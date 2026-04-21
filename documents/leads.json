@@ -1,0 +1,29 @@
+{
+  "leads": [
+    {
+      "id": "lead_1713700000000_sample001",
+      "email": "john.smith@acmecorp.com",
+      "name": "John Smith",
+      "company": "Acme Marketing Agency",
+      "timestamp": "2026-04-21T10:00:00Z",
+      "source": "landing_page"
+    },
+    {
+      "id": "lead_1713700600000_sample002",
+      "email": "sarah.johnson@marketingpro.com",
+      "name": "Sarah Johnson",
+      "company": "MarketingPro Solutions",
+      "timestamp": "2026-04-21T10:10:00Z",
+      "source": "landing_page"
+    },
+    {
+      "id": "lead_1713701200000_sample003",
+      "email": "mike.chen@digitalagency.io",
+      "name": "Mike Chen",
+      "company": "Digital Agency Inc",
+      "timestamp": "2026-04-21T10:20:00Z",
+      "source": "landing_page"
+    }
+  ],
+  "lastUpdated": "2026-04-21T10:20:00Z"
+}
