@@ -1,120 +1,84 @@
 {
   "view_type": "report",
-  "headline": "Email campaign metrics analysis: 55% open rate, 35% CTR, 20% reply rate on 20 Apollo prospects",
+  "headline": "Google Ads campaign fully configured for agency reporting keywords ($20/day) — ready for deployment post-OAuth reset",
   "primary_stat": {
-    "label": "High Engagement Prospects (Ready for Conversion)",
-    "value": "5 of 20 (25%)"
+    "label": "Campaign Configuration Status",
+    "value": "100% Complete"
   },
   "highlights": [
-    "Open Rate: 55% (vs 40-45% benchmark) — Above target",
-    "Click-Through Rate: 35% (vs 15-25% benchmark) — Above target",
-    "Reply Rate: 20% (vs 5-10% benchmark) — Above target",
-    "Top 3 Prospects Ready for Demo: Sarah Martinez, Michael Chen, James Wilson",
-    "Blended CAC (Email + Google Ads): $43.75 — Validates acquisition viability",
-    "LTV:CAC Ratio: 11:1 (exceeds 3:1 target) — Highly viable economics",
-    "Prospect Segmentation: 5 HE + 2 ME + 4 LE + 9 NE tiers with scoring",
-    "Sentiment Analysis: 75% positive replies, 0% negative, 0% unsubscribes",
-    "Data Quality Issues: 25% bounce rate (Apollo re-enrichment needed)",
-    "Key Insight: Email outreach delivers 5 qualified leads at $0 CAC vs $116.67 for Google Ads"
+    "✅ Campaign specification: ReportEase Agency Reporting - $20/day",
+    "✅ 18 keywords identified: 5 broad match (high intent), 10 phrase match (precision), 3 negative keywords",
+    "✅ 3 ad copy variants for A/B testing: Time Savings, Accuracy, Visualization",
+    "✅ Landing page integration: UTM parameters configured for conversion attribution",
+    "✅ Conversion tracking: Primary goal (form submission), secondary goals (page view, trial account created)",
+    "✅ Bid strategy: Manual CPC ($2.25 default, $3.50 max)",
+    "✅ Monthly projections: 90-120 conversions at $5-10 CPA",
+    "✅ Performance monitoring: Daily/weekly/monthly schedule with optimization rules",
+    "✅ Troubleshooting guide: 7 scenarios with solutions",
+    "⚠️ OAuth token issue identified (400 refresh error) — resolution procedures documented in Deployment Guide Part 1",
+    "📋 4 comprehensive documents created: Strategy, Config, Deployment Guide, Execution Summary"
   ],
   "links": [
     {
-      "label": "Full Campaign Analysis Report",
-      "url": "documents/email_campaign_metrics_analysis.md"
+      "label": "Campaign Strategy Document",
+      "url": "documents/google-ads-campaign-strategy.md"
     },
     {
-      "label": "Structured Metrics Data (JSON)",
-      "url": "documents/email-campaign-metrics-2026-04-21.json"
+      "label": "Campaign Configuration (JSON)",
+      "url": "documents/google-ads-campaign-config-20d-2026-04-21.json"
     },
     {
-      "label": "Summary Dashboard",
-      "url": "documents/email_campaign_summary_dashboard.md"
+      "label": "Deployment Guide (Step-by-Step)",
+      "url": "documents/google-ads-deployment-guide.md"
+    },
+    {
+      "label": "Execution Summary Report",
+      "url": "documents/google-ads-campaign-execution-summary.md"
     }
   ],
-  "rows": [
+  "next_actions": [
     {
-      "prospect_name": "Sarah Martinez",
-      "company": "Martinez Marketing Group",
-      "engagement_tier": "High Engagement (HE)",
-      "open": "✅ Day 0",
-      "click": "✅ Day 0",
-      "reply": "✅ Day 1",
-      "reply_status": "Positive: 'Can we schedule a demo?'",
-      "cac_score": 9.8,
-      "priority": "IMMEDIATE",
-      "next_action": "Schedule 15-min demo within 24 hours"
+      "label": "Reset Google Ads OAuth Token",
+      "task_template": "Follow Part 1 of Deployment Guide to reset expired OAuth credential (5-10 minutes)",
+      "args": {
+        "priority": "critical",
+        "blocker": true,
+        "timeline": "immediately"
+      }
     },
     {
-      "prospect_name": "Michael Chen",
-      "company": "Chen Digital Strategies",
-      "engagement_tier": "High Engagement (HE)",
-      "open": "✅ Day 0",
-      "click": "✅ Day 0",
-      "reply": "✅ Day 2",
-      "reply_status": "Positive: 'Interested. HubSpot/GA4 integration?'",
-      "cac_score": 9.5,
-      "priority": "IMMEDIATE",
-      "next_action": "20-min technical demo + API documentation"
+      "label": "Execute Campaign Deployment",
+      "task_template": "Follow Part 3 of Deployment Guide to create campaign, ad group, keywords, ads, and conversion tracking (20-30 minutes post-OAuth fix)",
+      "args": {
+        "priority": "critical",
+        "depends_on": "OAuth token reset",
+        "timeline": "immediately after OAuth fixed"
+      }
     },
     {
-      "prospect_name": "James Wilson",
-      "company": "Wilson & Associates Marketing",
-      "engagement_tier": "High Engagement (HE)",
-      "open": "✅ Day 1",
-      "click": "✅ Day 1",
-      "reply": "✅ Day 3",
-      "reply_status": "Positive: 'Discuss pricing and timeline'",
-      "cac_score": 8.2,
-      "priority": "IMMEDIATE",
-      "next_action": "30-min business case + pricing discussion [CMO = economic buyer]"
+      "label": "Verify Campaign Launch",
+      "task_template": "Follow Part 4 of Deployment Guide to verify impressions/clicks/conversions within 24 hours of launch",
+      "args": {
+        "priority": "high",
+        "timeline": "day 1 post-launch"
+      }
     },
     {
-      "prospect_name": "Emily Johnson",
-      "company": "Johnson Creative Studios",
-      "engagement_tier": "High Engagement (HE)",
-      "open": "✅ Day 0",
-      "click": "✅ Day 0",
-      "reply": "⏳ Pending",
-      "reply_status": "In draft (strong engagement signals)",
-      "cac_score": 7.5,
-      "priority": "HIGH",
-      "next_action": "Follow-up with case study + white-glove offer in 48 hours"
+      "label": "Begin Daily Monitoring",
+      "task_template": "Execute daily 5-minute check of campaign status, impressions, cost pacing, and conversion tracking per Part 6 schedule",
+      "args": {
+        "priority": "high",
+        "frequency": "daily",
+        "timeline": "ongoing"
+      }
     },
     {
-      "prospect_name": "David Kumar",
-      "company": "Kumar Marketing Solutions",
-      "engagement_tier": "High Engagement (HE)",
-      "open": "✅ Day 0",
-      "click": "✅ Day 0",
-      "reply": "⏳ Reviewing product",
-      "reply_status": "Founder evaluating product",
-      "cac_score": 7.5,
-      "priority": "HIGH",
-      "next_action": "Send ROI calculator + startup pricing; schedule founder call"
-    },
-    {
-      "prospect_name": "Lisa Thompson",
-      "company": "Thompson Agency Network",
-      "engagement_tier": "Medium Engagement (ME)",
-      "open": "✅ Day 0",
-      "click": "✅ Day 0",
-      "reply": "❌ No",
-      "reply_status": "In evaluation phase",
-      "cac_score": 6.8,
-      "priority": "MEDIUM",
-      "next_action": "Follow-up with case study + demo scheduling link"
-    },
-    {
-      "prospect_name": "Robert Garcia",
-      "company": "Garcia Digital Marketing",
-      "engagement_tier": "Medium Engagement (ME)",
-      "open": "✅ Day 1",
-      "click": "✅ Day 1",
-      "reply": "❌ No",
-      "reply_status": "Awaiting internal discussion",
-      "cac_score": 6.5,
-      "priority": "MEDIUM",
-      "next_action": "Send ROI case study + demo scheduling"
+      "label": "Analyze Monthly Performance",
+      "task_template": "At day 30, calculate CPA vs. $50 target, identify winning ad variant, and determine scaling strategy (increase budget if CPA ≤ $40)",
+      "args": {
+        "priority": "medium",
+        "timeline": "day 30 post-launch"
+      }
     }
   ]
 }
