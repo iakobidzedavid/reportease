@@ -1,0 +1,77 @@
+{
+  "view_type": "report",
+  "headline": "Beachhead Market Validated: Digital Marketing Agencies (10-50) Rank #1 Across 12 Segments",
+  "primary_stat": {
+    "label": "Beachhead TAM",
+    "value": "$25.5M"
+  },
+  "highlights": [
+    "✅ Scored 4.2/5.0 on weighted beachhead matrix (highest of 12 segments)",
+    "✅ 8,550 addressable agencies × 2.5 users × $1,200 ARPU = $25.5M TAM",
+    "✅ Acute pain: 8-12 hrs/week manual reporting (6 hrs/week ROI = $3,600/year value)",
+    "✅ Optimal accessibility: 2-6 week sales cycles, direct access to decision-makers",
+    "✅ Strong unit economics: LTV $3,500-$5,600 >> COCA target ~$1,200",
+    "✅ Manageable competition: 3-4 vendors; differentiation via white-label + ease-of-use",
+    "✅ Positive tailwinds: 9% YoY agency growth; digital transformation driving demand",
+    "Top 3 ranked segments: (1) Digital Agencies 4.2, (2) Performance Marketing 4.0, (3) SaaS/Tech 3.9",
+    "Recommended co-beachhead: Performance Marketing Agencies (1-3 week sales cycle, highest accessibility)",
+    "Alternative markets to avoid (Phase 1): In-House Marketing (low accessibility), Healthcare/Pharma (regulatory gatekeeping)"
+  ],
+  "links": [
+    {
+      "label": "01 Market Segmentation Research (27K)",
+      "url": "documents/01_market_segmentation_research.md"
+    },
+    {
+      "label": "02 Beachhead Scoring Matrix (31K)",
+      "url": "documents/02_beachhead_scoring_matrix.md"
+    },
+    {
+      "label": "03 TAM Calculation Spreadsheet (18K)",
+      "url": "documents/03_tam_calculation_spreadsheet.md"
+    },
+    {
+      "label": "04 Beachhead Justification Final (18K)",
+      "url": "documents/04_beachhead_justification_final.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "DE Step 3: Build End User Profile (Marketing Manager Persona)",
+      "task_template": "build_customer_persona",
+      "args": {
+        "segment": "Digital Marketing Agencies (10-50)",
+        "persona_type": "end_user",
+        "title": "Marketing Manager",
+        "focus": "demographics, pain points, decision-making criteria"
+      }
+    },
+    {
+      "label": "DE Step 4: Calculate Beachhead TAM (Already Complete - $25.5M)",
+      "task_template": "validate_tam",
+      "args": {
+        "tam_amount": 25500000,
+        "segment": "Digital Marketing Agencies",
+        "status": "complete"
+      }
+    },
+    {
+      "label": "DE Step 6: Map Full Customer Lifecycle Use Case",
+      "task_template": "map_customer_journey",
+      "args": {
+        "segment": "Digital Marketing Agencies (10-50)",
+        "stages": ["problem_awareness", "solution_research", "trial", "purchase", "adoption", "expansion"]
+      }
+    },
+    {
+      "label": "DE Step 9: Identify 10+ Target Agencies for Outreach",
+      "task_template": "build_prospect_list",
+      "args": {
+        "segment": "Digital Marketing Agencies (10-50)",
+        "geography": "United States",
+        "target_count": 10,
+        "data_sources": ["linkedin", "crunchbase", "industry_directories"]
+      }
+    }
+  ]
+}
