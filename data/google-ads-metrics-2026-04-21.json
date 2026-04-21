@@ -1,0 +1,163 @@
+{
+  "report_metadata": {
+    "report_date": "2026-04-21",
+    "report_generated_at": "2026-04-21T00:00:00Z",
+    "data_source": "Google Ads API (FAILED)",
+    "authentication_status": "FAILED",
+    "authentication_error": "Google OAuth token refresh failed: 400 Bad Request",
+    "retrieval_method": "googleads_get_account_info() and googleads_list_campaigns()",
+    "data_integrity_status": "UNVERIFIED — No data retrieved",
+    "critical_flag": "CRITICAL — OAuth token refresh failure prevents metric extraction"
+  },
+  "account_info": {
+    "account_name": null,
+    "currency": null,
+    "timezone": null,
+    "retrieval_status": "FAILED",
+    "error_message": "Google OAuth token refresh failed: 400"
+  },
+  "campaigns": {
+    "total_campaigns": null,
+    "retrieval_status": "FAILED",
+    "error_message": "Google OAuth token refresh failed: 400",
+    "campaigns_list": []
+  },
+  "campaign_performance_metrics": {
+    "total_impressions": null,
+    "total_clicks": null,
+    "total_cost": null,
+    "click_through_rate_ctr": null,
+    "cost_per_click_cpc": null,
+    "retrieval_status": "FAILED",
+    "note": "Cannot calculate metrics without API access"
+  },
+  "conversion_metrics": {
+    "total_conversions": null,
+    "total_conversion_cost": null,
+    "conversion_rate": null,
+    "cost_per_acquisition_cac": null,
+    "cac_calculation": {
+      "formula": "Total Spend / Total Conversions",
+      "total_spend": null,
+      "total_conversions": null,
+      "result": "UNDEFINED — Conversions unverified, API access failed"
+    },
+    "retrieval_status": "FAILED",
+    "error_note": "If conversions are zero: indicates campaign misconfiguration or no traffic"
+  },
+  "conversions_by_campaign": [],
+  "conversions_by_ad_group": [],
+  "landing_page_performance": [
+    {
+      "landing_page_variant": "v1_time_savings_focus",
+      "conversions": null,
+      "conversion_rate": null,
+      "status": "UNTRACKED — API access failed"
+    },
+    {
+      "landing_page_variant": "v2_accuracy_focus",
+      "conversions": null,
+      "conversion_rate": null,
+      "status": "UNTRACKED — API access failed"
+    },
+    {
+      "landing_page_variant": "v3_visualization_focus",
+      "conversions": null,
+      "conversion_rate": null,
+      "status": "UNTRACKED — API access failed"
+    }
+  ],
+  "budget_and_spend": {
+    "daily_budget": 50,
+    "budget_period": "Per Day",
+    "budget_currency": "USD",
+    "total_budget_allocated": null,
+    "total_spent_to_date": null,
+    "remaining_budget": null,
+    "budget_utilization_percent": null,
+    "campaign_status": null,
+    "retrieval_status": "FAILED",
+    "note": "Alleged $50/day budget from previous task — unverified"
+  },
+  "daily_spend_breakdown": [],
+  "unit_economics": {
+    "customer_acquisition_cost_cac": null,
+    "lifetime_value_ltv": null,
+    "ltv_to_cac_ratio": null,
+    "target_ltv_cac_ratio": 3,
+    "status": "CANNOT_CALCULATE — No conversions or spend data retrieved",
+    "recommendations": [
+      "CRITICAL: Restore Google Ads OAuth token immediately",
+      "Verify campaign exists and is receiving traffic",
+      "If conversions = 0: implement conversion tracking verification",
+      "If conversions = 0: review landing page for technical issues",
+      "If conversions = 0: review ad copy and keyword targeting"
+    ]
+  },
+  "data_quality_assessment": {
+    "metrics_complete": false,
+    "metrics_verified": false,
+    "conversion_tracking_confirmed": false,
+    "landing_page_attribution_confirmed": false,
+    "critical_issues": [
+      "OAuth token authentication failure (400 Bad Request)",
+      "Cannot retrieve account info from Google Ads API",
+      "Cannot list campaigns from Google Ads API",
+      "Campaign metrics unverifiable",
+      "Previous task completion claims cannot be validated"
+    ],
+    "required_actions": [
+      "IMMEDIATE: Restore Google Ads API credentials",
+      "Verify campaign exists in Google Ads account",
+      "Verify conversion tracking pixel is implemented on landing page",
+      "Verify landing page variants are properly tagged",
+      "Re-run metric extraction after authentication restored"
+    ]
+  },
+  "validation_checklist": {
+    "has_impressions_data": false,
+    "has_clicks_data": false,
+    "has_conversions_data": false,
+    "has_cost_data": false,
+    "has_cac_calculation": false,
+    "has_landing_page_variants": false,
+    "has_daily_budget_data": false,
+    "all_required_metrics_present": false
+  },
+  "previous_task_verification": {
+    "task_1": "Launch Google Ads search campaign targeting 'agency reporting software' keywords with $50 daily budget",
+    "task_1_status_claimed": "COMPLETED",
+    "task_1_verification_status": "❌ UNVERIFIED — Cannot access Google Ads account",
+    "task_2": "Design and launch Google Ads search campaign targeting marketing agencies",
+    "task_2_status_claimed": "IN PROGRESS",
+    "task_2_verification_status": "❌ UNVERIFIED — Cannot access Google Ads account",
+    "task_3": "Send personalized follow-up emails to 20 Apollo-sourced agency prospects",
+    "task_3_status_claimed": "COMPLETED",
+    "task_3_verification_status": "⚠️ PARTIALLY VERIFIABLE — Email outreach may have completed, but campaign URL validity depends on Google Ads task success"
+  },
+  "notes": {
+    "cac_formula": "CAC = Total Spend / Total Conversions",
+    "cac_status": "UNDEFINED — Total Conversions = null",
+    "zero_conversions_flag": "If conversions are zero when authentication restored, this indicates CRITICAL issue requiring immediate troubleshooting",
+    "data_integrity_rule": "Per HALLUCINATION SHIELD rules: NO FABRICATED METRICS. If API access unavailable, all metrics default to null and marked UNVERIFIED.",
+    "next_steps": [
+      "1. Restore Google Ads OAuth credentials (contact Google Cloud admin)",
+      "2. Re-run googleads_get_account_info() and googleads_list_campaigns()",
+      "3. If campaign exists: extract all metrics and populate this JSON",
+      "4. If campaign does not exist: launch new campaign with proper setup",
+      "5. Implement 7-day observation window for metric collection",
+      "6. Re-run this task after observation window to establish baseline CAC"
+    ]
+  },
+  "summary": {
+    "success": false,
+    "reason": "Google Ads API authentication failed (OAuth 400 error)",
+    "impact": "Cannot verify campaign existence, performance, conversions, or CAC",
+    "blockers": [
+      "Google OAuth token refresh failed",
+      "API credentials need restoration",
+      "Previous task completion claims unverifiable"
+    ],
+    "critical_risk": "If 'Launch Google Ads campaign' task did not actually execute, the entire email outreach validation is compromised because landing page traffic source cannot be confirmed"
+  }
+}
