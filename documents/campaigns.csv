@@ -1,0 +1,4 @@
+campaign_name,channel,total_spend,total_impressions,total_clicks,total_conversions,campaign_start_date,campaign_end_date,duration_days,campaign_type
+Agency Reporting Search Campaign,google_ads,1250.00,18500,487,23,2026-04-01,2026-04-21,21,search
+Agency Reporting Brand Campaign,google_ads,800.00,12400,298,15,2026-04-05,2026-04-21,17,search
+TOTAL GOOGLE ADS,google_ads,2050.00,30900,785,38,2026-04-01,2026-04-21,21,AGGREGATE

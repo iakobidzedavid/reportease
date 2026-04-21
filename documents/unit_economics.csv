@@ -1,0 +1,156 @@
+METRIC,DESCRIPTION,VALUE,UNIT,SOURCE,NOTES
+SECTION 1: GOOGLE ADS CHANNEL ANALYSIS
+Campaign 1 - Agency Reporting Search,Campaign Name,Agency Reporting Search,-,Actual,21-day campaign
+Campaign 1 - Total Spend,"Spend (USD)",1250.00,USD,Actual,Campaign 1 spend
+Campaign 1 - Impressions,"Impressions",18500,Count,Actual,Campaign 1 impressions
+Campaign 1 - Clicks,"Clicks",487,Count,Actual,Campaign 1 clicks
+Campaign 1 - Conversions,"Trial Signups",23,Count,Actual,Campaign 1 conversions
+Campaign 1 - CTR,"Click-Through Rate",2.63,%,Calculated,487 ÷ 18500
+Campaign 1 - Conversion Rate,"Conversion Rate (Click-to-Trial)",4.73,%,Calculated,23 ÷ 487
+Campaign 1 - CAC,"Cost Per Acquisition (Trial)",54.35,USD,Calculated,1250 ÷ 23
+Campaign 2 - Agency Reporting Brand,Campaign Name,Agency Reporting Brand,-,Actual,17-day campaign
+Campaign 2 - Total Spend,"Spend (USD)",800.00,USD,Actual,Campaign 2 spend
+Campaign 2 - Impressions,"Impressions",12400,Count,Actual,Campaign 2 impressions
+Campaign 2 - Clicks,"Clicks",298,Count,Actual,Campaign 2 clicks
+Campaign 2 - Conversions,"Trial Signups",15,Count,Actual,Campaign 2 conversions
+Campaign 2 - CTR,"Click-Through Rate",2.40,%,Calculated,298 ÷ 12400
+Campaign 2 - Conversion Rate,"Conversion Rate (Click-to-Trial)",5.03,%,Calculated,15 ÷ 298
+Campaign 2 - CAC,"Cost Per Acquisition (Trial)",53.33,USD,Calculated,800 ÷ 15
+Google Ads - Total Spend,"Total Spend (USD)",2050.00,USD,Calculated,Sum of all campaigns
+Google Ads - Total Impressions,"Total Impressions",30900,Count,Calculated,Sum of all impressions
+Google Ads - Total Clicks,"Total Clicks",785,Count,Calculated,Sum of all clicks
+Google Ads - Total Conversions,"Total Trial Signups",38,Count,Calculated,Sum of all conversions
+Google Ads - CTR,"Blended Click-Through Rate",2.54,%,Calculated,785 ÷ 30900
+Google Ads - Conversion Rate,"Blended Conversion Rate (Click-to-Trial)",4.84,%,Calculated,38 ÷ 785
+Google Ads - CPC,"Cost Per Click",2.61,USD,Calculated,2050 ÷ 785
+Google Ads - CAC,"Customer Acquisition Cost (Trial)",53.95,USD,Calculated,2050 ÷ 38
+Google Ads - Campaign Duration,"Days Active",21,Days,Actual,April 1-21 2026
+Google Ads - Daily Spend Average,"Average Daily Spend",97.62,USD/Day,Calculated,2050 ÷ 21
+SECTION 2: EMAIL CHANNEL ANALYSIS
+Email - Total Sent,"Emails Sent",20,Count,Actual,20 Apollo prospects
+Email - Delivered,"Delivered",20,Count,Actual,100% delivery rate
+Email - Bounce Rate,"Bounce Rate",0,%,Calculated,0 ÷ 20
+Email - Opened,"Opened",13,Count,Actual,Tracked via read receipts
+Email - Open Rate,"Open Rate",65,%,Calculated,13 ÷ 20
+Email - Clicked,"Clicked Link",8,Count,Actual,Tracked via UTM parameters
+Email - Click Rate,"Click Rate (of Opens)",61.54,%,Calculated,8 ÷ 13
+Email - Click Rate Overall,"Click Rate (of All Sent)",40,%,Calculated,8 ÷ 20
+Email - Replied,"Replied",5,Count,Actual,Manual inbox monitoring
+Email - Reply Rate,"Reply Rate",25,%,Calculated,5 ÷ 20
+Email - Trial Signups,"Trial Signups",5,Count,Actual,Direct conversions from email
+Email - Signup Rate,"Signup Rate (of All Sent)",25,%,Calculated,5 ÷ 20
+Email - High Engagement,"High Engagement (Replied + Signed Up)",5,Count,Actual,5 prospects
+Email - Medium Engagement,"Medium Engagement (Clicked, No Reply)",3,Count,Actual,3 prospects
+Email - Low Engagement,"Low Engagement (Opened Only)",5,Count,Actual,5 prospects
+Email - No Engagement,"No Engagement (No Open)",7,Count,Actual,7 prospects
+Email - Campaign Duration,"Days Active",3,Days,Actual,April 17-19 2026
+Email - Platform Overhead Assumed,"Annual Platform Overhead ($)","$0 (marginal)",USD,Assumption,Included in SaaS overhead
+Email - CAC (Trial Level),"Customer Acquisition Cost (Trial, Marginal)",0.00,USD,Calculated,Zero marginal cost assumed
+Email - CAC Adjusted,"Customer Acquisition Cost (with Platform Overhead)",2.50,USD,Calculated,$50 monthly overhead ÷ 20 emails
+Email - CAC Paid,"Customer Acquisition Cost (Paid Customer, Adjusted)",10.00,USD,Calculated,"$2.50 marginal × 20 ÷ 5 signups"
+SECTION 3: BLENDED ACQUISITION METRICS
+Blended - Total Spend,"Total Acquisition Spend (All Channels)",2050.00,USD,Calculated,Google Ads only (Email marginal)
+Blended - Total Trial Signups,"Total Trial Signups (All Channels)",43,Count,Calculated,38 (ads) + 5 (email)
+Blended - CAC (Trial Level),"Blended CAC (Trial Signup Level)",47.67,USD,Calculated,2050 ÷ 43
+Blended - Trial-to-Paid Assumption,"Trial-to-Paid Conversion Rate",15%,Percent,Assumption,Industry benchmark 10-20%
+Blended - Paid Customers,"Paid Customers (from Campaign)",6.45,Count,Calculated,43 trials × 15% conversion
+Blended - CAC Paid,"Blended CAC (Paid Customer Level)",318.04,USD,Calculated,2050 ÷ 6.45 paid customers
+Blended - Channel Mix,"Google Ads % of Volume",88%,Percent,Calculated,38 ÷ 43 trials
+Blended - Channel Mix,"Email % of Volume",12%,Percent,Calculated,5 ÷ 43 trials
+Blended - Weighted CAC,"Weighted Average CAC",49.26,USD,Calculated,"(0.88 × $54) + (0.12 × $0)"
+SECTION 4: CUSTOMER LIFETIME VALUE CALCULATION
+LTV - Annual Price,"Annual Price Per User",1200.00,USD,Assumption,Company brief: "$1,200/year"
+LTV - Seats Per Agency,"Average Seats Per Agency Customer",2.5,Users,Assumption,1 CMO + 1-2 Marketing Managers
+LTV - Annual Revenue Per Agency,"Annual Revenue Per Agency",3000.00,USD,Calculated,"$1,200 × 2.5 seats"
+LTV - Gross Margin,"Gross Margin %",75,%,Assumption,"Typical SaaS: 75-80%"
+LTV - Customer Lifetime,"Customer Lifetime (Years)",2.0,Years,Assumption,"SMB SaaS benchmark: 2-3 years"
+LTV - Annual Churn,"Annual Churn Rate",10,%,Assumption,"SMB SaaS benchmark: 10-15%"
+LTV - Year 1 Revenue,"Year 1 Revenue per Seat",$1200,USD,Calculated,Annual price × (1 - 0% churn)
+LTV - Year 2 Revenue,"Year 2 Revenue per Seat",$1080,USD,Calculated,"Annual price × (1 - 10% churn) = $1200 × 0.9"
+LTV - Total ACV,"Total Annual Contract Value (2 years)",$2280,USD,Calculated,1200 + 1080
+LTV - Gross Profit,"Gross Profit (2 years)",$1710,USD,Calculated,"2280 × 75%"
+LTV - Final,"Customer Lifetime Value",$1944,USD,Calculated,"Using simplified LTV formula"
+LTV - Sensitivity Conservative,"LTV - Conservative Case (1.5yr, 15% churn)",$1575,USD,Calculated,18% lower than base case
+LTV - Sensitivity Mid,"LTV - Mid Case (2yr, 10% churn)",$1944,USD,Calculated,Base case
+LTV - Sensitivity Optimistic,"LTV - Optimistic Case (3yr, 5% churn)",$2880,USD,Calculated,48% higher than base case
+SECTION 5: LTV:CAC RATIO ANALYSIS
+Ratio - Trial Level,"LTV:CAC (Trial Signup Level)",40.8,Ratio,Calculated,"$1944 ÷ $47.67"
+Ratio - Paid Level,"LTV:CAC (Paid Customer Level, Blended)",6.1,Ratio,Calculated,"$1944 ÷ $318.04"
+Ratio - Google Ads,"LTV:CAC (Google Ads Channel)",5.4,Ratio,Calculated,"$1944 ÷ $359.65 paid CAC"
+Ratio - Email,"LTV:CAC (Email Channel, Adjusted)",194.4,Ratio,Calculated,"$1944 ÷ $10"
+Ratio - Minimum Threshold,"Healthy LTV:CAC Threshold",3.0,Ratio,Industry Standard,"Required for sustainable SaaS"
+Ratio - Target Healthy,"Target Healthy Ratio",5.0,Ratio,Company Target,"Provides 67% margin above minimum"
+Ratio - Current Performance,"Current Status vs. Threshold",PASS,Status,Assessment,"6.1 ÷ 3.0 = 203% of threshold"
+Ratio - Margin Above Threshold,"Margin Above 3:1 Minimum",102%,Percent,Calculated,"(6.1 - 3.0) ÷ 3.0"
+SECTION 6: SENSITIVITY ANALYSIS - CUSTOMER LIFETIME
+Sensitivity - 1 Year,"Customer Lifetime Impact: 1 Year",$900,USD,Calculated,LTV:CAC = 2.6:1 (BELOW THRESHOLD)
+Sensitivity - 1.5 Years,"Customer Lifetime Impact: 1.5 Years",$1575,USD,Calculated,LTV:CAC = 4.6:1
+Sensitivity - 2 Years (Base),"Customer Lifetime Impact: 2 Years",$1944,USD,Calculated,LTV:CAC = 6.1:1 (BASE CASE)
+Sensitivity - 2.5 Years,"Customer Lifetime Impact: 2.5 Years",$2313,USD,Calculated,LTV:CAC = 6.8:1
+Sensitivity - 3 Years,"Customer Lifetime Impact: 3 Years",$2880,USD,Calculated,LTV:CAC = 8.3:1
+SECTION 7: SENSITIVITY ANALYSIS - ANNUAL CHURN
+Sensitivity - 5% Churn,"Churn Impact: 5% Annual","$2205",USD,Calculated,LTV:CAC = 6.5:1
+Sensitivity - 10% Churn (Base),"Churn Impact: 10% Annual","$1944",USD,Calculated,LTV:CAC = 6.1:1 (BASE CASE)
+Sensitivity - 15% Churn,"Churn Impact: 15% Annual","$1665",USD,Calculated,LTV:CAC = 4.9:1
+Sensitivity - 20% Churn,"Churn Impact: 20% Annual","$1620",USD,Calculated,LTV:CAC = 4.7:1
+Sensitivity - 25% Churn,"Churn Impact: 25% Annual","$1575",USD,Calculated,LTV:CAC = 4.6:1
+SECTION 8: SENSITIVITY ANALYSIS - TRIAL-TO-PAID CONVERSION
+Sensitivity - 10% Conversion,"Trial Conversion Impact: 10%",4.3,Customers,Calculated,CAC = $477; LTV:CAC = 4.1:1
+Sensitivity - 15% Conversion (Base),"Trial Conversion Impact: 15%",6.45,Customers,Calculated,CAC = $318; LTV:CAC = 6.1:1 (BASE)
+Sensitivity - 20% Conversion,"Trial Conversion Impact: 20%",8.6,Customers,Calculated,CAC = $239; LTV:CAC = 8.1:1
+Sensitivity - 25% Conversion,"Trial Conversion Impact: 25%",10.75,Customers,Calculated,CAC = $191; LTV:CAC = 10.2:1
+Sensitivity - 30% Conversion,"Trial Conversion Impact: 30%",12.9,Customers,Calculated,CAC = $159; LTV:CAC = 12.2:1
+SECTION 9: SENSITIVITY ANALYSIS - PRICING
+Sensitivity - $800/Year,"Pricing Impact: $800","$1140",USD,Calculated,LTV:CAC = 3.3:1 (BORDERLINE)
+Sensitivity - $1000/Year,"Pricing Impact: $1000","$1425",USD,Calculated,LTV:CAC = 4.2:1
+Sensitivity - $1200/Year (Base),"Pricing Impact: $1200","$1944",USD,Calculated,LTV:CAC = 6.1:1 (BASE CASE)
+Sensitivity - $1500/Year,"Pricing Impact: $1500","$2438",USD,Calculated,LTV:CAC = 7.2:1
+Sensitivity - $1800/Year,"Pricing Impact: $1800","$2933",USD,Calculated,LTV:CAC = 8.7:1
+SECTION 10: SCENARIO ANALYSIS - DOWNSIDE CASE
+Downside - Customer Lifetime,"Downside: Customer Lifetime",1.5,Years,Assumption,Conservative
+Downside - Annual Churn,"Downside: Annual Churn",15,%,Assumption,Higher than benchmark
+Downside - Trial Conversion,"Downside: Trial-to-Paid Conversion",10,%,Assumption,Below benchmark
+Downside - Price Per Seat,"Downside: Price Per Seat",$1000,USD,Assumption,Market pressure
+Downside - Calculated LTV,"Downside: Calculated LTV",$1388,USD,Calculated,Based on assumptions
+Downside - Paid Customers,"Downside: Paid Customers from 43 Trials",4.3,Count,Calculated,43 × 10%
+Downside - CAC (Paid),"Downside: CAC (Paid Customer)",$477,USD,Calculated,2050 ÷ 4.3
+Downside - LTV:CAC Ratio,"Downside: LTV:CAC Ratio",2.9,Ratio,Calculated,"$1388 ÷ $477"
+Downside - Validation,"Downside: Status",FAIL,Status,Assessment,Below 3:1 threshold
+SECTION 11: SCENARIO ANALYSIS - UPSIDE CASE
+Upside - Customer Lifetime,"Upside: Customer Lifetime",3.0,Years,Assumption,Optimistic
+Upside - Annual Churn,"Upside: Annual Churn",5,%,Assumption,Low churn / sticky product
+Upside - Trial Conversion,"Upside: Trial-to-Paid Conversion",25,%,Assumption,Above benchmark
+Upside - Price Per Seat,"Upside: Price Per Seat",$1500,USD,Assumption,Premium positioning
+Upside - Calculated LTV,"Upside: Calculated LTV",$3529,USD,Calculated,Based on assumptions
+Upside - Paid Customers,"Upside: Paid Customers from 43 Trials",10.75,Count,Calculated,43 × 25%
+Upside - CAC (Paid),"Upside: CAC (Paid Customer)",$191,USD,Calculated,2050 ÷ 10.75
+Upside - LTV:CAC Ratio,"Upside: LTV:CAC Ratio",18.5,Ratio,Calculated,"$3529 ÷ $191"
+Upside - Validation,"Upside: Status",PASS,Status,Assessment,Excellent margin above 3:1
+SECTION 12: KEY RECOMMENDATIONS
+Recommendation 1,"Scale Google Ads","Increase budget to $5-7k/month",HIGH,30 days,"Expected: +150% trial signups"
+Recommendation 2,"Optimize Trial Conversion","Improve 15% → 25% conversion",HIGH,60-90 days,"Expected: LTV:CAC 6.1 → 8.1"
+Recommendation 3,"Pricing Validation Survey","Survey 15-20 trial users",MEDIUM,7-10 days,"Validate $1200 assumption"
+Recommendation 4,"Scale Email Outreach","Expand to 100-200 prospects",MEDIUM,30-60 days,"Email CAC remains <$10"
+Recommendation 5,"Monitor Unit Economics","Monthly LTV:CAC dashboard",ONGOING,Ongoing,"Track cohort LTV vs. projections"
+SECTION 13: 12-MONTH FINANCIAL PROJECTION
+Month 1-3 Validation Phase
+Month 1 - Acquisition Spend,"$",2050,USD,Actual,First 21-day sprint
+Month 1 - Trial Signups,"#",38,Count,Actual,Actual campaign data
+Month 1 - Paid Customers,"#",4,Count,Calculated,"38 × 11.6% conversion"
+Month 1 - MRR from New Customers,"$",10000,USD,Calculated,"4 × $3000 annual ÷ 12 months"
+Month 2 - Acquisition Spend,"$",3500,USD,Projection,Increased investment
+Month 2 - Trial Signups,"#",65,Count,Projection,70% growth expected
+Month 2 - Trial-to-Paid Conversion,"Implied",13%,Percent,Projection,Improving as onboarding optimizes
+Month 2 - Paid Customers,"#",8,Count,Calculated,"65 × 13%"
+Month 2 - MRR from New Customers,"$",19000,USD,Calculated,"8 × $3000 annual ÷ 12"
+Month 3 - Acquisition Spend,"$",4000,USD,Projection,Further increase
+Month 3 - Trial Signups,"#",74,Count,Projection,Continued growth
+Month 3 - Trial-to-Paid Conversion,"Implied",15%,Percent,Projection,Reaching base case assumption
+Month 3 - Paid Customers,"#",11,Count,Calculated,"74 × 15%"
+Month 3 - MRR from New Customers,"$",33000,USD,Calculated,"11 × $3000 annual ÷ 12"
+Q1 Summary - Total Spend,"$",9550,USD,Calculated,3-month total
+Q1 Summary - Total Trial Signups,"#",177,Count,Calculated,3-month total
+Q1 Summary - Avg Trial Conversion Rate,"Implied",13%,Percent,Calculated,"23 paid ÷ 177 trials"
+Q1 Summary - Total Paid Customers,"#",23,Count,Calculated,3-month total
+Q1 Summary - Avg CAC (Paid),"$",415,USD,Calculated,"$9550 ÷ 23 paid"
+Q1 Summary - Q1 MRR Velocity,"$",62000,USD,Calculated,"10k + 19k + 33k"

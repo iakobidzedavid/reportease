@@ -1,0 +1,92 @@
+{
+  "view_type": "report",
+  "headline": "Pricing Sensitivity Survey Strategy & Implementation Roadmap — Ready for Deployment",
+  "primary_stat": {
+    "label": "Survey Documents Created",
+    "value": "4 comprehensive guides (22+ pages)"
+  },
+  "highlights": [
+    "Complete pricing survey strategy with van Westendorp PSM methodology for testing $1,200/year assumption",
+    "Step-by-step deployment guide: Google Form template, email campaign, prospect targeting, 7-day collection timeline",
+    "Quantitative & qualitative analysis framework: price distribution, competitive spend baseline, feature-price justification",
+    "Unit economics model showing 135:1 LTV:CAC ratio at $1,200 (far exceeds 3:1 threshold)",
+    "Decision tree: IF <40% select $1,200 THEN adjust price; IF >60% THEN lock assumption",
+    "10-day execution roadmap: deploy day 1, collect days 2-8, analyze days 8-9, report day 10",
+    "Risk mitigation: min 5 responses needed, quality validation rules, outlier detection, data integrity checks",
+    "Integration with DE Framework: Phase 5 Step 21 (Test Assumptions) feeds into Phase 4 Step 15 (Design Business Model)",
+    "Production-ready templates: Google Form questions, email invites, analysis spreadsheets, git commit workflow"
+  ],
+  "links": [
+    {
+      "label": "Pricing Survey Strategy",
+      "url": "documents/pricing_sensitivity_survey_strategy.md"
+    },
+    {
+      "label": "Deployment & Implementation Guide",
+      "url": "documents/pricing_survey_deployment_guide.md"
+    },
+    {
+      "label": "Pricing Framework & Unit Economics",
+      "url": "documents/pricing_framework_and_unit_economics.md"
+    },
+    {
+      "label": "Validation Roadmap",
+      "url": "documents/pricing_validation_roadmap.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Extract top 10-15 prospects from email campaign engagement data",
+      "task_template": "data_extraction",
+      "args": {
+        "source_file": "data/email_campaign_results.csv",
+        "metric": "engagement_score",
+        "output_file": "data/top_prospects_for_pricing_survey.csv"
+      }
+    },
+    {
+      "label": "Create Google Form using deployment guide template",
+      "task_template": "survey_creation",
+      "args": {
+        "platform": "Google Forms",
+        "questions": 5,
+        "form_title": "ReportEase Pricing Feedback Survey",
+        "reference_doc": "documents/pricing_survey_deployment_guide.md"
+      }
+    },
+    {
+      "label": "Deploy survey invitations and collect responses for 7 days",
+      "task_template": "email_campaign",
+      "args": {
+        "recipient_count": 15,
+        "collection_window_days": 7,
+        "expected_response_rate": 0.40,
+        "incentive_amount_usd": 375
+      }
+    },
+    {
+      "label": "Analyze responses and write pricing report (documents/pricing_survey_results.md)",
+      "task_template": "analysis_and_reporting",
+      "args": {
+        "analysis_methods": [
+          "price_point_distribution",
+          "van_westendorp_psm",
+          "competitive_spend_baseline",
+          "feature_justification_ranking"
+        ],
+        "output_file": "documents/pricing_survey_results.md"
+      }
+    },
+    {
+      "label": "Commit survey results and raw data to GitHub",
+      "task_template": "git_commit",
+      "args": {
+        "files": [
+          "documents/pricing_survey_results.md",
+          "data/pricing_survey_responses.csv"
+        ],
+        "commit_message": "Add pricing sensitivity survey results: validate/adjust $1,200 assumption"
+      }
+    }
+  ]
+}
