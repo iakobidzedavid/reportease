@@ -1,0 +1,517 @@
+[
+  {
+    "name": "pica_hacker_news_get_an_item",
+    "description": "[HACKER-NEWS] Get an Item on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Parameters to be sent in the URL path.",
+          "properties": {
+            "itemId": {
+              "description": "The item\u2019s unique ID (an integer in practice) used to fetch /v0/item/<id>.json.",
+              "minLength": 1,
+              "title": "itemId",
+              "type": "string"
+            }
+          },
+          "required": [
+            "itemId"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters to be sent in the URL.",
+          "properties": {
+            "print": {
+              "description": "If set to `pretty`, returns a human-readable formatted JSON response (example shown in docs: ?print=pretty).",
+              "title": "print",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers",
+        "query"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_an_item",
+      "pica_action_id": "conn_mod_def::GJ310NV-FZs::GcvaGuXIRdCwhqJyntmCWw",
+      "action_title": "Get an Item",
+      "action_path": "/v0/item/{{itemId}}.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_list_job_stories_ids",
+    "description": "[HACKER-NEWS] List Job Stories (IDs) on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters for the request.",
+          "properties": {
+            "print": {
+              "description": "Pretty-print the response when set to `pretty`. Example: `print=pretty`.",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "list_job_stories_ids",
+      "pica_action_id": "conn_mod_def::GJ310e5SkMU::xw3KpSSMRtaqEvoYH7szPA",
+      "action_title": "List Job Stories (IDs)",
+      "action_path": "/v0/jobstories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_list_ask_hn_story_ids",
+    "description": "[HACKER-NEWS] List Ask HN Story IDs on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers for the Hacker News API",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters for GET /v0/askstories.json",
+          "properties": {
+            "print": {
+              "description": "Pretty-print the response when set to `pretty` (example: `?print=pretty`).",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "list_ask_hn_story_ids",
+      "pica_action_id": "conn_mod_def::GJ31z-kwoIs::Sxqd8iwhQpe0k9GYQWJgHw",
+      "action_title": "List Ask HN Story IDs",
+      "action_path": "/v0/askstories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_get_best_stories",
+    "description": "[HACKER-NEWS] Get Best Stories on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters sent in the URL.",
+          "properties": {
+            "print": {
+              "description": "Pretty-prints the JSON response when set to `pretty`.",
+              "enum": [
+                "pretty"
+              ],
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_best_stories",
+      "pica_action_id": "conn_mod_def::GJ310Fk71hs::uUBNdp5eS22fk6ngfCu9WA",
+      "action_title": "Get Best Stories",
+      "action_path": "/v0/beststories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_get_item_profile_updates",
+    "description": "[HACKER-NEWS] Get Item & Profile Updates on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters to include in the request URL.",
+          "properties": {
+            "print": {
+              "description": "Pretty-prints the JSON response when set to `pretty`.",
+              "enum": [
+                "pretty"
+              ],
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_item_profile_updates",
+      "pica_action_id": "conn_mod_def::GJ310WoY-JU::gxZul_MiTPWdlyBhy3Hq-g",
+      "action_title": "Get Item & Profile Updates",
+      "action_path": "/updates.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_get_max_item_id",
+    "description": "[HACKER-NEWS] Get Max Item ID on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "HTTP headers to send with the request.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters to include in the request URL.",
+          "properties": {
+            "print": {
+              "description": "Response formatting option. Example value: `pretty` (for human-readable output).",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_max_item_id",
+      "pica_action_id": "conn_mod_def::GJ310me3ivY::-7tvjIYCSQWXkRrJY2sCOA",
+      "action_title": "Get Max Item ID",
+      "action_path": "/v0/maxitem.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_list_new_stories",
+    "description": "[HACKER-NEWS] List New Stories on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers to send with the API call.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters to include in the request URL.",
+          "properties": {
+            "print": {
+              "description": "If set (e.g., `pretty`), formats the JSON output for readability. Example: `print=pretty`.",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers",
+        "query"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "list_new_stories",
+      "pica_action_id": "conn_mod_def::GJ310twRcgg::qSwHbHSkTjW8MLXxI7gycQ",
+      "action_title": "List New Stories",
+      "action_path": "/v0/newstories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_list_show_hn_story_ids",
+    "description": "[HACKER-NEWS] List Show HN Story IDs on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters to include in the URL.",
+          "properties": {
+            "print": {
+              "description": "If set to `pretty`, returns a human-readable (\u201cpretty printed\u201d) response.",
+              "enum": [
+                "pretty"
+              ],
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "list_show_hn_story_ids",
+      "pica_action_id": "conn_mod_def::GJ31007hqMc::ZSsXfWzdS6673tNSrBUfFA",
+      "action_title": "List Show HN Story IDs",
+      "action_path": "/v0/showstories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_get_top_stories",
+    "description": "[HACKER-NEWS] Get Top Stories on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Indicates the client expects a JSON response.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters for the request.",
+          "properties": {
+            "print": {
+              "description": "If set to `pretty`, returns a human-readable formatted response (example: `print=pretty`).",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers",
+        "query"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_top_stories",
+      "pica_action_id": "conn_mod_def::GJ3108Dwmm4::avAMAq7HQtW6PT8JhPg5vA",
+      "action_title": "Get Top Stories",
+      "action_path": "/v0/topstories.json",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_hacker_news_get_a_user",
+    "description": "[HACKER-NEWS] Get a User on hacker-news",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "HTTP headers to send with the request.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters to be interpolated into the request URL.",
+          "properties": {
+            "userId": {
+              "description": "The user's unique username. Case-sensitive.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "userId"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional URL query parameters.",
+          "properties": {
+            "print": {
+              "description": "Example shown in docs: `pretty` (used to pretty-print output).",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "hacker-news",
+      "action_id": "get_a_user",
+      "pica_action_id": "conn_mod_def::GJ311DlEyu8::J665kezDS3qYydh0VqEDKQ",
+      "action_title": "Get a User",
+      "action_path": "/v0/user/{{userId}}.json",
+      "method": "GET"
+    }
+  }
+]
