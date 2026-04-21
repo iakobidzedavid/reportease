@@ -18,6 +18,10 @@ reportease/
   next.config.ts
   package.json
   tsconfig.json
+  .claude/
+    CLAUDE.md
+    settings.json
+    agents/
   documents/
     .gitkeep
   src/
