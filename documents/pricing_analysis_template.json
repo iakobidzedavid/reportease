@@ -1,0 +1,319 @@
+{
+  "survey_metadata": {
+    "survey_name": "AutoReport Pricing Sensitivity Survey",
+    "survey_period": "2026-04-21 to 2026-04-28",
+    "total_invitations": 15,
+    "tier_1_invitations": 7,
+    "tier_2_invitations": 5,
+    "tier_3_invitations": 3,
+    "target_response_rate": 0.5,
+    "target_responses": 8
+  },
+  "response_tracking": {
+    "received_date": "2026-04-28",
+    "total_responses": 0,
+    "completed_surveys": 0,
+    "partial_responses": 0,
+    "abandonment_rate": 0
+  },
+  "acceptance_analysis": {
+    "pricing_scenarios": {
+      "starter_800": {
+        "scenario_name": "Starter — $800/year",
+        "features": [
+          "Automated reports from Google Analytics + 2 ad platforms",
+          "Weekly scheduled PDF reports + basic dashboard",
+          "3 team members access",
+          "Email support"
+        ],
+        "acceptance_counts": {
+          "yes": 0,
+          "no": 0,
+          "maybe": 0
+        },
+        "acceptance_rates": {
+          "yes_percent": 0,
+          "no_percent": 0,
+          "maybe_percent": 0
+        },
+        "acceptance_rate_target": 0.75
+      },
+      "standard_1200": {
+        "scenario_name": "Standard — $1,200/year",
+        "features": [
+          "5 ad platform integrations",
+          "HubSpot integration",
+          "Daily scheduled reports (not weekly)",
+          "Interactive dashboard with real-time sync",
+          "Unlimited team members",
+          "Email + Slack support"
+        ],
+        "acceptance_counts": {
+          "yes": 0,
+          "no": 0,
+          "maybe": 0
+        },
+        "acceptance_rates": {
+          "yes_percent": 0,
+          "no_percent": 0,
+          "maybe_percent": 0
+        },
+        "acceptance_rate_target": 0.65
+      },
+      "premium_1800": {
+        "scenario_name": "Premium — $1,800/year",
+        "features": [
+          "Custom report template builder",
+          "White-label/reseller options",
+          "API access for custom integrations",
+          "Dedicated Slack channel support",
+          "Quarterly strategy calls with our team",
+          "Usage analytics & optimization recommendations"
+        ],
+        "acceptance_counts": {
+          "yes": 0,
+          "no": 0,
+          "maybe": 0
+        },
+        "acceptance_rates": {
+          "yes_percent": 0,
+          "no_percent": 0,
+          "maybe_percent": 0
+        },
+        "acceptance_rate_target": 0.4
+      }
+    }
+  },
+  "willingness_to_pay_analysis": {
+    "starter_wtp": {
+      "responses": [],
+      "count": 0,
+      "mean": 0,
+      "median": 0,
+      "std_dev": 0,
+      "min": 0,
+      "max": 0,
+      "above_1200": 0
+    },
+    "standard_wtp": {
+      "responses": [],
+      "count": 0,
+      "mean": 0,
+      "median": 0,
+      "std_dev": 0,
+      "min": 0,
+      "max": 0,
+      "above_1200": 0
+    },
+    "premium_wtp": {
+      "responses": [],
+      "count": 0,
+      "mean": 0,
+      "median": 0,
+      "std_dev": 0,
+      "min": 0,
+      "max": 0,
+      "above_1800": 0
+    },
+    "overall_wtp_ceiling": {
+      "description": "Average maximum price respondent willing to pay across all three tiers",
+      "value": 0,
+      "confidence_interpretation": "The typical agency in our survey would be willing to pay up to $X/year"
+    }
+  },
+  "price_elasticity_analysis": {
+    "elasticity_800_to_1200": {
+      "price_change_percent": 50,
+      "quantity_change_percent": 0,
+      "elasticity_coefficient": 0,
+      "interpretation": "If acceptance drops 15% when price increases 50%, elasticity = -0.30 (inelastic/good)"
+    },
+    "elasticity_1200_to_1800": {
+      "price_change_percent": 50,
+      "quantity_change_percent": 0,
+      "elasticity_coefficient": 0,
+      "interpretation": "If acceptance drops 20% when price increases 50%, elasticity = -0.40 (somewhat elastic)"
+    },
+    "optimal_price_point": {
+      "recommended_price": 1200,
+      "rationale": "Price point with highest yes_percent (adoption) or best elasticity tradeoff",
+      "confidence_level": "Low/Medium/High"
+    }
+  },
+  "feature_preference_analysis": {
+    "feature_frequency_by_tier": {
+      "starter_features": {
+        "automation": 0,
+        "scheduling": 0,
+        "basic_dashboard": 0,
+        "multi_platform_integration": 0
+      },
+      "standard_features": {
+        "advanced_dashboard": 0,
+        "real_time_sync": 0,
+        "unlimited_users": 0,
+        "hubspot_integration": 0,
+        "slack_integration": 0
+      },
+      "premium_features": {
+        "custom_templates": 0,
+        "api_access": 0,
+        "white_label": 0,
+        "dedicated_support": 0,
+        "strategy_calls": 0
+      }
+    },
+    "feature_popularity_ranking": {
+      "tier_1_most_important": "Feature name",
+      "tier_2_most_important": "Feature name",
+      "tier_3_most_important": "Feature name"
+    },
+    "feature_adoption_interpretation": "Which features are table-stakes vs. nice-to-have by tier?"
+  },
+  "segmentation_analysis": {
+    "by_company_size": {
+      "10_20_people": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "key_features": []
+      },
+      "21_35_people": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "key_features": []
+      },
+      "36_50_people": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "key_features": []
+      },
+      "50_plus_people": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "key_features": []
+      }
+    },
+    "by_annual_revenue": {
+      "500k_1m": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "elasticity_observation": ""
+      },
+      "1m_5m": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "elasticity_observation": ""
+      },
+      "5m_10m": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "elasticity_observation": ""
+      },
+      "10m_plus": {
+        "count": 0,
+        "avg_wtp": 0,
+        "preferred_tier": "Starter/Standard/Premium",
+        "elasticity_observation": ""
+      }
+    },
+    "by_decision_authority": {
+      "decision_maker": {
+        "count": 0,
+        "avg_wtp": 0,
+        "likely_to_upgrade": "Yes/No/Maybe"
+      },
+      "influencer": {
+        "count": 0,
+        "avg_wtp": 0,
+        "likely_to_upgrade": "Yes/No/Maybe"
+      },
+      "advisor": {
+        "count": 0,
+        "avg_wtp": 0,
+        "likely_to_upgrade": "Yes/No/Maybe"
+      }
+    }
+  },
+  "validation_metrics": {
+    "1200_assumption_validation": {
+      "target": "≥60% say 'Yes' to Standard ($1,200)",
+      "actual": 0,
+      "passed": false,
+      "interpretation": "If YES, $1,200 pricing assumption is VALIDATED. If NO, pivot to lower price."
+    },
+    "revenue_impact_analysis": {
+      "if_1200_confirmed": "Can proceed with $1,200 ARPU; LTV calculations hold",
+      "if_pivot_to_1000": "Reduces annual revenue per user from $1,200 to $1,000; LTV down 17%; still viable if CAC < $333/user",
+      "if_pivot_to_800": "Reduces annual revenue per user by 33%; LTV down 33%; requires lower CAC or higher volume to maintain unit economics"
+    },
+    "tier_viability": {
+      "starter_800_viable": "Is 800 tier viable as entry point? (measure: >70% yes)",
+      "standard_1200_viable": "Is 1200 tier viable as main offering? (measure: >60% yes)",
+      "premium_1800_viable": "Is 1800 tier viable as premium option? (measure: >35% yes)"
+    }
+  },
+  "risk_assessment": {
+    "survey_limitations": [
+      "Small sample size (n=8-10 expected); results not statistically significant for segments",
+      "Selection bias: only high-engagement prospects included; may skew toward price-insensitive buyers",
+      "Hypothetical pricing: respondents may not behave as they predict; actual conversion may differ",
+      "No competitive comparison: survey doesn't show competitor pricing, so WTP may be influenced by anchoring"
+    ],
+    "confidence_levels": {
+      "overall_recommendation": "Medium (sample size and selection bias)",
+      "feature_preferences": "High (clear patterns likely to emerge)",
+      "elasticity_calculation": "Low (would need 30+ respondents for statistical significance)"
+    }
+  },
+  "recommendations": {
+    "pricing_strategy": {
+      "recommended_tier_structure": "Starter / Standard / Premium at $800 / $1,200 / $1,800",
+      "primary_recommendation": {
+        "price_point": 1200,
+        "rationale": "Survey should reveal whether this is optimal",
+        "confidence": "TBD post-analysis"
+      },
+      "alternative_strategy": {
+        "description": "If <50% accept $1,200, consider value-based pricing tied to time savings ROI",
+        "rationale": "Price by value delivered, not by feature tier"
+      }
+    },
+    "feature_prioritization": {
+      "table_stakes_for_mvp": "Features selected by >60% at Starter tier",
+      "premium_differentiators": "Features selected by >50% at Premium tier",
+      "deprioritize": "Features with <30% selection across all tiers"
+    },
+    "segmentation_strategy": {
+      "by_size": "Consider size-based pricing if large agencies (50+) have 30%+ higher WTP",
+      "by_revenue": "Consider revenue-based pricing if revenue cohorts show clear elasticity differences",
+      "by_authority": "Tailor sales messaging differently for decision-makers vs. influencers"
+    },
+    "next_steps_if_validated": [
+      "Proceed to pilot customer acquisition with $1,200 pricing",
+      "Create 3-tier pricing page on marketing site",
+      "Develop sales playbook with tier-specific value propositions",
+      "Set up pricing analytics to track tier adoption and CAC by segment"
+    ],
+    "next_steps_if_not_validated": [
+      "Conduct follow-up interviews with 2-3 respondents to understand price sensitivity",
+      "Consider lower starting price ($999 or $1,095) to improve adoption",
+      "Test value-based pricing (e.g., $150/month for teams under 30 people)",
+      "Re-run survey in 2-4 weeks after product roadmap refinements to signal stronger value"
+    ]
+  },
+  "executive_summary": {
+    "recommendation": "TBD POST-ANALYSIS",
+    "key_finding_1": "TBD",
+    "key_finding_2": "TBD",
+    "key_finding_3": "TBD",
+    "go_no_go_decision": "TBD",
+    "business_impact": "This pricing decision will directly impact LTV and unit economics; final recommendation requires data analysis"
+  }
+}
