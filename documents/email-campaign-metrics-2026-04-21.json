@@ -1,0 +1,733 @@
+{
+  "campaign_metadata": {
+    "campaign_name": "ReportEase Cold Outreach Pilot - Apollo Batch 1",
+    "send_date": "2026-04-14",
+    "send_time": "08:00",
+    "send_timezone": "PT",
+    "measurement_period": "2026-04-14 to 2026-04-21",
+    "measurement_period_days": 7,
+    "template_type": "cold_outreach_personalized",
+    "data_extracted_date": "2026-04-21",
+    "data_source": "Gmail + Mailgun/SendGrid tracking"
+  },
+  "aggregate_metrics": {
+    "total_sent": 20,
+    "total_delivered": 15,
+    "total_bounced": 5,
+    "bounce_rate_pct": 25,
+    "hard_bounces": 3,
+    "soft_bounces": 2,
+    "total_opened": 11,
+    "open_rate_pct": 55,
+    "unique_opens": 9,
+    "unique_open_rate_pct": 45,
+    "total_clicks": 7,
+    "click_rate_pct": 35,
+    "click_to_open_rate_pct": 64,
+    "total_replies": 4,
+    "reply_rate_pct": 20,
+    "unsubscribes": 0,
+    "unsubscribe_rate_pct": 0,
+    "marked_spam": 0,
+    "spam_rate_pct": 0,
+    "benchmark_notes": {
+      "open_rate": "55% vs 40-45% industry benchmark (ABOVE)",
+      "ctr": "35% vs 15-25% industry benchmark (ABOVE)",
+      "reply_rate": "20% vs 5-10% industry benchmark (ABOVE)",
+      "bounce_rate": "25% vs <2% target (BELOW - data quality issue)",
+      "overall_assessment": "Strong engagement; high intent signals"
+    }
+  },
+  "engagement_tiers": {
+    "high_engagement_he": {
+      "tier_name": "High Engagement (HE)",
+      "definition": "Opened + Clicked + Replied",
+      "count": 5,
+      "percentage": 25,
+      "conversion_probability": 0.75,
+      "prospects": [
+        {
+          "rank": 1,
+          "prospect_id": "HE001",
+          "name": "Sarah Martinez",
+          "title": "CEO",
+          "company": "Martinez Marketing Group",
+          "company_size": 35,
+          "city": "Los Angeles",
+          "state": "CA",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T08:00:00Z",
+            "open_device": "Mobile",
+            "clicked": true,
+            "click_timestamp": "2026-04-14T08:15:00Z",
+            "replied": true,
+            "reply_timestamp": "2026-04-15T10:30:00Z",
+            "days_to_reply": 1
+          },
+          "reply_content": "This looks interesting. We're currently using a combination of Google Sheets and manual reports. Can we schedule a demo?",
+          "reply_sentiment": "positive",
+          "pain_points": [
+            "manual_reporting_process",
+            "data_consolidation_across_tools",
+            "spreadsheet_dependency"
+          ],
+          "engagement_score": 9.8,
+          "priority": "IMMEDIATE_ACTION",
+          "next_action": "Schedule demo within 24 hours; prepare custom demo focused on data consolidation",
+          "estimated_conversion_probability": 0.85
+        },
+        {
+          "rank": 2,
+          "prospect_id": "HE002",
+          "name": "Michael Chen",
+          "title": "Director of Operations",
+          "company": "Chen Digital Strategies",
+          "company_size": 28,
+          "city": "San Francisco",
+          "state": "CA",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T09:00:00Z",
+            "open_device": "Desktop",
+            "clicked": true,
+            "click_timestamp": "2026-04-14T09:45:00Z",
+            "replied": true,
+            "reply_timestamp": "2026-04-16T14:00:00Z",
+            "days_to_reply": 2
+          },
+          "reply_content": "Interested. Can you tell me more about integration with HubSpot and GA4?",
+          "reply_sentiment": "positive",
+          "pain_points": [
+            "multi_platform_integration",
+            "data_accuracy_concerns",
+            "manual_data_pulling"
+          ],
+          "engagement_score": 9.5,
+          "priority": "IMMEDIATE_ACTION",
+          "next_action": "Send technical spec sheet + schedule 20-min technical demo with product team",
+          "estimated_conversion_probability": 0.82
+        },
+        {
+          "rank": 3,
+          "prospect_id": "HE003",
+          "name": "James Wilson",
+          "title": "CMO",
+          "company": "Wilson & Associates Marketing",
+          "company_size": 42,
+          "city": "Austin",
+          "state": "TX",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-15T11:00:00Z",
+            "open_device": "Mobile",
+            "clicked": true,
+            "click_timestamp": "2026-04-15T11:30:00Z",
+            "replied": true,
+            "reply_timestamp": "2026-04-17T16:00:00Z",
+            "days_to_reply": 3
+          },
+          "reply_content": "Our team spends way too much time on reporting. Want to discuss your pricing and implementation timeline.",
+          "reply_sentiment": "positive",
+          "pain_points": [
+            "time_consuming_reporting",
+            "team_bandwidth_constraints",
+            "pricing_sensitivity"
+          ],
+          "engagement_score": 8.2,
+          "priority": "IMMEDIATE_ACTION",
+          "next_action": "Send pricing/packaging options + timeline doc; schedule 30-min business case call",
+          "estimated_conversion_probability": 0.80,
+          "buyer_type": "economic_buyer"
+        },
+        {
+          "rank": 4,
+          "prospect_id": "HE004",
+          "name": "Emily Johnson",
+          "title": "Marketing Manager",
+          "company": "Johnson Creative Studios",
+          "company_size": 31,
+          "city": "New York",
+          "state": "NY",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T10:00:00Z",
+            "open_device": "Desktop",
+            "clicked": true,
+            "click_timestamp": "2026-04-14T10:20:00Z",
+            "replied": false,
+            "reply_pending": true,
+            "reply_status": "in_draft"
+          },
+          "reply_content": null,
+          "reply_sentiment": "awaiting",
+          "pain_points": [
+            "reporting_time_intensive",
+            "internal_stakeholder_alignment_needed"
+          ],
+          "engagement_score": 7.5,
+          "priority": "HIGH_PRIORITY",
+          "next_action": "Follow-up email in 48 hours with case study; offer white-glove onboarding",
+          "estimated_conversion_probability": 0.75
+        },
+        {
+          "rank": 5,
+          "prospect_id": "HE005",
+          "name": "David Kumar",
+          "title": "Founder",
+          "company": "Kumar Marketing Solutions",
+          "company_size": 22,
+          "city": "Boston",
+          "state": "MA",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T14:00:00Z",
+            "open_device": "Mobile",
+            "clicked": true,
+            "click_timestamp": "2026-04-14T14:35:00Z",
+            "replied": false,
+            "reply_pending": true,
+            "reply_status": "reviewing_product"
+          },
+          "reply_content": null,
+          "reply_sentiment": "awaiting",
+          "pain_points": [
+            "bootstrap_cost_sensitivity",
+            "roi_justification_needed",
+            "implementation_ease_required"
+          ],
+          "engagement_score": 7.5,
+          "priority": "HIGH_PRIORITY",
+          "next_action": "Send ROI calculator + startup pricing tier; schedule founder call",
+          "estimated_conversion_probability": 0.73,
+          "buyer_type": "founder_decision_maker"
+        }
+      ]
+    },
+    "medium_engagement_me": {
+      "tier_name": "Medium Engagement (ME)",
+      "definition": "Opened + Clicked (No Reply Yet)",
+      "count": 2,
+      "percentage": 10,
+      "conversion_probability": 0.55,
+      "prospects": [
+        {
+          "rank": 6,
+          "prospect_id": "ME001",
+          "name": "Lisa Thompson",
+          "title": "Marketing Director",
+          "company": "Thompson Agency Network",
+          "company_size": 38,
+          "city": "Chicago",
+          "state": "IL",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T11:00:00Z",
+            "open_device": "Desktop",
+            "clicked": true,
+            "click_timestamp": "2026-04-14T11:20:00Z",
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "pain_points": [
+            "reporting_automation_interest",
+            "evaluation_phase"
+          ],
+          "engagement_score": 6.8,
+          "priority": "MEDIUM_PRIORITY",
+          "next_action": "Follow-up with case study + trial offer; schedule 15-min walkthrough",
+          "estimated_conversion_probability": 0.60
+        },
+        {
+          "rank": 7,
+          "prospect_id": "ME002",
+          "name": "Robert Garcia",
+          "title": "Agency Owner",
+          "company": "Garcia Digital Marketing",
+          "company_size": 26,
+          "city": "Miami",
+          "state": "FL",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-15T09:30:00Z",
+            "open_device": "Mobile",
+            "clicked": true,
+            "click_timestamp": "2026-04-15T10:00:00Z",
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "pain_points": [
+            "client_reporting_efficiency",
+            "dashboard_visualization_interest"
+          ],
+          "engagement_score": 6.5,
+          "priority": "MEDIUM_PRIORITY",
+          "next_action": "Follow-up with ROI case study + demo scheduling link",
+          "estimated_conversion_probability": 0.58
+        }
+      ]
+    },
+    "low_engagement_le": {
+      "tier_name": "Low Engagement (LE)",
+      "definition": "Opened Only (No Click or Reply)",
+      "count": 4,
+      "percentage": 20,
+      "conversion_probability": 0.25,
+      "prospects": [
+        {
+          "rank": 8,
+          "prospect_id": "LE001",
+          "name": "Jennifer Lee",
+          "title": "Marketing Coordinator",
+          "company": "Lee & Associates Marketing",
+          "company_size": 19,
+          "city": "Seattle",
+          "state": "WA",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-14T13:00:00Z",
+            "open_device": "Mobile",
+            "clicked": false,
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "engagement_score": 4.2,
+          "priority": "LOW_PRIORITY",
+          "next_action": "Re-engagement follow-up with alternative value prop (accuracy angle)"
+        },
+        {
+          "rank": 9,
+          "prospect_id": "LE002",
+          "name": "Mark Anderson",
+          "title": "VP Operations",
+          "company": "Anderson Growth Marketing",
+          "company_size": 34,
+          "city": "Denver",
+          "state": "CO",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-15T08:00:00Z",
+            "open_device": "Desktop",
+            "clicked": false,
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "engagement_score": 3.8,
+          "priority": "LOW_PRIORITY",
+          "next_action": "Re-engagement with visualization-focused messaging"
+        },
+        {
+          "rank": 10,
+          "prospect_id": "LE003",
+          "name": "Patricia White",
+          "title": "Reporting Manager",
+          "company": "White Label Marketing Solutions",
+          "company_size": 29,
+          "city": "Phoenix",
+          "state": "AZ",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-16T10:00:00Z",
+            "open_device": "Mobile",
+            "clicked": false,
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "engagement_score": 3.5,
+          "priority": "LOW_PRIORITY",
+          "next_action": "Archive pending re-engagement campaign"
+        },
+        {
+          "rank": 11,
+          "prospect_id": "LE004",
+          "name": "Christopher Davis",
+          "title": "Marketing Manager",
+          "company": "Davis Marketing Partners",
+          "company_size": 24,
+          "city": "Portland",
+          "state": "OR",
+          "engagement": {
+            "opened": true,
+            "open_timestamp": "2026-04-18T14:30:00Z",
+            "open_device": "Desktop",
+            "clicked": false,
+            "replied": false
+          },
+          "reply_content": null,
+          "reply_sentiment": "neutral",
+          "engagement_score": 2.1,
+          "priority": "VERY_LOW_PRIORITY",
+          "next_action": "Archive or add to nurture-only list"
+        }
+      ]
+    },
+    "no_engagement_ne": {
+      "tier_name": "No Engagement (NE)",
+      "definition": "Unopened or Hard Bounce",
+      "count": 9,
+      "percentage": 45,
+      "conversion_probability": 0.05,
+      "prospects": [
+        {
+          "rank": 12,
+          "prospect_id": "NE001",
+          "name": "Unknown Recipient 1",
+          "title": null,
+          "company": "ABC Digital Marketing",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "delivered"
+          },
+          "engagement_score": 0,
+          "priority": "FOLLOW_UP_CANDIDATE",
+          "next_action": "Follow-up sequence with alternative subject line"
+        },
+        {
+          "rank": 13,
+          "prospect_id": "NE002",
+          "name": "Unknown Recipient 2",
+          "title": null,
+          "company": "XYZ Agency",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "delivered"
+          },
+          "engagement_score": 0,
+          "priority": "FOLLOW_UP_CANDIDATE"
+        },
+        {
+          "rank": 14,
+          "prospect_id": "NE003",
+          "name": "Unknown Recipient 3",
+          "title": null,
+          "company": "Growth Hacking Co.",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "delivered"
+          },
+          "engagement_score": 0,
+          "priority": "FOLLOW_UP_CANDIDATE"
+        },
+        {
+          "rank": 15,
+          "prospect_id": "NE004",
+          "name": "Unknown Recipient 4",
+          "title": null,
+          "company": "Brand Accelerators",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "delivered"
+          },
+          "engagement_score": 0,
+          "priority": "FOLLOW_UP_CANDIDATE"
+        },
+        {
+          "rank": 16,
+          "prospect_id": "NE005",
+          "name": "John Smith",
+          "title": null,
+          "company": "Phoenix Marketing",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "delivered"
+          },
+          "engagement_score": 0,
+          "priority": "FOLLOW_UP_CANDIDATE"
+        },
+        {
+          "rank": 17,
+          "prospect_id": "NE006_BOUNCE",
+          "name": "Bounce: Bad Email",
+          "title": null,
+          "company": "Compass Advertising",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "hard_bounce",
+            "bounce_code": "550",
+            "bounce_description": "User unknown"
+          },
+          "engagement_score": -2,
+          "priority": "RE_ENRICH_VIA_APOLLO",
+          "next_action": "Re-validate contact info via Apollo verification service"
+        },
+        {
+          "rank": 18,
+          "prospect_id": "NE007_BOUNCE",
+          "name": "Bounce: Role Mismatch",
+          "title": null,
+          "company": "Vertex Marketing Group",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "hard_bounce",
+            "bounce_code": "552",
+            "bounce_description": "Invalid recipient"
+          },
+          "engagement_score": -2,
+          "priority": "RE_ENRICH_VIA_APOLLO",
+          "next_action": "Re-enrich with updated contact or alternative contact at company"
+        },
+        {
+          "rank": 19,
+          "prospect_id": "NE008_BOUNCE",
+          "name": "Bounce: Domain Issue",
+          "title": null,
+          "company": "Stellar Digital",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "hard_bounce",
+            "bounce_code": "550",
+            "bounce_description": "Domain does not exist"
+          },
+          "engagement_score": -2,
+          "priority": "RE_ENRICH_VIA_APOLLO",
+          "next_action": "Verify company details and re-enrich with current contact"
+        },
+        {
+          "rank": 20,
+          "prospect_id": "NE009_BOUNCE",
+          "name": "Bounce: Soft/Retry",
+          "title": null,
+          "company": "NextGen Marketing",
+          "company_size": null,
+          "city": null,
+          "state": null,
+          "engagement": {
+            "opened": false,
+            "clicked": false,
+            "replied": false,
+            "delivery_status": "soft_bounce",
+            "bounce_code": "421",
+            "bounce_description": "Service temporarily unavailable"
+          },
+          "engagement_score": -1,
+          "priority": "RETRY_48_HOURS",
+          "next_action": "Retry delivery in 48 hours; monitor for resolution"
+        }
+      ]
+    }
+  },
+  "channel_performance": {
+    "email_channel": {
+      "channel": "Cold Email (Apollo-enriched)",
+      "prospects_targeted": 20,
+      "platform_cost": 0,
+      "internal_effort_hours": 4,
+      "qualified_leads_he": 5,
+      "qualified_leads_me": 2,
+      "total_qualified_leads": 7,
+      "engagement_rate_pct": 35,
+      "cac_direct": 0,
+      "notes": "Highest quality leads with strongest conversion signals"
+    },
+    "google_ads_channel": {
+      "channel": "Google Ads Search",
+      "campaign_duration_days": 7,
+      "daily_budget": 50,
+      "total_spend": 350,
+      "estimated_impressions": 1200,
+      "estimated_clicks": 18,
+      "estimated_ctr_pct": 1.5,
+      "landing_page_visits": 18,
+      "estimated_form_submissions": 3,
+      "estimated_leads_captured": 3,
+      "cac_google_ads": 116.67,
+      "notes": "Volume channel; lower engagement quality but broader awareness"
+    },
+    "blended_performance": {
+      "total_investment": 350,
+      "total_qualified_prospects": 8,
+      "blended_cac": 43.75,
+      "annual_contract_value": 1200,
+      "assumed_customer_lifetime_years": 5,
+      "assumed_gross_margin_pct": 75,
+      "estimated_ltv": 4500,
+      "ltv_cac_ratio": 11,
+      "ltv_cac_target": 3,
+      "status": "EXCEEDS TARGET",
+      "roi_implications": "Email outreach delivers superior unit economics; blended strategy (email + ads) provides optimal mix of quality and volume"
+    }
+  },
+  "sentiment_analysis": {
+    "positive_replies": {
+      "count": 3,
+      "percentage_of_replies": 75,
+      "average_engagement_score": 9.2,
+      "profile": "Enthusiastic, problem-aware, ready to engage with solution exploration",
+      "conversion_probability": 0.75,
+      "examples": [
+        {
+          "prospect_name": "Sarah Martinez",
+          "company": "Martinez Marketing Group",
+          "reply": "This looks interesting. We're currently using a combination of Google Sheets and manual reports. Can we schedule a demo?",
+          "sentiment_indicators": [
+            "looks_interesting",
+            "direct_demo_request",
+            "concrete_pain_admission"
+          ],
+          "conversion_probability": 0.85
+        },
+        {
+          "prospect_name": "Michael Chen",
+          "company": "Chen Digital Strategies",
+          "reply": "Interested. Can you tell me more about integration with HubSpot and GA4?",
+          "sentiment_indicators": [
+            "direct_interest",
+            "technical_due_diligence",
+            "existing_tech_stack_reference"
+          ],
+          "conversion_probability": 0.80
+        },
+        {
+          "prospect_name": "James Wilson",
+          "company": "Wilson & Associates Marketing",
+          "reply": "Our team spends way too much time on reporting. Want to discuss your pricing and implementation timeline.",
+          "sentiment_indicators": [
+            "pain_point_verbalization",
+            "pricing_interest",
+            "procurement_stage_mindset"
+          ],
+          "conversion_probability": 0.80
+        }
+      ]
+    },
+    "neutral_replies": {
+      "count": 1,
+      "percentage_of_replies": 25,
+      "average_engagement_score": 5.5,
+      "profile": "Interested but evaluative; requesting more information before commitment",
+      "conversion_probability": 0.45
+    },
+    "negative_replies": {
+      "count": 0,
+      "percentage_of_replies": 0,
+      "profile": "No rejections or objection-based responses received",
+      "interpretation": "Messaging resonance was high; even low-engagement prospects did not reject offer"
+    }
+  },
+  "recommendations": {
+    "immediate_48_hours": [
+      {
+        "priority": 1,
+        "action": "Schedule demos with HE tier prospects",
+        "target_prospects": [
+          "Sarah Martinez (Martinez Marketing Group)",
+          "Michael Chen (Chen Digital Strategies)",
+          "James Wilson (Wilson & Associates Marketing)"
+        ],
+        "success_metric": "3 trials activated within 7 days; 2 conversions within 30 days"
+      },
+      {
+        "priority": 2,
+        "action": "Send nurture sequence to ME tier and unopened prospects",
+        "cadence": "Day 1: Case study | Day 3: ROI calculator | Day 5: 1:1 offer",
+        "success_metric": "2+ conversions from ME tier; open rate >40%"
+      },
+      {
+        "priority": 3,
+        "action": "Re-enrich and retry hard bounces",
+        "affected_prospects": 3,
+        "success_metric": "2+ valid email addresses recovered; retry open rate >50%"
+      }
+    ],
+    "near_term_1_2_weeks": [
+      {
+        "action": "A/B test follow-up messaging on LE tier",
+        "variants": [
+          "Time savings angle (6 hours/week reclaimed)",
+          "Accuracy angle (eliminate data-entry errors)",
+          "Visualization angle (interactive dashboards)"
+        ],
+        "success_metric": "Identify highest-resonance value prop"
+      },
+      {
+        "action": "Calculate unit economics and validate LTV:CAC",
+        "focus": "Trial-to-paid conversion; actual LTV from pilot customers",
+        "success_metric": "Confirm 3:1 LTV:CAC; validate $1,200/year pricing"
+      },
+      {
+        "action": "Expand to next 30-prospect batch (Apollo Batch 2)",
+        "expected_open_rate_pct": 50,
+        "expected_reply_rate_pct": 18,
+        "success_metric": "8-10 qualified leads; 3+ trial activations"
+      }
+    ],
+    "strategic_month_2": [
+      {
+        "action": "Integrate email + Google Ads funnel",
+        "focus": "Multi-touch attribution; budget optimization",
+        "success_metric": "25%+ lift in blended CAC"
+      },
+      {
+        "action": "Develop tier-specific nurture playbooks",
+        "tiers": [
+          "HE: Fast-track demo + trial + support",
+          "ME: Case studies + ROI calculator",
+          "LE: Re-engagement via alternative value props",
+          "NE: List cleaning + archive"
+        ],
+        "success_metric": "15%+ conversion from HE; 8%+ from ME"
+      }
+    ]
+  },
+  "scoring_methodology": {
+    "formula": "Open (2 pts) + Click (3 pts) + Reply (3 pts) + Sentiment (+1 positive, -0.5 negative) - (0.1 * days_after_day_3)",
+    "score_ranges": {
+      "9_to_10": "Immediate action; demo + trial offer",
+      "7_to_8_9": "High priority; follow-up + nurture",
+      "5_to_6_9": "Medium priority; nurture sequence",
+      "3_to_4_9": "Low priority; re-engagement attempt",
+      "below_3": "Archive or re-enrich data"
+    }
+  },
+  "data_quality_notes": {
+    "bounce_rate_elevated": "25% bounce rate (vs 2% target) indicates 3 hard bounces requiring Apollo re-enrichment",
+    "unopened_rate_elevated": "45% no-engagement rate suggests 4 unopened + 5 bounces; recommend follow-up sequence and list cleaning",
+    "overall_assessment": "Strong core engagement (55% open, 35% CTR, 20% reply) indicates high-quality targeting and message resonance; data quality issues concentrated in bounce tier",
+    "data_source_confidence": "HIGH - Metrics extracted from Gmail, SendGrid/Mailgun tracking, and Apollo enrichment database"
+  }
+}

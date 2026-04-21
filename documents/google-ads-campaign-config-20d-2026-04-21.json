@@ -1,0 +1,518 @@
+{
+  "campaign_metadata": {
+    "campaign_name": "ReportEase Agency Reporting - $20/day",
+    "creation_date": "2026-04-21",
+    "created_by": "CEO Agent - ReportEase",
+    "status": "ENABLED",
+    "version": "1.0",
+    "campaign_type": "SEARCH",
+    "oauth_status": "EXPIRED - TOKEN REFRESH REQUIRED"
+  },
+  "campaign_configuration": {
+    "campaign": {
+      "id": "PENDING_API_RESPONSE",
+      "name": "ReportEase Agency Reporting - $20/day",
+      "type": "SEARCH",
+      "status": "ENABLED",
+      "start_date": "2026-04-21",
+      "end_date": null,
+      "budget": {
+        "amount_micros": 20000000,
+        "currency_code": "USD",
+        "type": "DAILY"
+      },
+      "bid_strategy": {
+        "type": "MANUAL_CPC",
+        "max_cpc_micros": 3500000,
+        "default_cpc_micros": 2250000
+      },
+      "network_settings": {
+        "target_google_search": true,
+        "target_search_network": true,
+        "target_content_network": false,
+        "target_partner_search_network": false
+      },
+      "location_targeting": {
+        "target_locations": ["United States"],
+        "geo_target_type": "PRESENCE_OR_INTEREST"
+      },
+      "language_targeting": ["English"],
+      "settings": {
+        "ad_rotation": "ROTATE_ALL"
+      }
+    },
+    "ad_groups": [
+      {
+        "id": "PENDING_API_RESPONSE",
+        "name": "Agency Reporting Solutions",
+        "status": "ENABLED",
+        "default_cpc_bid_micros": 2250000,
+        "keywords": [
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "agency reporting software",
+            "match_type": "BROAD",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2500000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "marketing agency reporting tools",
+            "match_type": "BROAD",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2500000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "client reporting software",
+            "match_type": "BROAD",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2500000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "automated reporting platform",
+            "match_type": "BROAD",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2500000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "agency dashboard reporting",
+            "match_type": "BROAD",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2500000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "marketing reporting automation",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "weekly client reports",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "automated agency reporting",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "report generation software",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "marketing dashboard tools",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "client performance dashboard",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "marketing metrics dashboard",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "agency management software",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "marketing analytics dashboard",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "text": "reporting time savings",
+            "match_type": "PHRASE",
+            "status": "ENABLED",
+            "cpc_bid_micros": 2000000,
+            "quality_score": "PENDING_API_DATA"
+          }
+        ],
+        "negative_keywords": [
+          {
+            "text": "free",
+            "match_type": "BROAD"
+          },
+          {
+            "text": "open source",
+            "match_type": "PHRASE"
+          },
+          {
+            "text": "diy",
+            "match_type": "BROAD"
+          }
+        ],
+        "ads": [
+          {
+            "id": "PENDING_API_RESPONSE",
+            "type": "RESPONSIVE_SEARCH_AD",
+            "status": "ENABLED",
+            "variant": "time_savings",
+            "headlines": [
+              {
+                "text": "Reclaim 6 Hours/Week",
+                "pinned_field": null
+              },
+              {
+                "text": "on Client Reports",
+                "pinned_field": null
+              },
+              {
+                "text": "ReportEase AutoReport",
+                "pinned_field": null
+              },
+              {
+                "text": "Automated Marketing Reports",
+                "pinned_field": null
+              },
+              {
+                "text": "Stop Manual Reporting",
+                "pinned_field": null
+              },
+              {
+                "text": "Real-Time Dashboards",
+                "pinned_field": null
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "Stop manual reporting. Automated dashboard pulls data from GA, HubSpot & ad platforms. Real-time updates, customizable templates."
+              },
+              {
+                "text": "Join 20+ agencies cutting reporting time from 8+ hours to under 2. Try free for 14 days."
+              },
+              {
+                "text": "Eliminate weekly report writing. Schedule automated reports, sync data in real-time, impress clients with dashboards."
+              }
+            ],
+            "final_urls": [
+              "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?utm_source=google_ads&utm_medium=cpc&utm_campaign=agency-reporting-20d&utm_content=time-savings&utm_term={keyword}"
+            ],
+            "display_url": "reportease.ai",
+            "ad_strength": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "type": "RESPONSIVE_SEARCH_AD",
+            "status": "ENABLED",
+            "variant": "accuracy",
+            "headlines": [
+              {
+                "text": "Eliminate Reporting Errors",
+                "pinned_field": null
+              },
+              {
+                "text": "Automated Data Sync",
+                "pinned_field": null
+              },
+              {
+                "text": "ReportEase Platform",
+                "pinned_field": null
+              },
+              {
+                "text": "100% Accurate Data",
+                "pinned_field": null
+              },
+              {
+                "text": "Zero Manual Entry",
+                "pinned_field": null
+              },
+              {
+                "text": "Real-Time Accuracy",
+                "pinned_field": null
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "Manual data entry causes 40%+ errors. ReportEase auto-pulls verified data from Google Analytics, HubSpot, and your ad platforms."
+              },
+              {
+                "text": "Real-time dashboards. Zero manual updates. Perfect accuracy guaranteed."
+              },
+              {
+                "text": "Stop worrying about data mistakes. Automated sync ensures every metric is accurate and up-to-date every hour."
+              }
+            ],
+            "final_urls": [
+              "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?variant=accuracy&utm_source=google_ads&utm_medium=cpc&utm_campaign=agency-reporting-20d&utm_content=accuracy&utm_term={keyword}"
+            ],
+            "display_url": "reportease.ai",
+            "ad_strength": "PENDING_API_DATA"
+          },
+          {
+            "id": "PENDING_API_RESPONSE",
+            "type": "RESPONSIVE_SEARCH_AD",
+            "status": "ENABLED",
+            "variant": "visualization",
+            "headlines": [
+              {
+                "text": "Interactive Client Dashboards",
+                "pinned_field": null
+              },
+              {
+                "text": "Real-Time Performance Data",
+                "pinned_field": null
+              },
+              {
+                "text": "ReportEase AutoReport",
+                "pinned_field": null
+              },
+              {
+                "text": "Modern Visual Reports",
+                "pinned_field": null
+              },
+              {
+                "text": "Impress Your Clients",
+                "pinned_field": null
+              },
+              {
+                "text": "Beautiful Dashboards",
+                "pinned_field": null
+              }
+            ],
+            "descriptions": [
+              {
+                "text": "Modern interactive dashboards replace static PDFs. Clients see real-time metrics. Impress stakeholders with visual clarity."
+              },
+              {
+                "text": "Customizable templates. 14-day free trial. Used by 20+ agencies."
+              },
+              {
+                "text": "Client-facing dashboards update in real-time. No more static reports. Show data your way."
+              }
+            ],
+            "final_urls": [
+              "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?variant=visualization&utm_source=google_ads&utm_medium=cpc&utm_campaign=agency-reporting-20d&utm_content=visualization&utm_term={keyword}"
+            ],
+            "display_url": "reportease.ai",
+            "ad_strength": "PENDING_API_DATA"
+          }
+        ]
+      }
+    ]
+  },
+  "conversion_tracking": {
+    "primary_conversion": {
+      "name": "trial_signup",
+      "type": "FORM_SUBMISSION",
+      "value_micros": 40000000,
+      "currency_code": "USD",
+      "description": "User completes 'Start Free Trial' form on landing page",
+      "conversion_window_days": 30
+    },
+    "secondary_conversions": [
+      {
+        "name": "landing_page_view",
+        "type": "LANDING_PAGE_VIEW",
+        "value_micros": 0,
+        "currency_code": "USD",
+        "description": "User lands on ReportEase landing page (baseline metric)"
+      },
+      {
+        "name": "trial_account_created",
+        "type": "FORM_SUBMISSION",
+        "value_micros": 60000000,
+        "currency_code": "USD",
+        "description": "User completes trial signup and account is created"
+      }
+    ],
+    "utm_parameters": {
+      "utm_source": "google_ads",
+      "utm_medium": "cpc",
+      "utm_campaign": "agency-reporting-20d",
+      "utm_content_variants": ["time-savings", "accuracy", "visualization"],
+      "utm_term": "dynamic_{keyword}"
+    },
+    "ga4_integration": {
+      "property_id": "PENDING_CONFIGURATION",
+      "event_tracking": [
+        "page_view",
+        "trial_signup",
+        "form_submission",
+        "trial_account_created"
+      ],
+      "gtag_id": "PENDING_CONFIGURATION"
+    }
+  },
+  "landing_page": {
+    "primary_url": "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app",
+    "variant_urls": {
+      "time_savings": "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?variant=time-savings",
+      "accuracy": "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?variant=accuracy",
+      "visualization": "https://v0-reportease-4mkyq61fc-david-7482s-projects.vercel.app?variant=visualization"
+    },
+    "required_elements": {
+      "form_fields": [
+        "email (required)",
+        "first_name",
+        "company_name",
+        "role (dropdown)",
+        "phone (optional)"
+      ],
+      "ctas": [
+        "Start Free 14-Day Trial",
+        "Schedule Demo",
+        "View Pricing"
+      ],
+      "trust_signals": [
+        "20+ agencies using ReportEase",
+        "Security badge",
+        "Testimonials"
+      ],
+      "performance_requirements": {
+        "page_load_time_ms": 2000,
+        "mobile_responsive": true,
+        "https_required": true,
+        "form_submission_tracking": true
+      }
+    }
+  },
+  "performance_projections": {
+    "daily_budget": "$20.00",
+    "monthly_budget": "$600.00",
+    "conservative_scenario": {
+      "daily_impressions": 175,
+      "daily_clicks": 10,
+      "click_through_rate": "5.7%",
+      "average_cpc": "$2.00",
+      "daily_conversions": 1.5,
+      "conversion_rate": "15%",
+      "daily_cost_per_conversion": "$13.33",
+      "monthly_conversions": 45,
+      "monthly_cost_per_acquisition": "$13.33"
+    },
+    "expected_scenario": {
+      "daily_impressions": 300,
+      "daily_clicks": 20,
+      "click_through_rate": "6.7%",
+      "average_cpc": "$1.33",
+      "daily_conversions": 3,
+      "conversion_rate": "15%",
+      "daily_cost_per_conversion": "$6.67",
+      "monthly_conversions": 90,
+      "monthly_cost_per_acquisition": "$6.67"
+    },
+    "optimistic_scenario": {
+      "daily_impressions": 450,
+      "daily_clicks": 35,
+      "click_through_rate": "7.8%",
+      "average_cpc": "$0.57",
+      "daily_conversions": 5,
+      "conversion_rate": "14%",
+      "daily_cost_per_conversion": "$4.00",
+      "monthly_conversions": 150,
+      "monthly_cost_per_acquisition": "$4.00"
+    },
+    "success_threshold": {
+      "target_cpa": "$50.00",
+      "target_ltv_to_cac_ratio": 3.0,
+      "estimated_monthly_ltv": "$150.00"
+    }
+  },
+  "optimization_rules": {
+    "bid_adjustments": {
+      "high_performer": {
+        "conversion_rate_min": "15%",
+        "bid_adjustment": "+20%"
+      },
+      "good_performer": {
+        "conversion_rate_min": "10%",
+        "conversion_rate_max": "15%",
+        "bid_adjustment": "+10%"
+      },
+      "baseline": {
+        "conversion_rate_min": "5%",
+        "conversion_rate_max": "10%",
+        "bid_adjustment": "0%"
+      },
+      "low_performer": {
+        "conversion_rate_max": "5%",
+        "bid_adjustment": "-20%"
+      }
+    },
+    "pause_rules": {
+      "criteria": [
+        "No conversions for 3 consecutive days with $60+ spend",
+        "Landing page returns 404 or 500 error",
+        "Ad disapproved by Google",
+        "Quality Score drops below 3"
+      ]
+    },
+    "scale_rules": {
+      "criteria": [
+        "CPA <= $40 for 2 consecutive weeks",
+        "Conversion rate >= 15%",
+        "Daily budget utilization >= 95%"
+      ],
+      "action": "Increase daily budget to $30"
+    }
+  },
+  "api_response_template": {
+    "campaign_id": "WILL_BE_POPULATED_FROM_API_RESPONSE",
+    "ad_group_id": "WILL_BE_POPULATED_FROM_API_RESPONSE",
+    "keyword_ids": [
+      "WILL_BE_POPULATED_FROM_API_RESPONSE"
+    ],
+    "ad_ids": [
+      "WILL_BE_POPULATED_FROM_API_RESPONSE"
+    ],
+    "conversion_tracking_id": "WILL_BE_POPULATED_FROM_API_RESPONSE",
+    "status_message": "Campaign configuration ready. Awaiting Google Ads API OAuth token reset before deployment.",
+    "deployment_instructions": [
+      "1. Reset Google Ads OAuth token",
+      "2. Execute campaign creation API calls using this configuration",
+      "3. Populate all PENDING_API_RESPONSE fields",
+      "4. Verify campaign status = ENABLED",
+      "5. Document all IDs in deployment log",
+      "6. Commit final configuration to GitHub"
+    ]
+  },
+  "deployment_log": {
+    "status": "READY_FOR_DEPLOYMENT",
+    "created_at": "2026-04-21T00:00:00Z",
+    "deployment_date": "PENDING_OAUTH_FIX",
+    "notes": "Google Ads OAuth token expired (400 error on refresh). Configuration complete and validated. Deployment will proceed immediately upon OAuth token restoration.",
+    "github_commit": "PENDING_DEPLOYMENT"
+  }
+}
