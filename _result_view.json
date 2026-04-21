@@ -1,0 +1,62 @@
+{
+  "view_type": "report",
+  "headline": "Competitive analysis complete: AutoReport scores 89/100 vs. 10 competitors; identified 5 differentiation opportunities",
+  "primary_stat": {
+    "label": "AutoReport Competitive Score",
+    "value": "89/100"
+  },
+  "highlights": [
+    "Analyzed 10 competitors across 7 dimensions (ease of use, speed, integrations, pricing, visualization, automation, support)",
+    "Whatagraph (79.5/100) is closest competitor; AutoReport wins on agency-specific workflows, customization, and transparency",
+    "5 defensible differentiation opportunities identified: (1) fastest setup for non-technical users, (2) multi-channel consolidation templates, (3) error-proof data validation, (4) agency operations automation, (5) transparent pricing",
+    "Core competitive advantage: AutoReport owns 'end-to-end agency reporting workflow' that no competitor fully addresses",
+    "Positioning opportunity: 'The operating system for agency reporting' — consolidates data, dashboards, team coordination, and billing",
+    "Time savings advantage: 5-minute setup vs. Whatagraph's 30 minutes and Supermetrics' 4-6 hours",
+    "Market gaps identified: Pre-built multi-channel templates (no competitor has them), accuracy SLA (none offered), transparent ROI pricing (all competitors opaque)"
+  ],
+  "links": [
+    {
+      "label": "Read Full Competitive Analysis",
+      "url": "documents/competitive_analysis_full.md"
+    },
+    {
+      "label": "View Positioning Matrix CSV",
+      "url": "documents/positioning_matrix.csv"
+    },
+    {
+      "label": "Read Differentiation Opportunities Summary",
+      "url": "documents/differentiation_opportunities_summary.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Build landing page with competitive positioning comparison",
+      "task_template": "gtm_content_creation",
+      "args": {
+        "content_type": "landing_page_competitor_comparison",
+        "product": "AutoReport",
+        "competitors": ["Whatagraph", "DataBox", "Supermetrics"],
+        "focus_dimensions": ["ease_of_use", "reporting_speed", "price_value", "automation"]
+      }
+    },
+    {
+      "label": "Create ROI calculator with transparent pricing model",
+      "task_template": "product_feature_build",
+      "args": {
+        "feature": "interactive_roi_calculator",
+        "inputs": ["team_size", "hours_saved_per_week", "hourly_rate", "num_clients"],
+        "outputs": ["annual_savings", "roi_multiple", "payback_period", "vs_competitor_comparison"]
+      }
+    },
+    {
+      "label": "Validate positioning with 10 cold outreach emails",
+      "task_template": "outreach_campaign",
+      "args": {
+        "target_count": 10,
+        "persona": "marketing_manager_at_digital_agency",
+        "messaging_angle": "fastest_report_setup_plus_multi_channel_consolidation",
+        "call_to_action": "15_minute_positioning_validation_call"
+      }
+    }
+  ]
+}
