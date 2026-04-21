@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReportEase Pricing Survey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-section.completed {
+            opacity: 0.6;
+        }
+        
+        .question-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            margin-bottom: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 12px;
+        }
+        
+        .radio-option,
+        .checkbox-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 12px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        
+        .radio-option:hover,
+        .checkbox-option:hover {
+            background-color: #f8f9ff;
+            border-color: #667eea;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 12px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .radio-label,
+        .checkbox-label {
+            cursor: pointer;
+            flex: 1;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button.submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        button.submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        button.submit:active {
+            transform: translateY(0);
+        }
+        
+        button.reset {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        button.reset:hover {
+            background: #e0e0e0;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        .helper-text {
+            font-size: 12px;
+            color: #999;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ReportEase Pricing Survey</h1>
+            <p>Help us understand your reporting challenges and pricing preferences. Your feedback is essential for building the perfect solution for your team.</p>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        
+        <div id="successMessage" class="success-message">
+            ✓ Thank you! Your response has been recorded.
+        </div>
+        
+        <div id="errorMessage" class="error-message">
+            ✗ There was an error submitting your response. Please try again.
+        </div>
+        
+        <form id="surveyForm">
+            <!-- Q1: Reporting Time -->
+            <div class="form-section" id="q1Section">
+                <label>
+                    <span class="question-number">1</span>
+                    How much time does your team currently spend on weekly client reporting?
+                    <span class="required">*</span>
+                </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="q1_a" name="reportingTime" value="1-3 hours">
+                        <span class="radio-label">1-3 hours per week</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q1_b" name="reportingTime" value="4-6 hours">
+                        <span class="radio-label">4-6 hours per week</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q1_c" name="reportingTime" value="7-10 hours">
+                        <span class="radio-label">7-10 hours per week</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q1_d" name="reportingTime" value="10+ hours">
+                        <span class="radio-label">10+ hours per week</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Q2: Pain Point -->
+            <div class="form-section" id="q2Section">
+                <label>
+                    <span class="question-number">2</span>
+                    What's your biggest pain point with the current reporting process?
+                    <span class="required">*</span>
+                </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="q2_a" name="painPoint" value="Time-consuming manual data collection">
+                        <span class="radio-label">Time-consuming manual data collection</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q2_b" name="painPoint" value="Errors and inconsistencies in reports">
+                        <span class="radio-label">Errors and inconsistencies in reports</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q2_c" name="painPoint" value="Difficulty creating visualizations clients understand">
+                        <span class="radio-label">Difficulty creating visualizations clients understand</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q2_d" name="painPoint" value="Hard to customize reports for different clients">
+                        <span class="radio-label">Hard to customize reports for different clients</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q2_e" name="painPoint" value="Managing multiple data sources">
+                        <span class="radio-label">Managing multiple data sources (GA, ads, email, etc.)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Q3: Bargain Price -->
+            <div class="form-section" id="q3Section">
+                <label>
+                    <span class="question-number">3</span>
+                    At what price would you consider ReportEase a bargain (excellent value)?
+                    <span class="required">*</span>
+                </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="q3_a" name="bargainPrice" value="Under $500/year">
+                        <span class="radio-label">Under $500/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q3_b" name="bargainPrice" value="$500-800/year">
+                        <span class="radio-label">$500-$800/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q3_c" name="bargainPrice" value="$800-1200/year">
+                        <span class="radio-label">$800-$1,200/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q3_d" name="bargainPrice" value="$1200-1800/year">
+                        <span class="radio-label">$1,200-$1,800/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q3_e" name="bargainPrice" value="Over $1800/year">
+                        <span class="radio-label">Over $1,800/year</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Q4: Too Expensive Price -->
+            <div class="form-section" id="q4Section">
+                <label>
+                    <span class="question-number">4</span>
+                    At what price would you consider ReportEase too expensive (not worth it)?
+                    <span class="required">*</span>
+                </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="q4_a" name="expensivePrice" value="$500/year or less">
+                        <span class="radio-label">$500/year or less</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q4_b" name="expensivePrice" value="$500-1000/year">
+                        <span class="radio-label">$500-$1,000/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q4_c" name="expensivePrice" value="$1000-1800/year">
+                        <span class="radio-label">$1,000-$1,800/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q4_d" name="expensivePrice" value="$1800-2500/year">
+                        <span class="radio-label">$1,800-$2,500/year</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q4_e" name="expensivePrice" value="Over $2500/year">
+                        <span class="radio-label">Over $2,500/year</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Q5: Pricing Choice -->
+            <div class="form-section" id="q5Section">
+                <label>
+                    <span class="question-number">5</span>
+                    Which of these three pricing options would you choose?
+                    <span class="required">*</span>
+                </label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="q5_a" name="pricingChoice" value="$800/year">
+                        <span class="radio-label"><strong>$800/year</strong> - Basic tier with essential reporting features</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q5_b" name="pricingChoice" value="$1200/year">
+                        <span class="radio-label"><strong>$1,200/year</strong> - Standard tier with all integrations and custom templates</span>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="q5_c" name="pricingChoice" value="$1800/year">
+                        <span class="radio-label"><strong>$1,800/year</strong> - Premium tier with white-label + dedicated support</span>
+                    </div>
+                </div>
+                <div class="helper-text">All options include a 14-day free trial and email support.</div>
+            </div>
+            
+            <!-- Contact Info (Optional) -->
+            <div class="form-section">
+                <label>
+                    <span class="question-number">6</span>
+                    Your email (optional - for follow-up questions)
+                </label>
+                <input type="email" name="email" placeholder="your@company.com">
+                <div class="helper-text">We'll only use this to ask clarification questions about your responses.</div>
+            </div>
+            
+            <!-- Submit -->
+            <div class="button-group">
+                <button type="reset" class="reset">Clear</button>
+                <button type="submit" class="submit">Submit Survey</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        const form = document.getElementById('surveyForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const progressFill = document.getElementById('progressFill');
+        
+        // Update progress bar as user fills form
+        function updateProgress() {
+            const inputs = form.querySelectorAll('input[type="radio"]:checked');
+            const total = form.querySelectorAll('input[type="radio"]').length / 5; // 5 questions with radio buttons
+            const progress = (inputs.length / 5) * 100;
+            progressFill.style.width = Math.min(progress, 95) + '%';
+        }
+        
+        form.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.addEventListener('change', updateProgress);
+        });
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(form);
+            const data = {
+                timestamp: new Date().toISOString(),
+                reportingTime: formData.get('reportingTime'),
+                painPoint: formData.get('painPoint'),
+                bargainPrice: formData.get('bargainPrice'),
+                expensivePrice: formData.get('expensivePrice'),
+                pricingChoice: formData.get('pricingChoice'),
+                email: formData.get('email') || 'anonymous'
+            };
+            
+            try {
+                // Send to backend
+                const response = await fetch('/api/survey', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    form.style.display = 'none';
+                    progressFill.style.width = '100%';
+                } else {
+                    errorMessage.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
