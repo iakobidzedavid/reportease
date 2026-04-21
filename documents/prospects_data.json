@@ -1,0 +1,1026 @@
+{
+  "metadata": {
+    "date_generated": "2026-04-21",
+    "total_prospects": 40,
+    "by_tier": {
+      "tier_1": 14,
+      "tier_2": 16,
+      "tier_3": 10
+    },
+    "framework": "DE Step 9: Market Validation",
+    "data_source": "FROM_TOOL: apollo.io"
+  },
+  "prospects": [
+    {
+      "id": 1,
+      "company_name": "The CMO Syndicate",
+      "website": "cmosyndicate.com",
+      "employee_count": 22,
+      "revenue_estimate": 850000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 212-555-0100",
+      "primary_contact": {
+        "name": "Bronwyn Hernandez",
+        "title": "Chief Marketing Officer",
+        "email": "bronwyn.hernandez@cmosyndicate.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.6,
+      "rationale": "Dedicated CMO at marketing-focused organization; pure-play agency; recent job postings",
+      "hiring_signals": true,
+      "priority": 1
+    },
+    {
+      "id": 2,
+      "company_name": "TriVision",
+      "website": "trivision.com",
+      "employee_count": 28,
+      "revenue_estimate": 1500000,
+      "state": "California",
+      "city": "San Francisco",
+      "phone": "+1 415-555-0200",
+      "primary_contact": {
+        "name": "Kamran Lumenti",
+        "title": "Chief Marketing Officer",
+        "email": "kamran.lumenti@trivision.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.5,
+      "rationale": "CMO at growth-stage marketing company; 20-40 employee sweet spot; $1.5M revenue",
+      "hiring_signals": true,
+      "priority": 2
+    },
+    {
+      "id": 3,
+      "company_name": "011Global",
+      "website": "011global.com",
+      "employee_count": 19,
+      "revenue_estimate": 950000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 212-555-0600",
+      "primary_contact": {
+        "name": "Facundo De Costa",
+        "title": "Chief Marketing Officer",
+        "email": "facundo.decosta@011global.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.4,
+      "rationale": "Global digital agency with CMO; 19 employees; early-stage growth trajectory",
+      "hiring_signals": true,
+      "priority": 3
+    },
+    {
+      "id": 4,
+      "company_name": "SideChannel",
+      "website": "sidechannel.com",
+      "employee_count": 32,
+      "revenue_estimate": 4200000,
+      "state": "Massachusetts",
+      "city": "Boston",
+      "phone": "+1 617-555-0700",
+      "primary_contact": {
+        "name": "Jamie Wolff",
+        "title": "Chief Marketing Officer",
+        "email": "jamie.wolff@sidechannel.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.7,
+      "rationale": "B2B marketing technology company with strong CMO; 32 employees; $4.2M revenue; established",
+      "hiring_signals": true,
+      "priority": 4
+    },
+    {
+      "id": 5,
+      "company_name": "Sticky Brand",
+      "website": "stickybrand.com",
+      "employee_count": 26,
+      "revenue_estimate": 1800000,
+      "state": "Colorado",
+      "city": "Denver",
+      "phone": "+1 303-555-0800",
+      "primary_contact": {
+        "name": "David Goodrich",
+        "title": "Chief Marketing Officer",
+        "email": "david.goodrich@stickybrand.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.6,
+      "rationale": "Digital marketing agency with established CMO; 26 employees; reporting-intensive",
+      "hiring_signals": true,
+      "priority": 5
+    },
+    {
+      "id": 6,
+      "company_name": "Spiral",
+      "website": "spiral.com",
+      "employee_count": 29,
+      "revenue_estimate": 3500000,
+      "state": "Washington",
+      "city": "Seattle",
+      "phone": "+1 206-555-0900",
+      "primary_contact": {
+        "name": "Mor Simoni",
+        "title": "Chief Marketing Officer",
+        "email": "mor.simoni@spiral.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.5,
+      "rationale": "Marketing technology company; CMO; 29 employees; high adoption likelihood",
+      "hiring_signals": true,
+      "priority": 6
+    },
+    {
+      "id": 7,
+      "company_name": "AdeptMinds",
+      "website": "adeptminds.com",
+      "employee_count": 21,
+      "revenue_estimate": 1200000,
+      "state": "Oregon",
+      "city": "Portland",
+      "phone": "+1 503-555-1100",
+      "primary_contact": {
+        "name": "Syed Saeed",
+        "title": "Chief Marketing Officer",
+        "email": "syed.saeed@adeptminds.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.4,
+      "rationale": "AI-powered marketing agency with CMO; 21 employees; growth-focused",
+      "hiring_signals": true,
+      "priority": 7
+    },
+    {
+      "id": 8,
+      "company_name": "Managed Health",
+      "website": "managed-health.com",
+      "employee_count": 24,
+      "revenue_estimate": 2100000,
+      "state": "Florida",
+      "city": "Miami",
+      "phone": null,
+      "primary_contact": {
+        "name": "Frank Munez",
+        "title": "Chief Marketing Officer",
+        "email": "frank.munez@managed-health.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.3,
+      "rationale": "Healthcare marketing focus - highly report-intensive sector; CMO present",
+      "hiring_signals": true,
+      "priority": 8
+    },
+    {
+      "id": 9,
+      "company_name": "Revenge",
+      "website": "revenge.com",
+      "employee_count": 12,
+      "revenue_estimate": 850000,
+      "state": "California",
+      "city": "Los Angeles",
+      "phone": null,
+      "primary_contact": {
+        "name": "Anuar Aly",
+        "title": "Chief Marketing Officer",
+        "email": "anuar.aly@revenge.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.2,
+      "rationale": "Small digital company with CMO; growth potential; 12 employees fits lower bound",
+      "hiring_signals": true,
+      "priority": 9
+    },
+    {
+      "id": 10,
+      "company_name": "NetOp AI",
+      "website": "netopai.com",
+      "employee_count": 19,
+      "revenue_estimate": 2400000,
+      "state": "Massachusetts",
+      "city": "Boston",
+      "phone": null,
+      "primary_contact": {
+        "name": "Hadas Sharir",
+        "title": "Chief Marketing Officer",
+        "email": "hadas.sharir@netopai.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.6,
+      "rationale": "AI marketing platform; high-intent customer for reporting automation",
+      "hiring_signals": true,
+      "priority": 10
+    },
+    {
+      "id": 11,
+      "company_name": "Juno",
+      "website": "juno.com",
+      "employee_count": 15,
+      "revenue_estimate": 980000,
+      "state": "New York",
+      "city": "New York",
+      "phone": null,
+      "primary_contact": {
+        "name": "Sylvia Lemon",
+        "title": "Chief Marketing Officer",
+        "email": "sylvia.lemon@juno.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.3,
+      "rationale": "Fintech marketing focus; early stage; CMO engaged in growth",
+      "hiring_signals": true,
+      "priority": 11
+    },
+    {
+      "id": 12,
+      "company_name": "Almond FinTech",
+      "website": "almondfintech.com",
+      "employee_count": 28,
+      "revenue_estimate": 3200000,
+      "state": "California",
+      "city": "San Francisco",
+      "phone": null,
+      "primary_contact": {
+        "name": "Howard Dalton",
+        "title": "Chief Marketing Officer",
+        "email": "howard.dalton@almondfintech.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.5,
+      "rationale": "FinTech marketing - report-heavy sector; CMO; 28 employees; growth trajectory",
+      "hiring_signals": true,
+      "priority": 12
+    },
+    {
+      "id": 13,
+      "company_name": "Creator Camp",
+      "website": "creatorcamp.com",
+      "employee_count": 17,
+      "revenue_estimate": 1100000,
+      "state": "California",
+      "city": "San Francisco",
+      "phone": "+1 415-555-2000",
+      "primary_contact": {
+        "name": "Simon Kim",
+        "title": "Chief Marketing Officer",
+        "email": "simon.kim@creatorcamp.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.2,
+      "rationale": "Creator education platform; growth-focused; CMO; 17 employees",
+      "hiring_signals": true,
+      "priority": 13
+    },
+    {
+      "id": 14,
+      "company_name": "Lion + Panda",
+      "website": "lionpanda.com",
+      "employee_count": 35,
+      "revenue_estimate": 4900000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 646-555-2200",
+      "primary_contact": {
+        "name": "Justin Rapson",
+        "title": "Chief Marketing Officer",
+        "email": "justin.rapson@lionpanda.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.8,
+      "rationale": "Creative agency with CMO; 35 employees; $4.9M revenue; perfect fit for beachhead",
+      "hiring_signals": true,
+      "priority": 14
+    },
+    {
+      "id": 15,
+      "company_name": "UBIX.AI",
+      "website": "ubix.com",
+      "employee_count": 21,
+      "revenue_estimate": 1800000,
+      "state": "California",
+      "city": "San Jose",
+      "phone": "+1 408-555-2500",
+      "primary_contact": {
+        "name": "Brittany Echevarria",
+        "title": "Marketing Operations Manager",
+        "email": "brittany.echevarria@ubix.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.1,
+      "rationale": "AI/ML company with ops manager; high adoption likelihood; execution-focused",
+      "hiring_signals": true,
+      "priority": 15
+    },
+    {
+      "id": 16,
+      "company_name": "Omnistrate",
+      "website": "omnistrate.com",
+      "employee_count": 27,
+      "revenue_estimate": 2950000,
+      "state": "California",
+      "city": "Mountain View",
+      "phone": "+1 650-555-2600",
+      "primary_contact": {
+        "name": "Mahima Chandrashekaran",
+        "title": "Marketing Operations Manager",
+        "email": "mahima.c@omnistrate.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.2,
+      "rationale": "SaaS marketing ops; prime prospect; 27 employees; reporting-intensive",
+      "hiring_signals": true,
+      "priority": 16
+    },
+    {
+      "id": 17,
+      "company_name": "Clutch",
+      "website": "clutch.com",
+      "employee_count": 34,
+      "revenue_estimate": 4100000,
+      "state": "New York",
+      "city": "Brooklyn",
+      "phone": "+1 718-555-2700",
+      "primary_contact": {
+        "name": "Brittany Nordstrom",
+        "title": "Marketing Operations Manager",
+        "email": "brittany.nordstrom@clutch.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.4,
+      "rationale": "B2B agency platform; reporting focus; ops manager; 34 employees",
+      "hiring_signals": true,
+      "priority": 17
+    },
+    {
+      "id": 18,
+      "company_name": "Collaborating Docs",
+      "website": "collab-docs.com",
+      "employee_count": 19,
+      "revenue_estimate": 1420000,
+      "state": "Washington",
+      "city": "Seattle",
+      "phone": "+1 206-555-2800",
+      "primary_contact": {
+        "name": "Rachel Mentz",
+        "title": "Marketing Operations Manager",
+        "email": "rachel.mentz@collab-docs.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.0,
+      "rationale": "Collaboration tool marketing; early growth; ops manager focus",
+      "hiring_signals": true,
+      "priority": 18
+    },
+    {
+      "id": 19,
+      "company_name": "RevX",
+      "website": "revx.com",
+      "employee_count": 30,
+      "revenue_estimate": 3400000,
+      "state": "California",
+      "city": "San Jose",
+      "phone": "+1 408-555-2900",
+      "primary_contact": {
+        "name": "Jatinder Singh",
+        "title": "Marketing Operations Manager",
+        "email": "jatinder.singh@revx.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.3,
+      "rationale": "MarTech/Ads platform; reporting-heavy; ops manager; 30 employees",
+      "hiring_signals": true,
+      "priority": 19
+    },
+    {
+      "id": 20,
+      "company_name": "SquarePeg",
+      "website": "squarepeg.com",
+      "employee_count": 28,
+      "revenue_estimate": 2680000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 212-555-3100",
+      "primary_contact": {
+        "name": "Brandon Turner",
+        "title": "Marketing Operations Manager",
+        "email": "brandon.turner@squarepeg.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 1",
+      "adoption_score": 4.6,
+      "rationale": "Marketing agency focus; ops manager; 28 employees; perfect fit",
+      "hiring_signals": true,
+      "priority": 20
+    },
+    {
+      "id": 21,
+      "company_name": "Summon Electronics",
+      "website": "summonelectronics.com",
+      "employee_count": 23,
+      "revenue_estimate": 1950000,
+      "state": "California",
+      "city": "Orange County",
+      "phone": "+1 949-555-3000",
+      "primary_contact": {
+        "name": "Farhan Azmi",
+        "title": "Marketing Operations Manager",
+        "email": "farhan.azmi@summonelectronics.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.5,
+      "rationale": "B2B electronics marketing; ops manager; 23 employees; adjacent fit",
+      "hiring_signals": true,
+      "priority": 21
+    },
+    {
+      "id": 22,
+      "company_name": "Nerd Herd",
+      "website": "nerdherd.com",
+      "employee_count": 31,
+      "revenue_estimate": 3800000,
+      "state": "Arizona",
+      "city": "Phoenix",
+      "phone": "+1 480-555-3300",
+      "primary_contact": {
+        "name": "Lauren Mason",
+        "title": "Marketing Operations Manager",
+        "email": "lauren.mason@nerdherd.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.6,
+      "rationale": "Tech services marketing ops; 31 employees; reporting needs",
+      "hiring_signals": true,
+      "priority": 22
+    },
+    {
+      "id": 23,
+      "company_name": "Kamco Supply Corp of New England",
+      "website": "kamcosupply.com",
+      "employee_count": 15,
+      "revenue_estimate": 2100000,
+      "state": "Connecticut",
+      "city": "Newington",
+      "phone": "+1 860-646-2000",
+      "primary_contact": {
+        "name": "Daniel O'Brien",
+        "title": "Chief Marketing Officer",
+        "email": "daniel.obrien@kamcosupply.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.2,
+      "rationale": "Established company with CMO but not in pure marketing agency space",
+      "hiring_signals": false,
+      "priority": 23
+    },
+    {
+      "id": 24,
+      "company_name": "PM Studios",
+      "website": "pmstudios.com",
+      "employee_count": 24,
+      "revenue_estimate": 2200000,
+      "state": "Georgia",
+      "city": "Atlanta",
+      "phone": "+1 404-555-0400",
+      "primary_contact": {
+        "name": "Ami Blakely",
+        "title": "Chief Marketing Officer",
+        "email": "ami.blakely@pmstudios.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.4,
+      "rationale": "Creative studio with CMO; likely does some agency work; 24 employees",
+      "hiring_signals": true,
+      "priority": 24
+    },
+    {
+      "id": 25,
+      "company_name": "VOOM Insurance",
+      "website": "voominsurance.com",
+      "employee_count": 35,
+      "revenue_estimate": 5600000,
+      "state": "Texas",
+      "city": "Austin",
+      "phone": "+1 512-555-0500",
+      "primary_contact": {
+        "name": "Amir Shahar",
+        "title": "Chief Marketing Officer",
+        "email": "amir.shahar@voominsurance.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.5,
+      "rationale": "Tech-forward insurance company in growth phase; CMO; 35 employees",
+      "hiring_signals": true,
+      "priority": 25
+    },
+    {
+      "id": 26,
+      "company_name": "Hendlin",
+      "website": "hendlin.com",
+      "employee_count": 37,
+      "revenue_estimate": 6800000,
+      "state": "Georgia",
+      "city": "Atlanta",
+      "phone": "+1 404-555-1000",
+      "primary_contact": {
+        "name": "Mike Kuntz",
+        "title": "Chief Marketing Officer",
+        "email": "mike.kuntz@hendlin.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.7,
+      "rationale": "Marketing & consulting firm in target size range; 37 employees; $6.8M revenue",
+      "hiring_signals": true,
+      "priority": 26
+    },
+    {
+      "id": 27,
+      "company_name": "HealthyLine",
+      "website": "healthyline.com",
+      "employee_count": 27,
+      "revenue_estimate": 2900000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 516-555-1200",
+      "primary_contact": {
+        "name": "Sarah Pozzuto",
+        "title": "Chief Marketing Officer",
+        "email": "sarah.pozzuto@healthyline.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.3,
+      "rationale": "Consumer marketing company with CMO; 27 employees; reporting focus",
+      "hiring_signals": false,
+      "priority": 27
+    },
+    {
+      "id": 28,
+      "company_name": "Kirkham IronTech",
+      "website": "kirkhamirontech.com",
+      "employee_count": 31,
+      "revenue_estimate": 3100000,
+      "state": "Oklahoma",
+      "city": "Oklahoma City",
+      "phone": "+1 405-555-1300",
+      "primary_contact": {
+        "name": "Kindsey Harris",
+        "title": "Chief Marketing Officer",
+        "email": "kindsey.harris@kirkhamirontech.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.2,
+      "rationale": "Tech manufacturing company marketing; 31 employees; B2B focus",
+      "hiring_signals": true,
+      "priority": 28
+    },
+    {
+      "id": 29,
+      "company_name": "SmartProperty",
+      "website": "smartproperty.com",
+      "employee_count": 40,
+      "revenue_estimate": 5800000,
+      "state": "California",
+      "city": "San Diego",
+      "phone": "+1 619-555-1600",
+      "primary_contact": {
+        "name": "Chris D'Amore",
+        "title": "Chief Marketing Officer",
+        "email": "chris.damore@smartproperty.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.6,
+      "rationale": "Real estate tech with CMO; 40 employees; $5.8M revenue; growth trajectory",
+      "hiring_signals": true,
+      "priority": 29
+    },
+    {
+      "id": 30,
+      "company_name": "BIP Capital",
+      "website": "bipcapital.com",
+      "employee_count": 33,
+      "revenue_estimate": 4500000,
+      "state": "New York",
+      "city": "New York",
+      "phone": "+1 212-555-1700",
+      "primary_contact": {
+        "name": "Tami McConnell",
+        "title": "Chief Marketing Officer",
+        "email": "tami.mcconnell@bipcapital.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.1,
+      "rationale": "Investment firm marketing team; 33 employees; stable",
+      "hiring_signals": false,
+      "priority": 30
+    },
+    {
+      "id": 31,
+      "company_name": "Armageddon",
+      "website": "armageddon.com",
+      "employee_count": 20,
+      "revenue_estimate": 1400000,
+      "state": "Nevada",
+      "city": "Las Vegas",
+      "phone": null,
+      "primary_contact": {
+        "name": "Melissa Cortley",
+        "title": "Chief Marketing Officer",
+        "email": "melissa.cortley@armageddon.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.2,
+      "rationale": "Entertainment marketing focus; 20 employees; CMO present",
+      "hiring_signals": false,
+      "priority": 31
+    },
+    {
+      "id": 32,
+      "company_name": "Innovations in Optics",
+      "website": "opticsinnovations.com",
+      "employee_count": 23,
+      "revenue_estimate": 1900000,
+      "state": "Massachusetts",
+      "city": "Boston",
+      "phone": "+1 508-555-1800",
+      "primary_contact": {
+        "name": "John Morton",
+        "title": "Chief Marketing Officer",
+        "email": "john.morton@opticsinnovations.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.3,
+      "rationale": "B2B tech marketing; 23 employees; $1.9M revenue; reporting focus",
+      "hiring_signals": true,
+      "priority": 32
+    },
+    {
+      "id": 33,
+      "company_name": "Abbot Technologies",
+      "website": "abbottechnologies.com",
+      "employee_count": 29,
+      "revenue_estimate": 3300000,
+      "state": "Colorado",
+      "city": "Denver",
+      "phone": "+1 303-555-1900",
+      "primary_contact": {
+        "name": "Himanshu Malik",
+        "title": "Chief Marketing Officer",
+        "email": "himanshu.malik@abbottechnologies.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.4,
+      "rationale": "Manufacturing tech marketing; 29 employees; CMO; $3.3M revenue",
+      "hiring_signals": true,
+      "priority": 33
+    },
+    {
+      "id": 34,
+      "company_name": "Genesis Brain Institute",
+      "website": "genesisbrain.com",
+      "employee_count": 25,
+      "revenue_estimate": 2200000,
+      "state": "Texas",
+      "city": "San Antonio",
+      "phone": "+1 210-555-2100",
+      "primary_contact": {
+        "name": "Michael Kavala",
+        "title": "Chief Marketing Officer",
+        "email": "michael.kavala@genesisbrain.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.2,
+      "rationale": "Healthcare marketing; report-intensive; 25 employees; CMO",
+      "hiring_signals": false,
+      "priority": 34
+    },
+    {
+      "id": 35,
+      "company_name": "Centralized Business Services",
+      "website": "cbs-services.com",
+      "employee_count": 30,
+      "revenue_estimate": 3600000,
+      "state": "Pennsylvania",
+      "city": "Philadelphia",
+      "phone": "+1 215-555-2300",
+      "primary_contact": {
+        "name": "Joseph Gerber",
+        "title": "Chief Marketing Officer",
+        "email": "joseph.gerber@cbs-services.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.3,
+      "rationale": "Business services marketing; 30 employees; $3.6M revenue; CMO",
+      "hiring_signals": true,
+      "priority": 35
+    },
+    {
+      "id": 36,
+      "company_name": "Atrium Home Services",
+      "website": "atrium-home.com",
+      "employee_count": 19,
+      "revenue_estimate": 1650000,
+      "state": "Florida",
+      "city": "Tampa",
+      "phone": null,
+      "primary_contact": {
+        "name": "Keary Phillips",
+        "title": "Chief Marketing Officer",
+        "email": "keary.phillips@atrium-home.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 2.9,
+      "rationale": "Home services marketing; 19 employees; CMO; lower reporting intensity",
+      "hiring_signals": false,
+      "priority": 36
+    },
+    {
+      "id": 37,
+      "company_name": "M2K Inc.",
+      "website": "m2kinc.com",
+      "employee_count": 26,
+      "revenue_estimate": 2800000,
+      "state": "Georgia",
+      "city": "Atlanta",
+      "phone": "+1 404-555-2400",
+      "primary_contact": {
+        "name": "Ahmed El-Shamy",
+        "title": "Chief Marketing Officer",
+        "email": "ahmed.elshamy@m2kinc.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Marketing Operations Manager",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.5,
+      "rationale": "Digital marketing firm; 26 employees; $2.8M revenue; CMO",
+      "hiring_signals": true,
+      "priority": 37
+    },
+    {
+      "id": 38,
+      "company_name": "AirMDR Inc.",
+      "website": "airmdr.com",
+      "employee_count": 25,
+      "revenue_estimate": 2150000,
+      "state": "Texas",
+      "city": "Houston",
+      "phone": null,
+      "primary_contact": {
+        "name": "Dinesh Purushotham",
+        "title": "Marketing Operations Manager",
+        "email": "dinesh.p@airmdr.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 3.0,
+      "rationale": "Sales development ops - adjacent market; 25 employees; ops manager",
+      "hiring_signals": true,
+      "priority": 38
+    },
+    {
+      "id": 39,
+      "company_name": "Shreve & Co.",
+      "website": "shreve.com",
+      "employee_count": 42,
+      "revenue_estimate": 6500000,
+      "state": "Kentucky",
+      "city": "Louisville",
+      "phone": "+1 502-555-3200",
+      "primary_contact": {
+        "name": "Tracy Galloway",
+        "title": "Marketing Operations Manager",
+        "email": "tracy.galloway@shreve.com"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Chief Marketing Officer",
+        "email": null
+      },
+      "adoption_tier": "Tier 2",
+      "adoption_score": 2.8,
+      "rationale": "Jewelry retail with marketing operations; 42 employees; oversized",
+      "hiring_signals": false,
+      "priority": 39
+    },
+    {
+      "id": 40,
+      "company_name": "PaymentMax",
+      "website": "paymentmax.com",
+      "employee_count": 43,
+      "revenue_estimate": 7200000,
+      "state": "California",
+      "city": "Los Angeles",
+      "phone": "+1 310-555-1400",
+      "primary_contact": {
+        "name": "Not Available",
+        "title": "Not Available",
+        "email": "Not Available"
+      },
+      "secondary_contact": {
+        "name": "Not Available",
+        "title": "Not Available",
+        "email": null
+      },
+      "adoption_tier": "Tier 3",
+      "adoption_score": 2.1,
+      "rationale": "No CMO available in dataset; 43 employees; fintech",
+      "hiring_signals": true,
+      "priority": 40
+    }
+  ],
+  "summary": {
+    "tier_1_count": 20,
+    "tier_2_count": 19,
+    "tier_3_count": 1,
+    "total_with_verified_emails": 38,
+    "total_with_hiring_signals": 30,
+    "average_employee_count": 27,
+    "average_revenue_estimate": 3124000,
+    "recommended_initial_outreach": 20,
+    "expected_pilot_conversion": "2-3 customers"
+  }
+}
