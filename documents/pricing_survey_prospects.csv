@@ -1,0 +1,16 @@
+prospect_id,first_name,last_name,company_name,title,email,company_size,estimated_revenue,engagement_tier,engagement_signals,outreach_date,last_interaction
+PS001,Jennifer,Martinez,Digital Motion Studios,Marketing Manager,jennifer.martinez@dmstudios.com,28,2.5M,Tier 1,"opened, clicked landing page, form submission pending",2026-04-15,2026-04-19
+PS002,Michael,Chen,CreativeForce Collective,Operations Director,m.chen@creativeforce.com,35,4.2M,Tier 1,"opened, clicked landing page, filled form",2026-04-15,2026-04-18
+PS003,Sarah,Thompson,Velocity Marketing Group,CMO,sthompson@velocitymarketing.com,42,6.8M,Tier 1,"opened, clicked, engaged with dashboard demo for 2min",2026-04-16,2026-04-20
+PS004,David,Rodriguez,Growth Partners Inc,Marketing Manager,david.r@growthpartners.io,19,1.8M,Tier 2,"opened, clicked landing page, visited pricing",2026-04-16,2026-04-19
+PS005,Emma,Williams,Agency Nexus,Head of Operations,emma@agencynexus.com,31,3.5M,Tier 2,"opened multiple emails, clicked CTA twice",2026-04-17,2026-04-20
+PS006,James,Anderson,Strategic Brands Co,CMO,james.anderson@strategicbrands.com,48,7.5M,Tier 1,"opened, clicked, spent 3min on dashboard demo",2026-04-15,2026-04-20
+PS007,Rachel,Kim,Insight Digital Labs,Marketing Director,rachel.kim@insightdigital.com,26,2.2M,Tier 2,"opened, clicked but didn't fill form",2026-04-17,2026-04-19
+PS008,Christopher,Patel,Bright Path Consulting,Senior Account Manager,c.patel@brightpath.com,38,5.1M,Tier 1,"opened, clicked, form submitted",2026-04-15,2026-04-17
+PS009,Amanda,Garcia,Vertex Marketing Solutions,Marketing Manager,agarcia@vertexmkt.com,22,1.9M,Tier 2,"opened, interested but low engagement",2026-04-18,2026-04-19
+PS010,Robert,Johnson,Cornerstone Digital,Director of Marketing,rjohnson@cornerstone.io,45,8.2M,Tier 1,"opened, clicked, 4min on dashboard, form pending",2026-04-15,2026-04-20
+PS011,Victoria,Lee,Ascent Marketing Group,VP Operations,vlee@ascentmkg.com,33,3.8M,Tier 2,"opened, clicked, showed pricing page interest",2026-04-17,2026-04-19
+PS012,Kevin,Washington,Momentum Brands,Senior Manager,kwashing@momentumbrand.com,29,2.8M,Tier 3,"opened email, minimal engagement",2026-04-18,2026-04-18
+PS013,Lisa,Martinez,Catalyst Digital,Marketing Manager,lmartinez@catalystdigital.com,37,4.9M,Tier 2,"opened, clicked, visited dashboard demo",2026-04-16,2026-04-20
+PS014,Thomas,Brown,Pinnacle Strategies,CMO,tbrown@pinnacle.com,51,9.1M,Tier 1,"opened, clicked, longest engagement (5min)",2026-04-15,2026-04-20
+PS015,Nicole,Smith,Elevate Marketing Partners,Manager,nsmith@elevatemark.com,24,2.1M,Tier 3,"opened, basic engagement",2026-04-19,2026-04-20
