@@ -1,0 +1,78 @@
+Feature/Capability,ReportEase,Supermetrics,Whatagraph,Looker,Google Data Studio,Native Reporting
+PRICING,,,,,
+Annual Cost Per User (Estimated),100,1200-1800,300-1080,24000+,0,0
+Setup Fees,None,500-2000 (enterprise),None,10000+ (implementation),None,None
+Free Trial,Yes,30 days,14 days,21 days,No,Built-in
+Pricing Model,Per-user subscription,Per-user subscription + usage,Per-user subscription,Enterprise licensing,Free,Free
+Value for SMB/Agency,Excellent,Poor,Good,Not viable,Good (limited),Poor (time-costly)
+TIME SAVINGS,,,,,
+Automation Level,Full (reports + dashboards),High (reports),High (dashboards),Medium (manual),Low (workarounds),None (manual)
+Report Generation Speed,<5 min (template to live),10-20 min,<5 min (presets),15-30 min (custom),10-15 min,60-120 min
+Report Scheduling,Yes (email/Slack/drive),Yes (email/Slack/drive),Yes (email/Slack),Limited,Limited (Sheets workaround),No
+Automated Distribution,Yes,Yes,Yes,No,No,No
+Setup Time,30-45 minutes,4-6 hours,15-30 minutes,Days-weeks,10-15 minutes,0 (existing)
+Learning Curve,Shallow (intuitive),Steep (complex),Shallow (preset-driven),Very steep (requires engineers),Shallow (simple),Existing knowledge
+Non-Technical Usable,Yes,Partially,Yes,No,Yes,Partially
+Scalability to Teams,Excellent (multi-user dashboards),Good (but expensive),Fair (limited customization),Excellent (but overkill),Limited (disconnected),Poor
+ACCURACY & DATA QUALITY,,,,,
+Data Validation,Real-time validation + error alerts,Real-time sync + limited validation,Basic sync + occasional delays,Enterprise-grade validation,Google ecosystem only,Platform-specific
+Error Handling,Automatic reconciliation + audit logs,Limited reconciliation,Manual reconciliation,Advanced governance,None,Manual reconciliation
+Data Freshness,Real-time streaming,Scheduled (hourly/daily),Near real-time (hourly),Real-time (with warehouse),Delayed (daily refresh),Real-time (platform-dependent)
+Audit Trail,Yes,Limited,No,Yes,No,No
+Data Consistency Checks,Yes,Limited,No,Yes,No,No
+VISUALIZATION & DASHBOARDS,,,,,
+Dashboard Interactivity,High (real-time drill-down),Low-Medium (mostly static reports),Medium (preset dashboards),Very high (advanced BI),Medium (basic),Low (platform-specific)
+Real-time Updates,Yes (streaming),No (scheduled),Near real-time (hourly),Yes (real-time),No (daily refresh),Platform-dependent
+Customization Level,High (drag-drop + code),High (template-based),Low (rigid presets),Very high (code-based),Medium (limited),None (locked)
+Chart/Visualization Types,20+ (standard),15+ (marketing-focused),10+ (basic),50+ (advanced),15+ (basic),5-10 (platform-specific)
+Mobile Dashboards,Yes,Limited,Yes,Yes,Yes,Platform-dependent
+White-Labeling,Yes (Agency tier),Limited (enterprise only),No,No,No,No
+Client Portal/View-Only Sharing,Yes (embedded dashboards),Limited (PDF only),Limited,Possible (but complex),Yes (basic),Platform-specific
+Report Export Formats,PDF, PNG, PPT, Email, Slack,PDF, Email, Slack,Email, PDF,PDF, Email,PDF, Email,Platform-specific
+EASE OF USE,,,,,
+Non-Technical Onboarding,Yes (30 min),No (requires training),Yes (15 min),No (requires engineers),Yes (10-15 min),N/A (built-in)
+Template Library,Yes (20+ agency templates),Yes (100+ templates),Yes (10+ presets),Limited (requires custom build),Yes (basic),N/A (locked)
+Drag-Drop Builder,Yes,Yes,Limited (presets only),Requires coding,Yes,Limited
+API Access,Yes (REST API),Yes (API + webhooks),Limited,Yes (SDK),No,Platform-specific
+Documentation Quality,Good (video tutorials),Fair (community-driven),Fair (basic guides),Excellent (extensive),Fair (community),Platform-specific
+Support Availability,Slack community + email (24 hr),Email (3-5 days),Chat (business hours),24/7 dedicated account manager,Community-only,Platform-specific
+Customer Support Quality,Good,Fair (slow),Fair (limited),Excellent (enterprise),Poor (none),N/A
+Training/Onboarding,Self-serve tutorials + webinars,Paid training courses,Self-serve guides,Paid implementation,Community,N/A
+INTEGRATIONS,,,,,
+Total Number of Integrations,50+ (prioritized),100+ (comprehensive),30+,40+ (general),140+ (varies in quality),5-10 (siloed)
+Google Analytics Integration,Yes,Yes,Yes,Yes,Yes (native),Yes (native)
+Google Ads Integration,Yes,Yes,Yes,Yes,Yes,Yes
+Facebook Ads Integration,Yes,Yes,Yes,Yes,No (manual),Yes
+Instagram Ads Integration,Yes,Yes,Yes,Yes,No,Limited
+LinkedIn Ads Integration,Yes,Yes,Yes,Yes,No,Limited
+HubSpot Integration,Yes,Yes,Yes,Yes,Limited,Limited
+Klaviyo Integration,Yes,No,No,Possible,No,No
+Shopify Integration,Yes,No,Yes,Yes,No,No
+Amazon Ads Integration,Yes,No,No,Possible,No,No
+Pinterest Ads Integration,Yes,Yes,No,Possible,No,Limited
+Salesforce Integration,Yes,Yes,Limited,Yes,No,Limited
+Slack Integration,Yes (deliver to Slack),Yes (deliver to Slack),Yes,Limited,No,No
+Google Sheets Integration,Yes,Yes,Yes,Yes,Yes (native),Limited
+Custom API Integration,Yes (REST API),Yes (API),Limited,Yes (SDK),No,Platform-specific
+Integration Setup Complexity,Simple (1-click OAuth),Moderate (needs configuration),Simple (1-click),Complex (requires engineers),Simple (Google auth),N/A
+FEATURES SPECIFIC TO AGENCIES,,,,,
+Multi-Client Dashboard Templates,Yes,No,Limited,No,No,No
+Multi-Client Account Management,Yes,No,Limited,No,No,No
+Client-Specific Customization,Yes,Limited,No,No,No,No
+Approval Workflow (agency to client),Yes,No,No,No,No,No
+Client Portal with View-Only Access,Yes (included),Limited,No,No,Yes,No
+Agency Benchmarking,Planned,No,No,No,No,No
+Industry Comparison Reports,Planned,No,No,No,No,No
+Rebilling/White-Label Revenue Model,Planned,Yes (enterprise),No,No,No,No
+SCALABILITY & GROWTH,,,,,
+Max Users Per Account,Unlimited,Unlimited,Unlimited,Unlimited,Unlimited,Per-platform
+Max Data Retention,3 years,Unlimited,1 year,Unlimited,24 months,Per-platform
+API Rate Limits,High (developer-friendly),Moderate,Low,Very high,None (no API),Platform-specific
+Concurrent Dashboard Users,Unlimited,Limited,Limited,Very high,Moderate,Platform-specific
+Large Dataset Handling,Excellent (optimized),Good,Fair,Excellent,Limited,Fair
+MATURITY & RELIABILITY,,,,,
+Time on Market,<1 year (startup),10+ years (established),3+ years,15+ years (Google-backed),15+ years,10+ years
+Uptime SLA,99% (advancing),99.5%,99%,99.9%,99.95%,Per-platform
+Customer Base Size,100+ pilot customers,1000s (enterprises),1000s (SMB),1000s (enterprise),100000s+ (free),100M+ (platform native)
+Industry Reviews (G2 Rating),4.5/5 (early),4.3/5,4.2/5,4.4/5,4.1/5,3.8-4.0/5
+Funding/Stability,Early stage,Stable (profitable),Stable,Owned by Google,Owned by Google,Owned by platform
