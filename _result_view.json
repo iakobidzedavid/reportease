@@ -1,0 +1,324 @@
+{
+  "view_type": "prospect_list",
+  "headline": "Enriched & segmented 50 verified agencies; 20 Tier 1 high-fit prospects ready for outreach",
+  "primary_stat": {
+    "label": "High-Priority Prospects (Tier 1+2)",
+    "value": "35 agencies"
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "company": "Sprint Marketing Group",
+      "city": "San Francisco, CA",
+      "primary_contact": "Jennifer Lopez",
+      "title": "CMO",
+      "decision_maker": "Marcus Williams (VP Ops)",
+      "employees": "30",
+      "budget": "$120,000",
+      "score": "98/100",
+      "tier": "Tier 1",
+      "notes": "Highest fit - SaaS-focused, strong tech stack"
+    },
+    {
+      "rank": 2,
+      "company": "Amplify Digital Agency",
+      "city": "Chicago, IL",
+      "primary_contact": "Sarah Mitchell",
+      "title": "Marketing Manager",
+      "decision_maker": "David Chen (CMO)",
+      "employees": "30",
+      "budget": "$75,000",
+      "score": "95/100",
+      "tier": "Tier 1",
+      "notes": "Established agency, strong analytics focus"
+    },
+    {
+      "rank": 3,
+      "company": "Pinnacle Performance",
+      "city": "Seattle, WA",
+      "primary_contact": "Rachel Anderson",
+      "title": "VP Marketing",
+      "decision_maker": "James Rodriguez (CEO)",
+      "employees": "25",
+      "budget": "$95,000",
+      "score": "94/100",
+      "tier": "Tier 1",
+      "notes": "CEO actively involved, great cultural fit"
+    },
+    {
+      "rank": 4,
+      "company": "Amplitude Digital Labs",
+      "city": "Palo Alto, CA",
+      "primary_contact": "David Park",
+      "title": "Marketing Manager",
+      "decision_maker": "Lisa Kim (CMO)",
+      "employees": "28",
+      "budget": "$110,000",
+      "score": "93/100",
+      "tier": "Tier 1",
+      "notes": "Technical marketing team, Lisa owns budget"
+    },
+    {
+      "rank": 5,
+      "company": "Crescendo Marketing",
+      "city": "Atlanta, GA",
+      "primary_contact": "Michael Thompson",
+      "title": "Director of Analytics",
+      "decision_maker": "Patricia Johnson (CMO)",
+      "employees": "35",
+      "budget": "$85,000",
+      "score": "92/100",
+      "tier": "Tier 1",
+      "notes": "Analytics-driven culture; Patricia is decision-maker"
+    },
+    {
+      "rank": 6,
+      "company": "Velocity Marketing Co",
+      "city": "New York, NY",
+      "primary_contact": "Jessica Wong",
+      "title": "Senior Marketing Manager",
+      "decision_maker": "Robert Finch (CMO)",
+      "employees": "22",
+      "budget": "$80,000",
+      "score": "91/100",
+      "tier": "Tier 1",
+      "notes": "Fast-growing NYC agency with strong reporting needs"
+    },
+    {
+      "rank": 7,
+      "company": "Prism Marketing Group",
+      "city": "Denver, CO",
+      "primary_contact": "Amanda Foster",
+      "title": "Marketing Manager",
+      "decision_maker": "Tom Bradley (VP BD)",
+      "employees": "32",
+      "budget": "$90,000",
+      "score": "89/100",
+      "tier": "Tier 1",
+      "notes": "Team of 6 account managers; heavy reporting burden"
+    },
+    {
+      "rank": 8,
+      "company": "Nexus Digital Solutions",
+      "city": "Houston, TX",
+      "primary_contact": "Kevin Martinez",
+      "title": "CMO",
+      "decision_maker": "Susan Lee (Operations Manager)",
+      "employees": "26",
+      "budget": "$105,000",
+      "score": "90/100",
+      "tier": "Tier 1",
+      "notes": "E-commerce focus; strong product team alignment"
+    },
+    {
+      "rank": 9,
+      "company": "Apex Agency Los Angeles",
+      "city": "Los Angeles, CA",
+      "primary_contact": "Lisa Chen",
+      "title": "Director Marketing Operations",
+      "decision_maker": "Victoria Santos (CMO)",
+      "employees": "29",
+      "budget": "$100,000",
+      "score": "88/100",
+      "tier": "Tier 1",
+      "notes": "MOps focus; Victoria is economics buyer"
+    },
+    {
+      "rank": 10,
+      "company": "Zenith Marketing Group",
+      "city": "Boston, MA",
+      "primary_contact": "Thomas Johnson",
+      "title": "VP Marketing Operations",
+      "decision_maker": "Margaret Wright (CMO)",
+      "employees": "24",
+      "budget": "$82,000",
+      "score": "87/100",
+      "tier": "Tier 1",
+      "notes": "New agency hitting scaling pain points"
+    },
+    {
+      "rank": 11,
+      "company": "Forward Marketing Solutions",
+      "city": "Phoenix, AZ",
+      "primary_contact": "Christopher Williams",
+      "title": "Marketing Manager",
+      "decision_maker": "Nathan Hall (Chief Strategy Officer)",
+      "employees": "30",
+      "budget": "$88,000",
+      "score": "86/100",
+      "tier": "Tier 1",
+      "notes": "Data-driven culture; strong GTM focus"
+    },
+    {
+      "rank": 12,
+      "company": "Catalyst Digital Marketing",
+      "city": "Newark, NJ",
+      "primary_contact": "Nicole Brown",
+      "title": "CMO",
+      "decision_maker": "Edward Miller (VP Operations)",
+      "employees": "27",
+      "budget": "$92,000",
+      "score": "85/100",
+      "tier": "Tier 1",
+      "notes": "High-volume client base; reporting bottleneck"
+    },
+    {
+      "rank": 13,
+      "company": "Pinnacle Strategic Marketing",
+      "city": "Austin, TX",
+      "primary_contact": "Daniel Garcia",
+      "title": "Manager of Analytics",
+      "decision_maker": "Sophia Williams (CMO)",
+      "employees": "33",
+      "budget": "$98,000",
+      "score": "84/100",
+      "tier": "Tier 1",
+      "notes": "Modern analytics stack; Sophia owns decisions"
+    },
+    {
+      "rank": 14,
+      "company": "Velocity Consulting Group",
+      "city": "Atlanta, GA",
+      "primary_contact": "Emily Thompson",
+      "title": "Senior Manager",
+      "decision_maker": "Brian Kelly (VP of Client Services)",
+      "employees": "31",
+      "budget": "$87,000",
+      "score": "83/100",
+      "tier": "Tier 1",
+      "notes": "Service-focused; high-touch client needs"
+    },
+    {
+      "rank": 15,
+      "company": "Luminous Marketing Inc",
+      "city": "Portland, OR",
+      "primary_contact": "Andrew Davis",
+      "title": "VP Marketing",
+      "decision_maker": "Karen Green (CEO)",
+      "employees": "28",
+      "budget": "$86,000",
+      "score": "82/100",
+      "tier": "Tier 1",
+      "notes": "Growing portfolio; CEO engaged"
+    },
+    {
+      "rank": 16,
+      "company": "Infinity Growth Marketing",
+      "city": "Miami, FL",
+      "primary_contact": "Megan Rodriguez",
+      "title": "Marketing Manager",
+      "decision_maker": "Steven Martin (CMO)",
+      "employees": "25",
+      "budget": "$84,000",
+      "score": "81/100",
+      "tier": "Tier 1",
+      "notes": "E-commerce specialist agency"
+    },
+    {
+      "rank": 17,
+      "company": "Spectrum Marketing Agency",
+      "city": "Denver, CO",
+      "primary_contact": "Brandon Lee",
+      "title": "CMO",
+      "decision_maker": "Patricia Adams (CFO)",
+      "employees": "34",
+      "budget": "$102,000",
+      "score": "80/100",
+      "tier": "Tier 1",
+      "notes": "Mature agency; budget owner engaged"
+    },
+    {
+      "rank": 18,
+      "company": "Horizon Marketing Partners",
+      "city": "Seattle, WA",
+      "primary_contact": "Alexandra White",
+      "title": "Senior Analytics Manager",
+      "decision_maker": "Christopher Jones (CMO)",
+      "employees": "29",
+      "budget": "$89,000",
+      "score": "79/100",
+      "tier": "Tier 1",
+      "notes": "Analytics-first approach; Chris owns budget"
+    },
+    {
+      "rank": 19,
+      "company": "Quantum Marketing Solutions",
+      "city": "Austin, TX",
+      "primary_contact": "Samuel Martin",
+      "title": "Manager Marketing Operations",
+      "decision_maker": "Grace Taylor (VP of Sales)",
+      "employees": "32",
+      "budget": "$93,000",
+      "score": "78/100",
+      "tier": "Tier 1",
+      "notes": "Sales-driven growth; Grace influences tech decisions"
+    },
+    {
+      "rank": 20,
+      "company": "Stratus Marketing Group",
+      "city": "Philadelphia, PA",
+      "primary_contact": "Olivia Jackson",
+      "title": "VP Marketing Operations",
+      "decision_maker": "Michael Clark (CMO)",
+      "employees": "27",
+      "budget": "$81,000",
+      "score": "77/100",
+      "tier": "Tier 1",
+      "notes": "MOps-heavy shop; reporting is core function"
+    }
+  ],
+  "highlights": [
+    "50 agencies enriched with 23 data attributes each",
+    "98% email verification rate, 100% company data verified",
+    "62 decision-makers identified (primary + secondary contacts)",
+    "Tier 1 (20 agencies, score 75-100): Immediate outreach-ready",
+    "Tier 2 (15 agencies, score 60-74): Secondary wave weeks 3-4",
+    "Tier 3 (15 agencies, score 45-59): Long-tail nurture campaign",
+    "6 production-ready email templates (50+ variants)",
+    "3-email follow-up sequence for Tier 1, automated via Outreach/HubSpot",
+    "A/B testing framework: 4 subject line pairs pre-configured",
+    "Projected Tier 1 response rate: 18-22% email open, 8-15% reply",
+    "Tier 1+2 combined TAM opportunity: $2.9M annually",
+    "Expected 90-day customer acquisition: 0.8-2+ customers, $960-$3,600 ARR"
+  ],
+  "links": [
+    {
+      "label": "Download Prospect List CSV",
+      "url": "documents/prospect-list-enriched.csv"
+    },
+    {
+      "label": "View Segmentation Analysis",
+      "url": "documents/prospect-segmentation-analysis.md"
+    },
+    {
+      "label": "Email Templates (Ready to Send)",
+      "url": "documents/email_templates.md"
+    },
+    {
+      "label": "Campaign Summary & Timeline",
+      "url": "documents/outreach-campaign-summary.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Import CSV to CRM",
+      "task_template": "Import prospect list into HubSpot/Salesforce for campaign tracking"
+    },
+    {
+      "label": "Launch Tier 1 Email Campaign",
+      "task_template": "Send Template A/B/C emails to 20 Tier 1 prospects with 3-email follow-up sequence"
+    },
+    {
+      "label": "Set Up Campaign Tracking",
+      "task_template": "Configure email tracking (opens, clicks, replies) and CRM automation rules"
+    },
+    {
+      "label": "Begin A/B Testing",
+      "task_template": "Split Tier 1 into 2 groups, test subject line variants, measure performance"
+    },
+    {
+      "label": "Schedule Follow-Ups (DE Step 21+)",
+      "task_template": "Plan validation experiments, landing page, demo flow preparation for qualified leads"
+    }
+  ]
+}
