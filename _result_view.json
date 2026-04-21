@@ -1,56 +1,58 @@
 {
   "view_type": "report",
-  "headline": "Competitive Positioning Analysis Complete: ReportEase owns affordable power for agencies at 1/10th Supermetrics cost",
+  "headline": "Email campaign blocked: Apollo prospects missing email addresses (critical data dependency)",
   "primary_stat": {
-    "label": "Competitive Advantage",
-    "value": "92% cheaper than Supermetrics, 8x faster setup, built for agencies"
+    "label": "Prospects with verified email status",
+    "value": "20/20"
   },
   "highlights": [
-    "Analyzed 5 major competitors: Supermetrics, Whatagraph, Looker, Google Data Studio, native platform reporting",
-    "Mapped 30+ customer pain points across G2, Capterra, Trustpilot reviews and industry forums",
-    "Created comprehensive feature matrix comparing 40+ dimensions across all competitors",
-    "Identified 6 major unmet customer needs: affordable automation, intuitive UX, dashboards+reports in one tool, agency-specific workflows, SMB support tier, and reliability",
-    "Developed positioning framework with competitive messaging vs. each competitor (Supermetrics, Whatagraph, Looker, GDS, native)",
-    "Validated pricing assumption ($100/user/year = 10x cheaper than Supermetrics, positioning as 'affordable power')",
-    "Established clear differentiation: ReportEase is 3x cheaper than Whatagraph, 10x cheaper than Supermetrics, 100x cheaper than Looker",
-    "Created sales conversation scripts, email templates, landing page variants, and objection handling",
-    "Documented agency-first positioning as unique moat (no competitor claims this; all are enterprise or generic)",
-    "Recommended GTM roadmap: Phase 1 (beachhead messaging: time savings), Phase 2 (agency features), Phase 3 (expansion)"
+    "🔴 BLOCKER: Apollo JSON has has_email=true but no actual email field in dataset",
+    "✅ Campaign template drafted (subject, body, CTA, UTM params)",
+    "✅ 20 verified CMO/Marketing Director prospects identified and profiled",
+    "✅ Email tracking plan documented (open rate, click rate, reply rate)",
+    "✅ Results CSV structure designed with all required fields",
+    "⚠️ Cannot execute without retrieving email addresses from Apollo API",
+    "📊 Expected metrics calculated (20-35% open rate, 2-5% click rate baseline)"
   ],
   "links": [
     {
-      "label": "Full Competitive Analysis Report",
-      "url": "documents/competitive_analysis.md"
+      "label": "Email Campaign Execution Report",
+      "url": "documents/email_campaign_execution_report.md"
     },
     {
-      "label": "Positioning & Messaging Framework",
-      "url": "documents/positioning_and_messaging_framework.md"
-    },
-    {
-      "label": "Competitive Feature Matrix (CSV)",
-      "url": "documents/competitive_feature_matrix.csv"
-    },
-    {
-      "label": "One-Page Summary",
-      "url": "documents/competitive_analysis_one_pager.md"
+      "label": "Apollo Prospects (20) - JSON",
+      "url": "documents/apollo_prospects_20.json"
     }
   ],
   "next_actions": [
     {
-      "label": "Validate positioning with 10+ prospect interviews",
-      "task_template": "Send outreach to Apollo list with positioning test message"
+      "label": "Export Apollo prospects with email addresses",
+      "task_template": "data_enrichment",
+      "args": {
+        "source": "Apollo API",
+        "task": "Re-run Apollo People Search with email field exported",
+        "output": "apollo_prospects_20_with_emails.json",
+        "validation": "Verify all 20 contacts have valid email addresses"
+      }
     },
     {
-      "label": "Create landing page with validated positioning",
-      "task_template": "Build landing page variant emphasizing 'Reclaim 6 hours/week' and 'Supermetrics cost' messaging"
+      "label": "Send 20 personalized outreach emails",
+      "task_template": "email_campaign",
+      "args": {
+        "template": "apollo_cold_outreach",
+        "recipients": 20,
+        "tracking": "UTM + open_rate + click_rate + reply_rate",
+        "timing": "stagger by 1-2 minutes"
+      }
     },
     {
-      "label": "Develop case study from pilot customer",
-      "task_template": "Interview early adopter about time savings, cost savings, and competitive replacement"
-    },
-    {
-      "label": "Launch sales outreach using Supermetrics comparison",
-      "task_template": "Send cold email campaign emphasizing cost comparison and simplicity advantage"
+      "label": "Document campaign results and track metrics",
+      "task_template": "metrics_collection",
+      "args": {
+        "output_file": "data/email_campaign_results.csv",
+        "metrics": ["sent_timestamp", "open_status", "click_status", "reply_status"],
+        "analysis": "Calculate open rate, click rate, reply rate, trial signup rate"
+      }
     }
   ]
 }
