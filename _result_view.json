@@ -1,0 +1,69 @@
+{
+  "view_type": "report",
+  "headline": "Landing Page Copy Strategy with 3 Google Ads-Aligned Variants, Social Proof Framework & Form Optimization",
+  "primary_stat": {
+    "label": "Variants Created",
+    "value": 3
+  },
+  "highlights": [
+    "Variant A: Time Savings Hero - 'Reclaim 6 Hours/Week' with focus on time ROI and workload relief",
+    "Variant B: Accuracy Assurance - 'Eliminate Reporting Errors' with emphasis on precision and client trust",
+    "Variant C: Visualization Hero - 'Interactive Dashboards Clients Love' with focus on engagement and agency differentiation",
+    "Social Proof Framework: Logo placement strategy, stat blocks, testimonials, and trust messaging for each variant",
+    "Form Strategy: 3-4 field optimization with variant-specific questions to improve conversion and segmentation",
+    "CTA Button Copy Matrix: 9 unique button texts mapped to each variant's primary motivation and buyer journey",
+    "Google Ads Alignment: Keyword-to-variant mapping, Quality Score optimization, ad headline-to-landing page sync",
+    "Success Metrics: Target form completion rate 8-12%, trial activation 60%+, variant differentiation ≥2%",
+    "Implementation Checklist: 40+ tasks across design, copy, technical, testing, and analytics phases",
+    "Risk Mitigation: 4 key risks identified with contingency plans (low form rates, activation issues, variant underperformance, ad quality)",
+    "Complete 7-day A/B test framework with decision rules and winner declaration criteria at 100 submissions per variant",
+    "Appendix: Industry benchmarks, pain point sources, competitive pricing, and time value calculations"
+  ],
+  "links": [
+    {
+      "label": "View Full Strategy Document",
+      "url": "documents/landing_page_copy_strategy.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Get Design Review on Variant Hero Images",
+      "task_template": "design_review",
+      "args": {
+        "variants": ["time_savings", "accuracy", "visualization"],
+        "priority": "critical",
+        "timeline": "48_hours"
+      }
+    },
+    {
+      "label": "Build 3 Landing Page Variants in Next.js",
+      "task_template": "develop_landing_pages",
+      "args": {
+        "variants": 3,
+        "urls": ["/ads/v1", "/ads/v2", "/ads/v3"],
+        "priority": "critical",
+        "include_form": true,
+        "include_analytics": true
+      }
+    },
+    {
+      "label": "Configure Google Ads Campaign with 3 Ad Sets",
+      "task_template": "setup_google_ads",
+      "args": {
+        "ad_sets": 3,
+        "keywords_per_set": 5,
+        "initial_budget": 100,
+        "conversion_tracking": "form_submission"
+      }
+    },
+    {
+      "label": "Set Up Form Analytics & Conversion Tracking",
+      "task_template": "setup_analytics",
+      "args": {
+        "metrics": ["form_completion_rate", "trial_activation_rate", "conversion_rate"],
+        "variants": 3,
+        "reporting_cadence": "daily"
+      }
+    }
+  ]
+}
