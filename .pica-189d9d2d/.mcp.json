@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "pica": {
+      "command": "/Users/david/code/claude-agent-fastapi/venv/bin/python3.14",
+      "args": [
+        "/Users/david/code/claude-agent-fastapi/app/agents/pica_mcp_server.py"
+      ],
+      "env": {
+        "PICA_SECRET": "sk_test_fQ9DGm0Da0ISKBLj4Nwyag9qfS1DSOne5Dq4iy_NvSg",
+        "PICA_API_URL": "https://api.picaos.com",
+        "PICA_TOOLS_PATH": "/tmp/agent-workspaces/562944e5-03fc-4b62-960b-9c4ab3004c16/teams/ef57e028-a491-4d46-84ce-28335a6c0275/.pica-189d9d2d/pica_tools.json",
+        "PICA_CONNECTIONS_PATH": "/tmp/agent-workspaces/562944e5-03fc-4b62-960b-9c4ab3004c16/teams/ef57e028-a491-4d46-84ce-28335a6c0275/.pica-189d9d2d/pica_connections.json"
+      }
+    }
+  }
+}
