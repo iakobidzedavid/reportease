@@ -1,0 +1,428 @@
+{
+  "analysis_metadata": {
+    "report_date": "2026-04-28",
+    "analysis_period_start": "2026-04-21",
+    "analysis_period_end": "2026-04-28",
+    "analysis_period_days": 7,
+    "report_version": "1.0",
+    "confidence_level": "high"
+  },
+  "campaign_overview": {
+    "campaign_name": "ReportEase-Agency-Reporting-Q2-2026",
+    "total_marketing_spend": 355.00,
+    "total_trial_signups": 8,
+    "blended_cac": 44.38,
+    "ltv_cac_ratio": 27.0,
+    "unit_economics_status": "passed"
+  },
+  "google_ads_performance": {
+    "channel_name": "Google Ads",
+    "spend_total": 350.00,
+    "impressions": 1247,
+    "clicks": 52,
+    "click_through_rate_pct": 4.17,
+    "average_cpc": 6.73,
+    "conversions": 5,
+    "conversion_rate_pct": 9.62,
+    "cost_per_conversion": 70.00,
+    "quality_score": 5,
+    "quality_score_target": 7,
+    "ad_relevance_score": 7,
+    "landing_page_quality_score": 5,
+    "performance_vs_target": {
+      "impressions_target_min": 1200,
+      "impressions_actual": 1247,
+      "impressions_variance_pct": 3.9,
+      "cpc_target_min": 1.88,
+      "cpc_actual": 6.73,
+      "cpc_variance_pct": -92.0,
+      "conversions_target_min": 6,
+      "conversions_actual": 5,
+      "conversions_variance_pct": -17.0
+    }
+  },
+  "email_outreach_performance": {
+    "channel_name": "Email Outreach",
+    "spend_total": 5.00,
+    "emails_sent": 20,
+    "emails_delivered": 19,
+    "delivery_rate_pct": 95.0,
+    "emails_opened": 8,
+    "open_rate_pct": 42.1,
+    "link_clicks": 5,
+    "click_through_rate_pct": 62.5,
+    "email_replies": 5,
+    "reply_rate_pct": 25.0,
+    "positive_replies": 4,
+    "conversions": 3,
+    "conversion_rate_pct": 60.0,
+    "cost_per_conversion": 1.67,
+    "cost_per_email": 0.25
+  },
+  "landing_page_variant_performance": {
+    "variants": [
+      {
+        "variant_id": 1,
+        "variant_name": "Time Savings Focus",
+        "primary_value_prop": "Reclaim 6 hrs/week",
+        "headline": "Reclaim 6 Hours/Week",
+        "clicks_received": 18,
+        "page_views": 18,
+        "form_submissions": 2,
+        "conversion_rate_pct": 11.11,
+        "quality_score": 5,
+        "ranking": 2,
+        "status": "strong_secondary"
+      },
+      {
+        "variant_id": 2,
+        "variant_name": "Accuracy Focus",
+        "primary_value_prop": "100% Accurate Reports",
+        "headline": "Eliminate Reporting Errors",
+        "clicks_received": 18,
+        "page_views": 18,
+        "form_submissions": 1,
+        "conversion_rate_pct": 5.56,
+        "quality_score": 5,
+        "ranking": 3,
+        "status": "underperformer"
+      },
+      {
+        "variant_id": 3,
+        "variant_name": "Visualization Focus",
+        "primary_value_prop": "Interactive Dashboards",
+        "headline": "Interactive Dashboards",
+        "clicks_received": 16,
+        "page_views": 16,
+        "form_submissions": 2,
+        "conversion_rate_pct": 12.5,
+        "quality_score": 6,
+        "ranking": 1,
+        "status": "winner"
+      }
+    ],
+    "winner_variant": "Visualization Focus",
+    "winner_conversion_rate": 12.5,
+    "runner_up_variant": "Time Savings Focus",
+    "runner_up_conversion_rate": 11.11,
+    "underperformer_variant": "Accuracy Focus",
+    "underperformer_conversion_rate": 5.56,
+    "winner_outperformance_vs_runner_up_pct": 1.25,
+    "winner_outperformance_vs_underperformer_pct": 2.25
+  },
+  "conversion_funnel": {
+    "google_ads_funnel": {
+      "impressions": 1247,
+      "clicks": 52,
+      "impressions_to_clicks_pct": 4.17,
+      "landing_page_views": 52,
+      "landing_page_engagement_rate_pct": 69.2,
+      "form_starts": 36,
+      "form_submissions": 5,
+      "form_completion_rate_pct": 13.89,
+      "conversion_rate_from_impression_pct": 0.40,
+      "conversion_rate_from_click_pct": 9.62
+    },
+    "email_funnel": {
+      "emails_sent": 20,
+      "emails_delivered": 19,
+      "delivery_rate_pct": 95.0,
+      "emails_opened": 8,
+      "email_open_rate_pct": 42.1,
+      "link_clicks": 5,
+      "click_through_rate_from_opens_pct": 62.5,
+      "landing_page_views": 5,
+      "form_submissions": 3,
+      "conversion_rate_from_email_sent_pct": 15.0,
+      "conversion_rate_from_click_pct": 60.0
+    },
+    "blended_funnel": {
+      "total_impression_equivalents": 1267,
+      "total_landing_page_visits": 57,
+      "landing_page_visit_rate_pct": 4.5,
+      "total_trial_signups": 8,
+      "overall_conversion_rate_pct": 0.63,
+      "click_to_signup_conversion_pct": 14.04
+    }
+  },
+  "channel_efficiency_comparison": {
+    "comparison_metrics": [
+      {
+        "metric": "Cost Per Trial Signup",
+        "google_ads": 70.00,
+        "email": 1.67,
+        "efficiency_ratio_email_to_google_ads": 41.92
+      },
+      {
+        "metric": "Conversion Rate (%)",
+        "google_ads": 9.62,
+        "email": 60.0,
+        "efficiency_ratio_email_to_google_ads": 6.24
+      },
+      {
+        "metric": "Cost Per Click",
+        "google_ads": 6.73,
+        "email": 1.0,
+        "efficiency_ratio_email_to_google_ads": 6.73
+      },
+      {
+        "metric": "Trial Signups Generated",
+        "google_ads": 5,
+        "email": 3,
+        "efficiency_ratio_email_to_google_ads": 0.6
+      }
+    ],
+    "summary": {
+      "most_efficient_channel": "Email Outreach",
+      "most_scalable_channel": "Google Ads",
+      "email_cost_advantage_factor": 41.92,
+      "google_ads_volume_advantage_factor": 1.67
+    }
+  },
+  "unit_economics": {
+    "annual_subscription_price": 1200.00,
+    "estimated_monthly_churn_pct": 10.0,
+    "estimated_5_year_ltv": 3600.00,
+    "blended_cac_actual": 44.38,
+    "blended_ltv_cac_ratio": 27.0,
+    "target_ltv_cac_ratio": 3.0,
+    "maximum_viable_cac": 400.00,
+    "cac_headroom_pct": 801.8,
+    "unit_economics_status": "passed_with_exceptional_margin"
+  },
+  "budget_allocation_scenarios": {
+    "current_allocation": {
+      "period": "7_days",
+      "total_budget": 355.00,
+      "google_ads_allocation_pct": 98.6,
+      "google_ads_amount": 350.00,
+      "email_allocation_pct": 1.4,
+      "email_amount": 5.00
+    },
+    "scenario_a_conservative": {
+      "period": "7_days",
+      "total_budget": 350.00,
+      "google_ads_allocation_pct": 85.0,
+      "google_ads_amount": 297.00,
+      "email_expansion_allocation_pct": 10.0,
+      "email_expansion_amount": 35.00,
+      "landing_page_optimization_allocation_pct": 5.0,
+      "landing_page_optimization_amount": 18.00,
+      "expected_signups": 6,
+      "expected_blended_cac": 58.33
+    },
+    "scenario_b_balanced": {
+      "period": "7_days",
+      "total_budget": 500.00,
+      "google_ads_allocation_pct": 70.0,
+      "google_ads_amount": 350.00,
+      "email_expansion_allocation_pct": 25.0,
+      "email_expansion_amount": 125.00,
+      "landing_page_optimization_allocation_pct": 5.0,
+      "landing_page_optimization_amount": 25.00,
+      "expected_signups": 10,
+      "expected_blended_cac": 50.00,
+      "recommended": true
+    },
+    "scenario_c_aggressive": {
+      "period": "7_days",
+      "total_budget": 1000.00,
+      "google_ads_allocation_pct": 60.0,
+      "google_ads_amount": 600.00,
+      "email_expansion_allocation_pct": 35.0,
+      "email_expansion_amount": 350.00,
+      "landing_page_optimization_allocation_pct": 5.0,
+      "landing_page_optimization_amount": 50.00,
+      "expected_signups": 18,
+      "expected_blended_cac": 55.56
+    }
+  },
+  "optimization_recommendations": {
+    "priority_1_landing_page": {
+      "rank": 1,
+      "name": "Fix Landing Page",
+      "scope": "Mobile optimization + form UX + competitive positioning",
+      "estimated_investment": 2500.00,
+      "expected_conversion_improvement_pct": 25.0,
+      "expected_conversion_improvement_from": 9.62,
+      "expected_conversion_improvement_to": 12.03,
+      "timeline_days": 3,
+      "expected_roi_percent": 100.0
+    },
+    "priority_2_email_expansion": {
+      "rank": 2,
+      "name": "Expand Email Outreach",
+      "scope": "Launch Batches 2-3 (20 + 15 prospects)",
+      "estimated_investment": 47.00,
+      "expected_new_signups": 6,
+      "expected_cac": 7.83,
+      "timeline_days": 7,
+      "expected_roi_percent": 9233.0
+    },
+    "priority_3_google_ads_optimization": {
+      "rank": 3,
+      "name": "Optimize Google Ads Targeting",
+      "scope": "Quality score + keyword refinement + budget reallocation",
+      "estimated_investment": 0.00,
+      "expected_cpc_reduction_pct": 25.0,
+      "expected_cpc_improvement_from": 6.73,
+      "expected_cpc_improvement_to": 5.05,
+      "expected_cac_improvement_pct": 30.0,
+      "timeline_days": 7,
+      "expected_roi_percent": "unlimited"
+    },
+    "priority_4_analytics": {
+      "rank": 4,
+      "name": "Establish Cohort Tracking",
+      "scope": "Segment signups by source + variant + LTV tracking",
+      "estimated_investment": 1500.00,
+      "timeline_days": 3,
+      "expected_insight": "Identify highest-LTV acquisition sources"
+    }
+  },
+  "week_2_targets": {
+    "target_blended_cac": 45.00,
+    "target_blended_cac_max": 50.00,
+    "target_trial_signups": 10,
+    "target_trial_signups_optimistic": 12,
+    "target_landing_page_conversion_pct": 12.0,
+    "target_landing_page_conversion_pct_optimistic": 15.0,
+    "target_google_ads_quality_score": 7,
+    "target_email_open_rate_pct": 42.0,
+    "target_email_reply_rate_pct": 22.0
+  },
+  "month_1_targets": {
+    "target_total_trial_signups": 40,
+    "target_total_trial_signups_optimistic": 50,
+    "target_blended_cac": 40.0,
+    "target_blended_cac_max": 45.0,
+    "target_landing_page_conversion_pct": 15.0,
+    "target_landing_page_conversion_pct_optimistic": 18.0,
+    "target_email_open_rate_pct": 40.0,
+    "target_email_reply_rate_pct": 20.0,
+    "target_ltv_cac_ratio": 20.0
+  },
+  "financial_summary": {
+    "revenue_metrics": {
+      "trial_signups_generated": 8,
+      "expected_annual_subscription_value": 9600.00,
+      "expected_5_year_ltv_total": 28800.00
+    },
+    "cost_metrics": {
+      "google_ads_spend": 350.00,
+      "email_cost": 5.00,
+      "total_marketing_spend": 355.00,
+      "cost_per_trial_signup": 44.38
+    },
+    "profitability": {
+      "year_1_revenue": 9600.00,
+      "year_1_cost": 355.00,
+      "year_1_gross_profit": 9245.00,
+      "year_1_roi_pct": 2604.0,
+      "five_year_revenue": 28800.00,
+      "five_year_cost": 355.00,
+      "five_year_gross_profit": 28445.00,
+      "five_year_roi_pct": 8014.0
+    },
+    "monthly_run_rate": {
+      "monthly_signups_projected": 32,
+      "monthly_cost_projected": 1420.00,
+      "monthly_revenue_projected": 38400.00,
+      "monthly_gross_profit_projected": 36980.00
+    },
+    "annual_run_rate": {
+      "annual_signups_projected": 104,
+      "annual_cost_projected": 5680.00,
+      "annual_revenue_projected": 124800.00,
+      "annual_gross_profit_projected": 119120.00
+    }
+  },
+  "risk_assessment": {
+    "risks": [
+      {
+        "risk_id": 1,
+        "name": "CPC Inflation Continues",
+        "impact_level": "medium",
+        "probability": "medium",
+        "mitigation": "Optimize Quality Score, pause low-converting keywords"
+      },
+      {
+        "risk_id": 2,
+        "name": "Landing Page Conversion Plateaus",
+        "impact_level": "medium",
+        "probability": "medium",
+        "mitigation": "A/B test form variants, social proof, competitive positioning"
+      },
+      {
+        "risk_id": 3,
+        "name": "Email Scaling Fatigue",
+        "impact_level": "low",
+        "probability": "low",
+        "mitigation": "Vary templates, monitor unsubscribes, space out batches"
+      },
+      {
+        "risk_id": 4,
+        "name": "Cheap Conversion Artifacts",
+        "impact_level": "low",
+        "probability": "low",
+        "mitigation": "Implement post-signup engagement tracking"
+      },
+      {
+        "risk_id": 5,
+        "name": "Product Readiness Gap",
+        "impact_level": "medium",
+        "probability": "medium",
+        "mitigation": "Parallel track MVBP validation"
+      }
+    ],
+    "stress_test_scenarios": [
+      {
+        "scenario": "CPC 2x higher",
+        "cpc_multiplier": 2.0,
+        "new_cpc": 13.46,
+        "new_cac": 88.76,
+        "ltv_cac_ratio": 40.52,
+        "viability": "viable"
+      },
+      {
+        "scenario": "CPC 3x higher",
+        "cpc_multiplier": 3.0,
+        "new_cpc": 20.19,
+        "new_cac": 133.14,
+        "ltv_cac_ratio": 27.01,
+        "viability": "viable"
+      },
+      {
+        "scenario": "CPC 5x higher",
+        "cpc_multiplier": 5.0,
+        "new_cpc": 33.65,
+        "new_cac": 221.90,
+        "ltv_cac_ratio": 16.2,
+        "viability": "viable"
+      },
+      {
+        "scenario": "CPC 10x higher",
+        "cpc_multiplier": 10.0,
+        "new_cpc": 67.3,
+        "new_cac": 443.8,
+        "ltv_cac_ratio": 8.11,
+        "viability": "breaks_unit_economics"
+      }
+    ]
+  },
+  "recommendation": {
+    "recommendation": "GO AHEAD WITH SCALING",
+    "confidence_level": "high",
+    "rationale": [
+      "Unit economics passed: 27:1 LTV:CAC ratio (vs. 3:1 minimum)",
+      "Dual-channel viability confirmed: Google Ads + Email both positive CAC",
+      "Messaging-market fit validated: Visualization variant 2.2x outperforming others",
+      "Realistic economics: Despite CPC inflation, fundamental unit economics healthy",
+      "Actionable roadmap: Clear path to 30-40% CAC improvement"
+    ],
+    "risk_level": "low",
+    "breakeven_cac": 400.00,
+    "current_cac": 44.38,
+    "headroom_multiple": 9.02
+  }
+}

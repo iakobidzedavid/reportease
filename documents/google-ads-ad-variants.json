@@ -1,0 +1,337 @@
+{
+  "campaign_name": "ReportEase-Agency-Reporting-Q2-2026",
+  "ad_group_name": "Agency Reporting",
+  "created_date": "2026-04-21",
+  "ad_variants": [
+    {
+      "variant_id": "AD-001",
+      "variant_name": "Time Savings Focus",
+      "value_proposition": "Reclaim 6 hours/week on reporting",
+      "target_audience": "Busy marketing managers at agencies drowning in manual reporting",
+      "messaging_pillars": [
+        "Time reclamation",
+        "Automation",
+        "Efficiency gains"
+      ],
+      "landing_page_variant": "landing_page_time_savings",
+      "headlines": [
+        {
+          "text": "Reclaim 6 Hours/Week",
+          "character_count": 20,
+          "status": "approved"
+        },
+        {
+          "text": "Stop Drowning in Reports",
+          "character_count": 25,
+          "status": "approved"
+        },
+        {
+          "text": "Weekly Reports—Automated",
+          "character_count": 24,
+          "status": "approved"
+        },
+        {
+          "text": "Save 30+ Hours Monthly",
+          "character_count": 21,
+          "status": "approved"
+        },
+        {
+          "text": "Reporting Automation",
+          "character_count": 19,
+          "status": "approved"
+        }
+      ],
+      "descriptions": [
+        {
+          "text": "Stop drowning in weekly client reports. AutoReport generates, schedules, and delivers them automatically.",
+          "character_count": 102,
+          "status": "EXCEEDS_LIMIT",
+          "note": "90 char limit - needs revision"
+        },
+        {
+          "text": "Generate client reports in minutes, not hours. Automated workflows reclaim your team's time.",
+          "character_count": 95,
+          "status": "EXCEEDS_LIMIT",
+          "note": "90 char limit - needs revision"
+        },
+        {
+          "text": "Eliminate manual reporting work. Let AutoReport handle weekly client deliverables automatically.",
+          "character_count": 95,
+          "status": "EXCEEDS_LIMIT",
+          "note": "90 char limit - needs revision"
+        }
+      ],
+      "descriptions_revised": [
+        {
+          "text": "Stop drowning in reports. AutoReport generates, schedules & delivers weekly client reports automatically.",
+          "character_count": 103,
+          "status": "needs_revision"
+        },
+        {
+          "text": "Generate reports in minutes. Automated workflows save your team 30+ hours monthly on reporting.",
+          "character_count": 97,
+          "status": "needs_revision"
+        },
+        {
+          "text": "Automate weekly client reports. Spend minutes, not hours on reporting. Deliver on time, every time.",
+          "character_count": 102,
+          "status": "needs_revision"
+        }
+      ],
+      "final_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app",
+      "utm_parameters": {
+        "utm_campaign": "ReportEase-Agency-Reporting-Q2-2026",
+        "utm_medium": "cpc",
+        "utm_source": "google",
+        "utm_content": "time-savings",
+        "utm_term": "agency-reporting"
+      },
+      "full_tracking_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app?utm_campaign=ReportEase-Agency-Reporting-Q2-2026&utm_medium=cpc&utm_source=google&utm_content=time-savings&utm_term=agency-reporting",
+      "expected_performance": {
+        "ctr_percentage": 4.5,
+        "conversion_rate_percentage": 11,
+        "estimated_cpl": 22,
+        "rationale": "Time savings is primary value prop - highest resonance"
+      },
+      "approval_status": "pending_revision"
+    },
+    {
+      "variant_id": "AD-002",
+      "variant_name": "Accuracy Focus",
+      "value_proposition": "Eliminate manual data-entry errors",
+      "target_audience": "Detail-oriented managers, agencies with high client expectations",
+      "messaging_pillars": [
+        "Data accuracy",
+        "Error elimination",
+        "Data integration"
+      ],
+      "landing_page_variant": "landing_page_accuracy",
+      "headlines": [
+        {
+          "text": "Eliminate Reporting Errors",
+          "character_count": 26,
+          "status": "approved"
+        },
+        {
+          "text": "100% Accurate Reports",
+          "character_count": 21,
+          "status": "approved"
+        },
+        {
+          "text": "Zero Manual Data Entry",
+          "character_count": 22,
+          "status": "approved"
+        },
+        {
+          "text": "Error-Free Client Reports",
+          "character_count": 25,
+          "status": "approved"
+        },
+        {
+          "text": "Automated Data Accuracy",
+          "character_count": 23,
+          "status": "approved"
+        }
+      ],
+      "descriptions": [
+        {
+          "text": "Automated data pull from Google Analytics, HubSpot, and ad platforms. Zero manual entry errors.",
+          "character_count": 98,
+          "status": "EXCEEDS_LIMIT",
+          "note": "90 char limit - needs revision"
+        },
+        {
+          "text": "Real-time data integration from all platforms. Accuracy guaranteed, errors eliminated.",
+          "character_count": 85,
+          "status": "approved"
+        },
+        {
+          "text": "Sync your entire marketing stack automatically. Never manually enter report data again.",
+          "character_count": 86,
+          "status": "approved"
+        }
+      ],
+      "descriptions_revised": [
+        {
+          "text": "Auto-sync Google Analytics, HubSpot & ad platforms. Zero manual entry errors, 100% accurate.",
+          "character_count": 93,
+          "status": "needs_revision"
+        },
+        {
+          "text": "Real-time data integration from all platforms. Accuracy guaranteed, errors eliminated.",
+          "character_count": 85,
+          "status": "approved"
+        },
+        {
+          "text": "Sync your entire marketing stack. Never manually enter data again. Always 100% accurate.",
+          "character_count": 86,
+          "status": "approved"
+        }
+      ],
+      "final_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app",
+      "utm_parameters": {
+        "utm_campaign": "ReportEase-Agency-Reporting-Q2-2026",
+        "utm_medium": "cpc",
+        "utm_source": "google",
+        "utm_content": "accuracy",
+        "utm_term": "agency-reporting"
+      },
+      "full_tracking_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app?utm_campaign=ReportEase-Agency-Reporting-Q2-2026&utm_medium=cpc&utm_source=google&utm_content=accuracy&utm_term=agency-reporting",
+      "expected_performance": {
+        "ctr_percentage": 3.5,
+        "conversion_rate_percentage": 9,
+        "estimated_cpl": 28,
+        "rationale": "Secondary value prop - resonates with detail-focused buyers but lower priority"
+      },
+      "approval_status": "pending_revision"
+    },
+    {
+      "variant_id": "AD-003",
+      "variant_name": "Visualization Focus",
+      "value_proposition": "Interactive dashboards stakeholders love",
+      "target_audience": "Agencies with high-touch client relationships, premium positioning",
+      "messaging_pillars": [
+        "Beautiful dashboards",
+        "Client impression",
+        "Real-time visibility"
+      ],
+      "landing_page_variant": "landing_page_visualization",
+      "headlines": [
+        {
+          "text": "Interactive Dashboards",
+          "character_count": 21,
+          "status": "approved"
+        },
+        {
+          "text": "Impress Clients Instantly",
+          "character_count": 24,
+          "status": "approved"
+        },
+        {
+          "text": "Real-Time Report Dashboards",
+          "character_count": 27,
+          "status": "approved"
+        },
+        {
+          "text": "Client-Ready Dashboards",
+          "character_count": 23,
+          "status": "approved"
+        },
+        {
+          "text": "Beautiful Report Dashboards",
+          "character_count": 27,
+          "status": "approved"
+        }
+      ],
+      "descriptions": [
+        {
+          "text": "Real-time syncing, customizable templates, interactive dashboards. Impress clients instantly.",
+          "character_count": 90,
+          "status": "approved"
+        },
+        {
+          "text": "Present polished, interactive dashboards to clients instantly. Real-time data, zero delays.",
+          "character_count": 90,
+          "status": "approved"
+        },
+        {
+          "text": "Custom dashboards, automated updates, client-ready in minutes. Beautiful, professional reports.",
+          "character_count": 94,
+          "status": "EXCEEDS_LIMIT",
+          "note": "90 char limit - needs revision"
+        }
+      ],
+      "descriptions_revised": [
+        {
+          "text": "Real-time syncing, customizable templates, interactive dashboards. Impress clients instantly.",
+          "character_count": 90,
+          "status": "approved"
+        },
+        {
+          "text": "Present polished, interactive dashboards to clients instantly. Real-time data, zero delays.",
+          "character_count": 90,
+          "status": "approved"
+        },
+        {
+          "text": "Automated updates, client-ready dashboards in minutes. Beautiful, professional reports.",
+          "character_count": 87,
+          "status": "approved"
+        }
+      ],
+      "final_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app",
+      "utm_parameters": {
+        "utm_campaign": "ReportEase-Agency-Reporting-Q2-2026",
+        "utm_medium": "cpc",
+        "utm_source": "google",
+        "utm_content": "visualization",
+        "utm_term": "agency-reporting"
+      },
+      "full_tracking_url": "https://v0-reportease-95254ahho-david-7482s-projects.vercel.app?utm_campaign=ReportEase-Agency-Reporting-Q2-2026&utm_medium=cpc&utm_source=google&utm_content=visualization&utm_term=agency-reporting",
+      "expected_performance": {
+        "ctr_percentage": 2.8,
+        "conversion_rate_percentage": 8,
+        "estimated_cpl": 33,
+        "rationale": "Tertiary value prop - appeals to premium buyers but lower initial intent"
+      },
+      "approval_status": "approved"
+    }
+  ],
+  "responsive_search_ad_specifications": {
+    "format": "Responsive Search Ad (RSA)",
+    "platform": "Google Ads Search",
+    "headlines_min": 3,
+    "headlines_max": 15,
+    "headlines_recommended": 5,
+    "headline_char_limit": 30,
+    "descriptions_min": 2,
+    "descriptions_max": 4,
+    "descriptions_recommended": 3,
+    "description_char_limit": 90,
+    "final_urls_min": 1,
+    "final_urls_max": 5,
+    "mobile_preferred_url": false,
+    "pinning_allowed": true,
+    "notes": "Responsive Search Ads allow Google to test headline and description combinations to maximize performance. Provide diverse, high-quality copy for each field to improve CTR and conversion rates."
+  },
+  "copy_quality_guidelines": {
+    "headlines": [
+      "Lead with primary benefit (time, accuracy, or visibility)",
+      "Keep under 30 characters strictly",
+      "Action-oriented language preferred",
+      "Avoid ALL CAPS (except acronyms like 'SEO')",
+      "No exclamation marks (overuse)",
+      "Include brand name or product name where possible"
+    ],
+    "descriptions": [
+      "Provide specific details (e.g., 'Google Analytics, HubSpot, ad platforms')",
+      "Keep under 90 characters strictly",
+      "Include CTA when possible ('start', 'try', 'discover')",
+      "Focus on buyer benefits, not features",
+      "Avoid generic claims ('best', 'top', 'leading')",
+      "Match landing page messaging for quality score boost"
+    ],
+    "overall": [
+      "Ensure headlines + descriptions tell complete story",
+      "Don't repeat same message across headlines",
+      "Test variations within match type (phrase vs broad)",
+      "Use numbers where credible (6 hours, 30+ minutes)",
+      "Appeal to target persona pain points"
+    ]
+  },
+  "testing_framework": {
+    "test_duration_days": 30,
+    "primary_metric": "Cost Per Lead (CPL)",
+    "secondary_metrics": [
+      "Click-Through Rate (CTR)",
+      "Conversion Rate",
+      "Quality Score"
+    ],
+    "winning_criteria": {
+      "variant_1_time": "Lowest CPL expected (~$22)",
+      "variant_2_accuracy": "Mid-range CPL (~$28)",
+      "variant_3_visualization": "Highest CPL (~$33)"
+    },
+    "success_action": "Scale top variant to 50% of budget, reduce bottom variant by 25%",
+    "failure_action": "If all variants CPL > $40, pause and revise entire ad group messaging"
+  }
+}
