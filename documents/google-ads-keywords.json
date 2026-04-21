@@ -1,0 +1,259 @@
+{
+  "campaign_name": "ReportEase-Agency-Reporting-Q2-2026",
+  "ad_group_name": "Agency Reporting",
+  "created_date": "2026-04-21",
+  "keywords": [
+    {
+      "id": 1,
+      "text": "agency reporting software",
+      "match_type": "PHRASE",
+      "category": "Core Product",
+      "priority": "high",
+      "estimated_cpc": 2.75,
+      "estimated_monthly_searches": 180,
+      "quality_score_target": 6,
+      "notes": "Primary intent indicator, most competitive but highest conversion potential"
+    },
+    {
+      "id": 2,
+      "text": "automated marketing reports",
+      "match_type": "PHRASE",
+      "category": "Problem Statement",
+      "priority": "high",
+      "estimated_cpc": 2.25,
+      "estimated_monthly_searches": 120,
+      "quality_score_target": 6,
+      "notes": "Pain point + solution combo, growing demand"
+    },
+    {
+      "id": 3,
+      "text": "client reporting tool",
+      "match_type": "PHRASE",
+      "category": "Buyer Focus",
+      "priority": "high",
+      "estimated_cpc": 2.0,
+      "estimated_monthly_searches": 90,
+      "quality_score_target": 6,
+      "notes": "Buyer-centric language, good intent"
+    },
+    {
+      "id": 4,
+      "text": "marketing dashboard for agencies",
+      "match_type": "PHRASE",
+      "category": "Vertical Specific",
+      "priority": "high",
+      "estimated_cpc": 1.75,
+      "estimated_monthly_searches": 60,
+      "quality_score_target": 7,
+      "notes": "Niche targeting, less competition, high relevance"
+    },
+    {
+      "id": 5,
+      "text": "weekly report automation",
+      "match_type": "PHRASE",
+      "category": "Workflow",
+      "priority": "high",
+      "estimated_cpc": 1.50,
+      "estimated_monthly_searches": 45,
+      "quality_score_target": 7,
+      "notes": "Time-saving focus, long-tail, strong buying intent"
+    },
+    {
+      "id": 6,
+      "text": "marketing performance reporting",
+      "match_type": "PHRASE",
+      "category": "Core Product",
+      "priority": "medium",
+      "estimated_cpc": 2.0,
+      "estimated_monthly_searches": 75,
+      "quality_score_target": 6,
+      "notes": "Solution-seeking stage, clear value prop match"
+    },
+    {
+      "id": 7,
+      "text": "client report generator",
+      "match_type": "PHRASE",
+      "category": "Buyer Focus",
+      "priority": "medium",
+      "estimated_cpc": 1.85,
+      "estimated_monthly_searches": 50,
+      "quality_score_target": 6,
+      "notes": "Specific tool-seeking, good conversion potential"
+    },
+    {
+      "id": 8,
+      "text": "automated client reports",
+      "match_type": "PHRASE",
+      "category": "Solution Stage",
+      "priority": "high",
+      "estimated_cpc": 2.25,
+      "estimated_monthly_searches": 80,
+      "quality_score_target": 6,
+      "notes": "Direct product match, high relevance"
+    },
+    {
+      "id": 9,
+      "text": "agency reporting platform",
+      "match_type": "PHRASE",
+      "category": "Core Product",
+      "priority": "high",
+      "estimated_cpc": 2.5,
+      "estimated_monthly_searches": 100,
+      "quality_score_target": 6,
+      "notes": "Solution-seeking, platform-aware buyers"
+    },
+    {
+      "id": 10,
+      "text": "marketing report automation",
+      "match_type": "PHRASE",
+      "category": "Problem Statement",
+      "priority": "medium",
+      "estimated_cpc": 1.95,
+      "estimated_monthly_searches": 70,
+      "quality_score_target": 6,
+      "notes": "Workflow automation focus, good intent"
+    },
+    {
+      "id": 11,
+      "text": "agency dashboard software",
+      "match_type": "PHRASE",
+      "category": "Vertical Specific",
+      "priority": "medium",
+      "estimated_cpc": 1.70,
+      "estimated_monthly_searches": 55,
+      "quality_score_target": 7,
+      "notes": "Niche vertical, visualization focus"
+    },
+    {
+      "id": 12,
+      "text": "+agency +reporting +tool",
+      "match_type": "BROAD",
+      "category": "Core Product",
+      "priority": "medium",
+      "estimated_cpc": 1.50,
+      "estimated_monthly_searches": 140,
+      "quality_score_target": 5,
+      "notes": "Broad reach, lower CPC, will capture related variations"
+    },
+    {
+      "id": 13,
+      "text": "+automated +reports +marketing",
+      "match_type": "BROAD",
+      "category": "Problem Statement",
+      "priority": "medium",
+      "estimated_cpc": 1.40,
+      "estimated_monthly_searches": 110,
+      "quality_score_target": 5,
+      "notes": "Will match order variations: automated reports, reports marketing, etc."
+    },
+    {
+      "id": 14,
+      "text": "+client +reporting +solution",
+      "match_type": "BROAD",
+      "category": "Buyer Focus",
+      "priority": "medium",
+      "estimated_cpc": 1.35,
+      "estimated_monthly_searches": 85,
+      "quality_score_target": 5,
+      "notes": "Will capture variations on client reporting needs"
+    },
+    {
+      "id": 15,
+      "text": "+agency +time +tracking +software",
+      "match_type": "BROAD",
+      "category": "Workflow",
+      "priority": "low",
+      "estimated_cpc": 1.20,
+      "estimated_monthly_searches": 40,
+      "quality_score_target": 5,
+      "notes": "Lower conversion intent but captures time-tracking buyers"
+    },
+    {
+      "id": 16,
+      "text": "+marketing +reporting +platform",
+      "match_type": "BROAD",
+      "category": "Core Product",
+      "priority": "medium",
+      "estimated_cpc": 1.60,
+      "estimated_monthly_searches": 95,
+      "quality_score_target": 5,
+      "notes": "Platform-aware buyers, good conversion potential"
+    },
+    {
+      "id": 17,
+      "text": "+automated +marketing +reporting",
+      "match_type": "BROAD",
+      "category": "Problem Statement",
+      "priority": "high",
+      "estimated_cpc": 1.70,
+      "estimated_monthly_searches": 125,
+      "quality_score_target": 5,
+      "notes": "Direct product match with broad reach"
+    },
+    {
+      "id": 18,
+      "text": "+agency +performance +reporting",
+      "match_type": "BROAD",
+      "category": "Workflow",
+      "priority": "medium",
+      "estimated_cpc": 1.45,
+      "estimated_monthly_searches": 60,
+      "quality_score_target": 5,
+      "notes": "Performance metrics focus, good fit"
+    },
+    {
+      "id": 19,
+      "text": "+agency +efficiency +software",
+      "match_type": "BROAD",
+      "category": "Vertical Specific",
+      "priority": "low",
+      "estimated_cpc": 1.25,
+      "estimated_monthly_searches": 50,
+      "quality_score_target": 5,
+      "notes": "Efficiency-focused buyers, broader match"
+    }
+  ],
+  "negative_keywords": [
+    {
+      "text": "agency staffing",
+      "match_type": "PHRASE",
+      "reason": "Recruitment focus, wrong buyer"
+    },
+    {
+      "text": "agency jobs",
+      "match_type": "PHRASE",
+      "reason": "Job seekers, not buyers"
+    },
+    {
+      "text": "agency recruitment",
+      "match_type": "PHRASE",
+      "reason": "HR focus, irrelevant"
+    },
+    {
+      "text": "free reporting software",
+      "match_type": "PHRASE",
+      "reason": "Price-sensitive, low conversion"
+    },
+    {
+      "text": "open source",
+      "match_type": "PHRASE",
+      "reason": "DIY focus, wrong buyer"
+    },
+    {
+      "text": "nonprofit reporting",
+      "match_type": "PHRASE",
+      "reason": "Wrong vertical"
+    }
+  ],
+  "keyword_summary": {
+    "total_keywords": 19,
+    "phrase_match_count": 11,
+    "broad_match_count": 8,
+    "estimated_total_monthly_searches": 1750,
+    "estimated_total_monthly_budget": 1500,
+    "estimated_avg_cpc": 1.85,
+    "estimated_monthly_clicks": 60,
+    "estimated_monthly_conversions": 6,
+    "estimated_cpl": 25
+  }
+}
