@@ -1,0 +1,65 @@
+{
+  "view_type": "report",
+  "headline": "Completed pain point & objection research across Hacker News — 10 pain points, 10 objections, messaging refinements ready",
+  "primary_stat": {
+    "label": "Top Pain Points Identified",
+    "value": "10 major + 6 secondary"
+  },
+  "highlights": [
+    "Pain Point #1: Manual reporting consumes 6-40 hours/week (VALIDATED on Ask HN)",
+    "Pain Point #2: Data integration complexity across GA, Ads, HubSpot (CONFIRMED)",
+    "Objection #1: Fear of team training/adoption (ADDRESSABLE with 30-min setup messaging)",
+    "Objection #2: Will this replace our staff? (CRITICAL — messaging updated to address headcount concern)",
+    "Competitor Finding: No dominant competitor in marketing-specific reporting automation (MAJOR OPPORTUNITY)",
+    "Messaging Gap #1: Current positioning says 'cuts time from 8+ to 2 hours' = sounds like layoffs (REVISED)",
+    "Messaging Gap #2: Missing ease-of-setup messaging (ADDED: '30-minute setup, no technical skills')",
+    "Messaging Gap #3: Missing data accuracy proof (ADDED: '99.9% reconciliation with source platforms')",
+    "ROI Validation: 6 hours/week @ $50/hour = $15,600/year savings vs $1,200/year cost = 13x ROI",
+    "Content Assets Created: ROI calculator spec, setup video outline, competitor matrix, sales scripts"
+  ],
+  "next_actions": [
+    {
+      "label": "Implement homepage messaging updates (WEEK 1)",
+      "task_template": "Update site copy",
+      "args": {
+        "hero_message": "Stop Drowning in Reporting. Start Your Day on Strategy.",
+        "secondary_message": "AutoReport frees your team from 6+ hours of weekly reporting. No technical skills required. 13x ROI."
+      }
+    },
+    {
+      "label": "Build ROI Calculator landing page (WEEK 2)",
+      "task_template": "Create interactive tool",
+      "args": {
+        "purpose": "Help prospects justify purchase to CFO with time + cost savings calculation"
+      }
+    },
+    {
+      "label": "Record 5-minute setup demo video (WEEK 2)",
+      "task_template": "Video production",
+      "args": {
+        "focus": "Show OAuth → Templates → Schedule → Dashboard in 5 minutes to overcome adoption objection"
+      }
+    },
+    {
+      "label": "Create security & compliance one-pager (WEEK 2)",
+      "task_template": "Sales collateral",
+      "args": {
+        "content": "SOC 2, encryption, GDPR, data accuracy guarantee, reconciliation process diagram"
+      }
+    },
+    {
+      "label": "Overhaul landing page structure (WEEK 3)",
+      "task_template": "Website update",
+      "args": {
+        "structure": "Hero → Problem → How It Works → What You Get → Objection Handling → Social Proof → CTA"
+      }
+    },
+    {
+      "label": "Train sales team on headcount reassurance narrative (WEEK 4)",
+      "task_template": "Sales enablement",
+      "args": {
+        "key_message": "Your team stays same size, focuses on strategy instead of data entry"
+      }
+    }
+  ]
+}
