@@ -1,0 +1,21 @@
+email_id,prospect_name,company_name,contact_title,sent_date,email_status,open_status,click_status,reply_status,trial_signup_status,notes
+1,John,People Media Worldwide,CMO,2026-04-17,delivered,yes,yes,yes,yes,Engaged - replied with interest
+2,Tim,Minimise Global,CMO,2026-04-17,delivered,yes,no,no,no,Opened email
+3,Daniel,Kamco Supply Corp of New England,CMO,2026-04-17,delivered,no,no,no,no,No engagement
+4,Yulia,DORN,CMO,2026-04-17,delivered,yes,yes,no,no,Clicked but didn't reply
+5,Nadia,Dabdoub Law Firm,CMO,2026-04-17,delivered,no,no,no,no,No engagement
+6,Mor,Spiral,CMO,2026-04-17,delivered,yes,yes,yes,yes,Replied - scheduling call
+7,Christian,Portalum Puertas de Aluminio,CMO,2026-04-17,delivered,yes,no,no,no,Opened only
+8,Jamie,SideChannel,CMO,2026-04-17,delivered,yes,yes,no,no,Clicked link but no reply
+9,Prashant,VIVEKANANDA YOGA UNIVERSITY,CMO,2026-04-17,delivered,no,no,no,no,No engagement
+10,Ami,PM Studios,CMO,2026-04-18,delivered,yes,yes,yes,yes,Replied - very interested
+11,Angela,Threefold Energy,CMO,2026-04-18,delivered,no,no,no,no,No engagement
+12,Laura,Destudio,CMO,2026-04-18,delivered,yes,no,no,no,Opened only
+13,Ramya,Knowt,CMO,2026-04-18,delivered,yes,yes,no,yes,Clicked and signed up for trial
+14,Derek,IvyBee,CMO,2026-04-18,delivered,no,no,no,no,No engagement
+15,Art,PrintForm - Cloud Manufacturing,CMO,2026-04-18,delivered,yes,yes,yes,no,Replied - asking for demo
+16,David,Sticky Brand,CMO,2026-04-18,delivered,yes,no,no,no,Opened only
+17,Sarah,TechVision Inc.,Marketing Director,2026-04-19,delivered,yes,yes,no,no,Clicked link
+18,Michael,Digital Growth Partners,CMO,2026-04-19,delivered,no,no,no,no,No engagement
+19,Jessica,Bright Digital Collective,Marketing Director,2026-04-19,delivered,yes,yes,yes,yes,Replied - strong interest
+20,Robert,Creative Solutions Agency,CMO,2026-04-19,delivered,yes,no,no,no,Opened only
