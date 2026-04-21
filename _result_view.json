@@ -1,0 +1,84 @@
+{
+  "view_type": "report",
+  "headline": "Google Ads Metrics Extraction Blocked: OAuth 400 Error Prevents Campaign Data Access",
+  "primary_stat": {
+    "label": "Authentication Status",
+    "value": "FAILED (HTTP 400)"
+  },
+  "highlights": [
+    "CRITICAL BLOCKER: Google OAuth token refresh failed (400 Bad Request)",
+    "Cannot retrieve campaign metrics, impressions, clicks, or conversions",
+    "CAC calculation undefined — total conversions unverifiable",
+    "3 previous tasks marked 'completed' cannot be verified without API access",
+    "Created 4 comprehensive documentation files: incident report, recovery plan, gap analysis, JSON structure",
+    "Campaign existence unconfirmed — may indicate launch task never executed",
+    "Zero conversions likely — indicates either no traffic or broken conversion tracking",
+    "Provided 8-step OAuth recovery guide with fallback options (manual export, service account)",
+    "Business unit economics validation completely blocked until metrics restored"
+  ],
+  "links": [
+    {
+      "label": "Incident Report (7.1 KB)",
+      "url": "data/google-ads-metrics-2026-04-21-incident-report.md"
+    },
+    {
+      "label": "Recovery Plan (9.5 KB)",
+      "url": "data/google-ads-oauth-recovery-plan.md"
+    },
+    {
+      "label": "Gap Analysis (15.7 KB)",
+      "url": "data/google-ads-extraction-gap-analysis.md"
+    },
+    {
+      "label": "Metrics JSON (6.8 KB)",
+      "url": "data/google-ads-metrics-2026-04-21.json"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Step 1: Restore OAuth Credentials",
+      "task_template": "Follow 8-step recovery guide in recovery-plan.md to re-authenticate Google Ads API",
+      "args": {
+        "priority": "critical",
+        "timeline": "< 30 minutes",
+        "owner": "API Admin / Google Cloud Admin"
+      }
+    },
+    {
+      "label": "Step 2: Verify Campaign Exists",
+      "task_template": "Once OAuth restored, run googleads_list_campaigns() to confirm 'Agency Reporting Software' campaign is active",
+      "args": {
+        "priority": "critical",
+        "timeline": "< 5 minutes",
+        "owner": "Data Pipeline"
+      }
+    },
+    {
+      "label": "Step 3: Re-run Metrics Extraction",
+      "task_template": "Execute full metrics extraction and populate google-ads-metrics-2026-04-21.json with real campaign data",
+      "args": {
+        "priority": "critical",
+        "timeline": "< 10 minutes",
+        "owner": "Data Pipeline"
+      }
+    },
+    {
+      "label": "Step 4: Calculate Verified CAC",
+      "task_template": "Once metrics retrieved: CAC = Total Spend ÷ Total Conversions; flag if zero conversions or > $100/month",
+      "args": {
+        "priority": "high",
+        "timeline": "< 5 minutes",
+        "owner": "Analytics Lead"
+      }
+    },
+    {
+      "label": "Step 5: Audit Previous Tasks",
+      "task_template": "Review 'Analyze Google Ads performance after 7 days' task; compare claimed CAC with newly calculated value",
+      "args": {
+        "priority": "high",
+        "timeline": "< 1 hour",
+        "owner": "CEO / Analytics Lead"
+      }
+    }
+  ]
+}
