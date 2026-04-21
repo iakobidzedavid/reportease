@@ -1,0 +1,64 @@
+{
+  "view_type": "report",
+  "headline": "HN positioning analysis complete: 10 themes, competitive whitespace mapped, GTM strategy validated",
+  "primary_stat": {
+    "label": "HN Comments Analyzed",
+    "value": "150+"
+  },
+  "highlights": [
+    "Finding 1: 'Back-office reporting chaos' is validated pain point—consultants position services around spreadsheet/workflow/reporting fixes",
+    "Finding 2: Agency operators face brutal time allocation—sales vs. shipping problem is acute, creating pricing umbrella for ReportEase",
+    "Finding 3: Spreadsheet hell is explicit and pervasive—spreadsheet glue mentioned across multiple threads as key consultancy value prop",
+    "Finding 4: Competitive whitespace validated—no mention of specialized marketing agency reporting tools on HN (absence validates gap)",
+    "Finding 5: Word-of-mouth + vertical credibility dominates GTM—HN founders show success via community/network, not paid acquisition",
+    "Finding 6: Vertical SaaS model works—mobile home dealership SaaS example: 80 customers over 7 years, profitable, defensible",
+    "Finding 7: Vertical focus = competitive moat—agencies buy similar tools, have similar sales cycles, talk to each other (perfect beachhead)",
+    "Finding 8: CMO trust drivers identified—differentiation, founder visibility, specific expertise matter (vs. generic consultancy)",
+    "Finding 9: Competitive positioning clear—ReportEase uniquely combines: templates + multi-source + scheduling + dashboards vs. rivals",
+    "Finding 10: MVBP validation—'Don't launch until you nail it' + 'serve one region at a time' informs product launch strategy"
+  ],
+  "links": [
+    {
+      "label": "Full Analysis Report",
+      "url": "file://documents/hn_positioning_analysis.md"
+    },
+    {
+      "label": "HN Thread 1 (Consultant Projects)",
+      "url": "https://news.ycombinator.com/item?id=47822940"
+    },
+    {
+      "label": "HN Thread 2 (Solo Business)",
+      "url": "https://news.ycombinator.com/item?id=47803524"
+    },
+    {
+      "label": "HN Thread 3 (Cold Start Problem)",
+      "url": "https://news.ycombinator.com/item?id=47834213"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Update landing page messaging",
+      "task_template": "Update hero copy and value prop to emphasize 'agency-specific' positioning and '6 hours/week' quantification",
+      "args": {
+        "focus": "CMO + Marketing Manager messaging layers",
+        "timeline_days": 2
+      }
+    },
+    {
+      "label": "Create ROI calculator",
+      "task_template": "Build interactive ROI calculator showing time savings + accuracy improvements for landing page",
+      "args": {
+        "inputs": ["hours_per_week", "reporting_frequency", "team_size"],
+        "outputs": ["hours_saved_annually", "error_reduction", "revenue_impact"]
+      }
+    },
+    {
+      "label": "Build founder credibility content",
+      "task_template": "Create agency-focused content: 'The Agency Reporting Benchmark Report' showing time spent on reporting across 100+ agencies",
+      "args": {
+        "format": "research_report",
+        "distribution": ["blog", "hacker_news", "agency_networks"]
+      }
+    }
+  ]
+}
