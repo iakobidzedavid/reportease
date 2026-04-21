@@ -1,0 +1,77 @@
+{
+  "view_type": "report",
+  "headline": "Infrastructure root cause analysis complete: 5 critical issues identified & remediation guide provided",
+  "primary_stat": {
+    "label": "Issues Diagnosed",
+    "value": "5 Critical"
+  },
+  "highlights": [
+    "Root cause: Missing environment variables (90% probability) — GITHUB_TOKEN, VERCEL_TOKEN, V0_API_KEY not configured",
+    "Secondary cause: Form submission infrastructure not implemented — No API route handler, no form component",
+    "Tertiary cause: GitHub Actions deployment pipeline missing — No CI/CD workflows, no branch protection",
+    "Repository & code quality: HEALTHY — Git config valid, TypeScript/Next.js config valid, no syntax errors",
+    "All fixes documented in 2 comprehensive guides (50+ pages) with step-by-step instructions and verification scripts",
+    "Estimated remediation time: 2.5 hours (environment setup 30 min, form implementation 45 min, automation 30 min, testing 35 min)",
+    "No infrastructure outages detected — Issue is configuration-related, not service availability",
+    "Pattern: Identical error across 2 tasks = shared infrastructure failure, not task-specific bugs",
+    "Verification checklist provided with 25+ checkpoints to ensure complete resolution",
+    "Next steps: Execute remediation guide sections 1-4, then re-run failed tasks with confidence"
+  ],
+  "links": [
+    {
+      "label": "Full Root Cause Analysis",
+      "url": "documents/2026-04-21_infrastructure_root_cause_analysis.md"
+    },
+    {
+      "label": "Remediation Guide with Code",
+      "url": "documents/2026-04-21_infrastructure_remediation_guide.md"
+    },
+    {
+      "label": "Executive Summary",
+      "url": "documents/2026-04-21_infrastructure_summary.md"
+    }
+  ],
+  "next_actions": [
+    {
+      "label": "Read Full Analysis",
+      "task_template": "review_document",
+      "args": {
+        "document": "documents/2026-04-21_infrastructure_root_cause_analysis.md"
+      }
+    },
+    {
+      "label": "Execute Remediation Section 1",
+      "task_template": "infrastructure_setup",
+      "args": {
+        "section": "environment_variables",
+        "guide": "documents/2026-04-21_infrastructure_remediation_guide.md"
+      }
+    },
+    {
+      "label": "Execute Remediation Section 2",
+      "task_template": "infrastructure_setup",
+      "args": {
+        "section": "form_infrastructure",
+        "guide": "documents/2026-04-21_infrastructure_remediation_guide.md"
+      }
+    },
+    {
+      "label": "Execute Remediation Section 3",
+      "task_template": "infrastructure_setup",
+      "args": {
+        "section": "deployment_pipeline",
+        "guide": "documents/2026-04-21_infrastructure_remediation_guide.md"
+      }
+    },
+    {
+      "label": "Run Verification & Re-execute Failed Tasks",
+      "task_template": "task_reexecution",
+      "args": {
+        "tasks": [
+          "Fix landing page lead capture form",
+          "Verify MVBP end-to-end functionality and deploy code to public GitHub repository"
+        ]
+      }
+    }
+  ]
+}

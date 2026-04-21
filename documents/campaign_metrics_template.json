@@ -1,0 +1,316 @@
+{
+  "campaign": {
+    "name": "ReportEase Cold Outreach - Wave 1",
+    "product": "AutoReport MVBP",
+    "beachhead_market": "Digital Marketing Agencies (10-50 person shops)",
+    "target_segment": "CMO, Head of Operations, Marketing Manager",
+    "start_date": "PENDING",
+    "end_date": "PENDING",
+    "status": "AWAITING_EXECUTION"
+  },
+  "campaign_overview": {
+    "emails_sent": 0,
+    "emails_delivered": 0,
+    "delivery_rate": 0.0,
+    "period_days": 0,
+    "variants_tested": 0
+  },
+  "primary_metrics": {
+    "open_rate": {
+      "value": 0.0,
+      "target": 0.25,
+      "description": "Percentage of delivered emails that were opened"
+    },
+    "click_rate": {
+      "value": 0.0,
+      "target": 0.10,
+      "description": "Percentage of opens that generated at least one click"
+    },
+    "reply_rate": {
+      "value": 0.0,
+      "target": 0.03,
+      "description": "Percentage of sent emails that received a reply"
+    },
+    "trial_signup_conversion": {
+      "value": 0.0,
+      "target": 0.20,
+      "description": "Percentage of clicks that led to trial account creation"
+    },
+    "end_to_end_conversion": {
+      "value": 0.0,
+      "target": 0.01,
+      "description": "Percentage of sent emails that resulted in trial signup"
+    }
+  },
+  "variant_performance": [
+    {
+      "variant_id": "v1_control",
+      "subject_line": "AutoReport MVBP Live – Your Marketing Reports in 10 Minutes",
+      "hook_type": "product_launch",
+      "emails_sent": 0,
+      "open_rate": 0.0,
+      "click_rate": 0.0,
+      "reply_rate": 0.0,
+      "trial_signups": 0,
+      "winner": null
+    },
+    {
+      "variant_id": "v2_pain_point",
+      "subject_line": "Your Marketing Teams are Spending X Hours/Week on Reports",
+      "hook_type": "pain_point_first",
+      "emails_sent": 0,
+      "open_rate": 0.0,
+      "click_rate": 0.0,
+      "reply_rate": 0.0,
+      "trial_signups": 0,
+      "winner": null
+    },
+    {
+      "variant_id": "v3_social_proof",
+      "subject_line": "How [Similar Agency] Reclaimed 30 Hours/Month on Reporting",
+      "hook_type": "social_proof_outcome",
+      "emails_sent": 0,
+      "open_rate": 0.0,
+      "click_rate": 0.0,
+      "reply_rate": 0.0,
+      "trial_signups": 0,
+      "winner": null
+    }
+  ],
+  "segment_performance": {
+    "by_company_size": [
+      {
+        "size_bracket": "10-15 person agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "size_bracket": "16-30 person agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "size_bracket": "31-50 person agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      }
+    ],
+    "by_vertical": [
+      {
+        "vertical": "Digital/Creative Agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "vertical": "SEO/SEM Agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "vertical": "Performance Marketing Agencies",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      }
+    ],
+    "by_geography": [
+      {
+        "region": "Pacific (CA, WA, OR)",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "region": "Northeast (NY, MA, PA)",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "region": "Midwest (IL, MI, MN)",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      },
+      {
+        "region": "South (TX, FL, NC)",
+        "emails_sent": 0,
+        "open_rate": 0.0,
+        "reply_rate": 0.0,
+        "trial_signups": 0
+      }
+    ]
+  },
+  "top_5_high_engagement_prospects": [
+    {
+      "rank": 1,
+      "company_name": "TBD",
+      "prospect_name": "TBD",
+      "email": "TBD",
+      "title": "TBD",
+      "engagement_score": 0,
+      "opens": 0,
+      "clicks": 0,
+      "replies": 0,
+      "trial_signup": false,
+      "sentiment": "pending",
+      "status": "PENDING",
+      "next_action": "AWAITING_CAMPAIGN"
+    },
+    {
+      "rank": 2,
+      "company_name": "TBD",
+      "prospect_name": "TBD",
+      "email": "TBD",
+      "title": "TBD",
+      "engagement_score": 0,
+      "opens": 0,
+      "clicks": 0,
+      "replies": 0,
+      "trial_signup": false,
+      "sentiment": "pending",
+      "status": "PENDING",
+      "next_action": "AWAITING_CAMPAIGN"
+    },
+    {
+      "rank": 3,
+      "company_name": "TBD",
+      "prospect_name": "TBD",
+      "email": "TBD",
+      "title": "TBD",
+      "engagement_score": 0,
+      "opens": 0,
+      "clicks": 0,
+      "replies": 0,
+      "trial_signup": false,
+      "sentiment": "pending",
+      "status": "PENDING",
+      "next_action": "AWAITING_CAMPAIGN"
+    },
+    {
+      "rank": 4,
+      "company_name": "TBD",
+      "prospect_name": "TBD",
+      "email": "TBD",
+      "title": "TBD",
+      "engagement_score": 0,
+      "opens": 0,
+      "clicks": 0,
+      "replies": 0,
+      "trial_signup": false,
+      "sentiment": "pending",
+      "status": "PENDING",
+      "next_action": "AWAITING_CAMPAIGN"
+    },
+    {
+      "rank": 5,
+      "company_name": "TBD",
+      "prospect_name": "TBD",
+      "email": "TBD",
+      "title": "TBD",
+      "engagement_score": 0,
+      "opens": 0,
+      "clicks": 0,
+      "replies": 0,
+      "trial_signup": false,
+      "sentiment": "pending",
+      "status": "PENDING",
+      "next_action": "AWAITING_CAMPAIGN"
+    }
+  ],
+  "common_objections": [],
+  "reply_sentiment_distribution": {
+    "positive": 0,
+    "neutral": 0,
+    "objection": 0,
+    "question": 0,
+    "no_replies": 0
+  },
+  "top_objections_and_questions": [
+    {
+      "rank": 1,
+      "objection": "TBD",
+      "frequency": 0,
+      "suggested_response": "TBD"
+    },
+    {
+      "rank": 2,
+      "objection": "TBD",
+      "frequency": 0,
+      "suggested_response": "TBD"
+    },
+    {
+      "rank": 3,
+      "objection": "TBD",
+      "frequency": 0,
+      "suggested_response": "TBD"
+    }
+  ],
+  "trial_signups_detail": [
+    {
+      "prospect_name": "TBD",
+      "company": "TBD",
+      "email": "TBD",
+      "signup_date": "TBD",
+      "trial_duration_days": 14,
+      "demo_usage": false,
+      "integrations_configured": [],
+      "status": "PENDING"
+    }
+  ],
+  "unit_economics": {
+    "total_emails_sent": 0,
+    "cost_per_email": 0.0,
+    "total_campaign_cost": 0.0,
+    "trial_signups": 0,
+    "cost_per_trial_signup": 0.0,
+    "estimated_conversions_to_paid": 0,
+    "assumed_conversion_rate": 0.20,
+    "customer_acquisition_cost": 0.0,
+    "customer_lifetime_value": 6000.0,
+    "ltv_coca_ratio": 0.0,
+    "ltv_coca_target": 3.0
+  },
+  "analysis_findings": {
+    "most_effective_hook": "PENDING",
+    "best_performing_variant": "PENDING",
+    "highest_engagement_segment": "PENDING",
+    "lowest_engagement_segment": "PENDING",
+    "key_success_factors": [],
+    "areas_for_improvement": [],
+    "estimated_conversion_funnel": {
+      "emails_sent": 20,
+      "opens_expected": 5,
+      "clicks_expected": 0.5,
+      "trial_signups_expected": 0.1,
+      "conversion_funnel": "5% → 10% → 20% → 5% (compound)"
+    }
+  },
+  "recommendations": {
+    "for_follow_up": [],
+    "for_messaging_refinement": [],
+    "for_campaign_scaling": [],
+    "for_business_model": []
+  },
+  "meta": {
+    "report_date": "2026-04-21",
+    "report_version": "1.0",
+    "campaign_status": "AWAITING_EXECUTION",
+    "next_update": "POST_CAMPAIGN_LAUNCH",
+    "last_updated": "2026-04-21T00:00:00Z"
+  }
+}
