@@ -1,0 +1,4 @@
+
+# Agent debug logs (may contain auth tokens)
+.claude-debug-*.log
+*.debug.log
