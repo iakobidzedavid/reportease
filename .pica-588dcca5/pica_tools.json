@@ -1,0 +1,4639 @@
+[
+  {
+    "name": "pica_apollo_bulk_organization_enrichment",
+    "description": "[APOLLO] Bulk Organization Enrichment on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "domains": {
+          "description": "Array of domain names to enrich (up to 4 domains). Each domain should be a string without www., @ symbol, or similar.",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4,
+          "type": "array"
+        }
+      },
+      "required": [
+        "domains"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_organization_enrichment",
+      "pica_action_id": "conn_mod_def::GHFycgEKFOQ::u0jN29cHTamW-ECNPSM_NQ",
+      "action_title": "Bulk Organization Enrichment",
+      "action_path": "/apollo/bulk-organization-enrichment",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_people_enrichment",
+    "description": "[APOLLO] Bulk People Enrichment on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "details": {
+          "description": "Array of person detail objects (up to 10 people). Each object can contain firstName, lastName, name, email, hashedEmail, organizationName, domain, id, or linkedinUrl",
+          "items": {
+            "additionalProperties": false,
+            "description": "Person identification details used for matching.",
+            "properties": {
+              "domain": {
+                "description": "Domain name of the person's employer (e.g., apollo.io). Do not include www. or @",
+                "type": "string"
+              },
+              "email": {
+                "description": "Email address of the person",
+                "type": "string"
+              },
+              "firstName": {
+                "description": "First name of the person. Typically used with lastName",
+                "type": "string"
+              },
+              "hashedEmail": {
+                "description": "Hashed email (MD5 or SHA-256 format)",
+                "type": "string"
+              },
+              "id": {
+                "description": "Apollo ID for the person",
+                "type": "string"
+              },
+              "lastName": {
+                "description": "Last name of the person. Typically used with firstName",
+                "type": "string"
+              },
+              "linkedinUrl": {
+                "description": "LinkedIn profile URL",
+                "type": "string"
+              },
+              "name": {
+                "description": "Full name of the person. If provided, firstName and lastName are not needed",
+                "type": "string"
+              },
+              "organizationName": {
+                "description": "Name of the person's employer (current or previous)",
+                "type": "string"
+              }
+            },
+            "title": "Person Detail",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "revealPersonalEmails": {
+          "description": "Set to true to enrich all matched people with personal emails. May consume additional credits. Default: false",
+          "type": "boolean"
+        },
+        "revealPhoneNumber": {
+          "description": "Set to true to enrich all matched people with phone numbers. Requires webhookUrl. Default: false",
+          "type": "boolean"
+        },
+        "webhookUrl": {
+          "description": "Required if revealPhoneNumber is true. URL where Apollo will send phone number data asynchronously",
+          "type": "string"
+        }
+      },
+      "required": [
+        "details"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_people_enrichment",
+      "pica_action_id": "conn_mod_def::GHFye_z-Otw::or6sUDS4RvGDSLikpDbWPg",
+      "action_title": "Bulk People Enrichment",
+      "action_path": "/apollo/bulk-people-enrichment",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_get_deals",
+    "description": "[APOLLO] Get Deals on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "description": "The page number of the Apollo data to retrieve. Use with perPage for pagination. Example: 4",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "The number of search results per page. Limiting results per page improves performance. Use with page parameter to navigate through results. Example: 3",
+          "type": "number"
+        },
+        "sortByField": {
+          "description": "Sort the opportunities by: `amount` (largest deal values first), `is_closed` (closed deals first), or `is_won` (won deals first)",
+          "enum": [
+            "amount",
+            "is_closed",
+            "is_won"
+          ],
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "get_deals",
+      "pica_action_id": "conn_mod_def::GHFyisR9Bjs::sZHb1wZkQYOdqiQzs6qQ_A",
+      "action_title": "Get Deals",
+      "action_path": "/apollo/get-deals",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_get_labels",
+    "description": "[APOLLO] Get Labels on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "get_labels",
+      "pica_action_id": "conn_mod_def::GHFylIc_VFo::Uz3qTWqqTRy7SxxPDJDgKQ",
+      "action_title": "Get Labels",
+      "action_path": "/apollo/get-labels",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_get_users",
+    "description": "[APOLLO] Get Users on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "description": "Page number of Apollo data to retrieve. Use with perPage for pagination. Example: 4",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "Number of search results per page. Limiting results per page improves endpoint performance. Use with page. Example: 10",
+          "type": "number"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "get_users",
+      "pica_action_id": "conn_mod_def::GHFynfCuBgA::qOcBkFC9SFacpd94_LUIuQ",
+      "action_title": "Get Users",
+      "action_path": "/apollo/get-users",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_people_enrichment",
+    "description": "[APOLLO] People Enrichment on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "domain": {
+          "description": "The domain of the person's employer (e.g., apollo.io). Do not include www. or @",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of the person",
+          "type": "string"
+        },
+        "firstName": {
+          "description": "The first name of the person (typically used with lastName)",
+          "type": "string"
+        },
+        "hashedEmail": {
+          "description": "The hashed email (MD5 or SHA-256 format) for privacy-preserving lookups",
+          "type": "string"
+        },
+        "id": {
+          "description": "The Apollo ID for the person (from previous searches)",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "The last name of the person (typically used with firstName)",
+          "type": "string"
+        },
+        "linkedinUrl": {
+          "description": "The URL of the person's LinkedIn profile",
+          "type": "string"
+        },
+        "name": {
+          "description": "The full name of the person (first and last name separated by space). Use instead of firstName/lastName",
+          "type": "string"
+        },
+        "organizationName": {
+          "description": "The name of the person's employer (current or previous)",
+          "type": "string"
+        },
+        "revealPersonalEmails": {
+          "description": "Set to true to reveal personal email addresses (may consume credits). Defaults to false",
+          "type": "boolean"
+        },
+        "revealPhoneNumber": {
+          "description": "Set to true to reveal phone numbers (may consume credits, requires webhookUrl). Defaults to false",
+          "type": "boolean"
+        },
+        "webhookUrl": {
+          "description": "Required if revealPhoneNumber is true. URL to receive phone number data asynchronously",
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "people_enrichment",
+      "pica_action_id": "conn_mod_def::GHFyqD7awfE::b0Lf4WQARMKMO9joljlZUA",
+      "action_title": "People Enrichment",
+      "action_path": "/apollo/people-enrichment",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_accounts",
+    "description": "[APOLLO] Search Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "accountLabelIds": {
+          "description": "Apollo IDs for labels to include in search results. If multiple labels are provided, accounts connected to any of the labels will be included.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "accountStageIds": {
+          "description": "Apollo IDs for account stages to include in search results. If multiple stages are provided, accounts matching any of the stages will be included.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "page": {
+          "description": "Page number of Apollo data to retrieve. Use with perPage for pagination.",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "Number of results per page. Use with page for pagination.",
+          "type": "number"
+        },
+        "qOrganizationName": {
+          "description": "Keywords to narrow the search of accounts by name. Keywords should directly match at least part of an account's name.",
+          "type": "string"
+        },
+        "sortAscending": {
+          "description": "Set to true to sort in ascending order. Must be used with sortByField. Defaults to false.",
+          "type": "boolean"
+        },
+        "sortByField": {
+          "description": "Sort matching accounts by one of: account_last_activity_date, account_created_at, or account_updated_at.",
+          "enum": [
+            "account_last_activity_date",
+            "account_created_at",
+            "account_updated_at"
+          ],
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_accounts",
+      "pica_action_id": "conn_mod_def::GHFysM7g11s::yA3OylqQQ3KslRbmRIDrpA",
+      "action_title": "Search Accounts",
+      "action_path": "/apollo/search-accounts",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_contacts",
+    "description": "[APOLLO] Search Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "contactLabelIds": {
+          "description": "Apollo IDs for labels to include in search results. Returns contacts connected to any of the labels.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "contactStageIds": {
+          "description": "Apollo IDs for contact stages to include in search results. Returns contacts matching any of the stages along with other parameters.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "page": {
+          "description": "Page number of Apollo data to retrieve.",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "Number of search results per page.",
+          "type": "number"
+        },
+        "qKeywords": {
+          "description": "Keywords to narrow the search of contacts. Can include combinations of names, job titles, employers (company names), and email addresses.",
+          "type": "string"
+        },
+        "sortAscending": {
+          "description": "Set to true to sort in ascending order. Must be used with sortByField, otherwise sorting logic is not applied. Defaults to false.",
+          "type": "boolean"
+        },
+        "sortByField": {
+          "description": "Field to sort matching contacts by.",
+          "enum": [
+            "contact_last_activity_date",
+            "contact_email_last_opened_at",
+            "contact_email_last_clicked_at",
+            "contact_created_at",
+            "contact_updated_at"
+          ],
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_contacts",
+      "pica_action_id": "conn_mod_def::GHFyuE9RV7g::h5dmoxUzR-Wh2_oTCykMfg",
+      "action_title": "Search Contacts",
+      "action_path": "/apollo/search-contacts",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_people",
+    "description": "[APOLLO] Search People on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "contactEmailStatus": {
+          "description": "Email verification statuses to filter by. Options: verified, unverified, likely to engage, unavailable",
+          "items": {
+            "enum": [
+              "verified",
+              "unverified",
+              "likely to engage",
+              "unavailable"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "currentlyNotUsingAnyOfTechnologyUids": {
+          "description": "Exclude companies using these technologies. Replace spaces/periods with underscores. Examples: salesforce, google_analytics, wordpress_org",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "currentlyUsingAllOfTechnologyUids": {
+          "description": "Technologies that current employer uses (must match ALL). Replace spaces/periods with underscores. Examples: salesforce, google_analytics, wordpress_org",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "currentlyUsingAnyOfTechnologyUids": {
+          "description": "Technologies that current employer uses (matches ANY). Replace spaces/periods with underscores. Examples: salesforce, google_analytics, wordpress_org",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "includeSimilarTitles": {
+          "description": "Whether to include people with similar job titles. Set to false for strict matches only. Defaults to true",
+          "type": "boolean"
+        },
+        "organizationIds": {
+          "description": "Apollo organization IDs to filter by. Each company has a unique ID",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "organizationJobLocations": {
+          "description": "Locations of jobs being actively recruited by current employer. Examples: atlanta, japan",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "organizationJobPostedAtRangeMax": {
+          "description": "Latest date when jobs were posted by current employer (YYYY-MM-DD format). Example: 2025-09-25",
+          "type": "string"
+        },
+        "organizationJobPostedAtRangeMin": {
+          "description": "Earliest date when jobs were posted by current employer (YYYY-MM-DD format). Example: 2025-07-25",
+          "type": "string"
+        },
+        "organizationLocations": {
+          "description": "Headquarters locations of current employers (cities, states, countries). Examples: texas, tokyo, spain",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "organizationNumEmployeesRanges": {
+          "description": "Employee count ranges at current employer. Format: min,max. Examples: 1,10; 250,500; 10000,20000",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "organizationNumJobsRangeMax": {
+          "description": "Maximum number of active job postings at current employer. Examples: 50, 500",
+          "type": "number"
+        },
+        "organizationNumJobsRangeMin": {
+          "description": "Minimum number of active job postings at current employer. Examples: 50, 500",
+          "type": "number"
+        },
+        "page": {
+          "description": "Page number for pagination. Use with perPage to navigate results. Example: 4",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "Number of results per page. Limits results for better performance. Example: 10",
+          "type": "number"
+        },
+        "personLocations": {
+          "description": "Locations where people live (cities, states, countries). Examples: california, ireland, chicago",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "personSeniorities": {
+          "description": "Job seniority levels. Options: owner, founder, c_suite, partner, vp, head, director, manager, senior, entry, intern",
+          "items": {
+            "enum": [
+              "owner",
+              "founder",
+              "c_suite",
+              "partner",
+              "vp",
+              "head",
+              "director",
+              "manager",
+              "senior",
+              "entry",
+              "intern"
+            ],
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "personTitles": {
+          "description": "Job titles to search for. Results include similar titles even if not exact matches. Example: marketing manager returns content marketing manager",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "qKeywords": {
+          "description": "Keywords to filter results by",
+          "type": "string"
+        },
+        "qOrganizationDomainsList": {
+          "description": "Employer domain names (current or previous). Do not include www., @, or similar. Max 1000 domains per request. Examples: apollo.io, microsoft.com",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "qOrganizationJobTitles": {
+          "description": "Job titles in active postings at current employer. Examples: sales manager, research analyst",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "revenueRangeMax": {
+          "description": "Maximum annual revenue of current employer (no currency symbols or commas). Examples: 500000, 1500000",
+          "type": "number"
+        },
+        "revenueRangeMin": {
+          "description": "Minimum annual revenue of current employer (no currency symbols or commas). Examples: 500000, 1500000",
+          "type": "number"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_people",
+      "pica_action_id": "conn_mod_def::GHFywR1WWo8::kY7bkWNWSrOHkNQgK5ZbWg",
+      "action_title": "Search People",
+      "action_path": "/apollo/search-people",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_tasks",
+    "description": "[APOLLO] Search Tasks on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "openFactorNames": {
+          "description": "Array of open factor names to filter tasks. Filters tasks by specific criteria or categories.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "page": {
+          "description": "Page number of Apollo data to retrieve. Use with `perPage` for pagination. Example: 4.",
+          "type": "number"
+        },
+        "perPage": {
+          "description": "Number of search results per page. Limiting results per page improves endpoint performance. Use with `page`. Example: 10.",
+          "type": "number"
+        },
+        "sortByField": {
+          "description": "Sort the tasks by a specific field (e.g., `due_at`, `created_at`, `updated_at`).",
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_tasks",
+      "pica_action_id": "conn_mod_def::GHFyyDuYpn0::8qcxwDiHRzSnQE2Ioib9kw",
+      "action_title": "Search Tasks",
+      "action_path": "/apollo/search-tasks",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_create_accounts",
+    "description": "[APOLLO] Bulk Create Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "accounts": {
+          "description": "Array of account attribute objects. Max 100 items per request.",
+          "items": {
+            "additionalProperties": false,
+            "description": "Account object fields (all optional per documentation).",
+            "properties": {
+              "account_stage_id": {
+                "description": "Account stage / pipeline stage ID (BSON::ObjectId).",
+                "type": "string"
+              },
+              "domain": {
+                "description": "Company domain (e.g., example.com).",
+                "type": "string"
+              },
+              "facebook_url": {
+                "description": "Facebook page URL.",
+                "type": "string"
+              },
+              "hubspot_id": {
+                "description": "HubSpot company ID (CRM integration / dedupe).",
+                "type": "string"
+              },
+              "linkedin_url": {
+                "description": "LinkedIn company page URL.",
+                "type": "string"
+              },
+              "merged_crm_ids": {
+                "description": "Additional CRM IDs for deduplication. Items are strings.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "name": {
+                "description": "Account name.",
+                "type": "string"
+              },
+              "organization_id": {
+                "description": "Apollo organization ID.",
+                "type": "string"
+              },
+              "owner_id": {
+                "description": "Account owner user ID (BSON::ObjectId). Defaults to current user if not provided.",
+                "type": "string"
+              },
+              "parent_account_id": {
+                "description": "Parent account ID (BSON::ObjectId) for hierarchy.",
+                "type": "string"
+              },
+              "phone": {
+                "description": "Company phone number.",
+                "type": "string"
+              },
+              "phone_status_cd": {
+                "description": "Phone validation status.",
+                "type": "string"
+              },
+              "raw_address": {
+                "description": "Company address.",
+                "type": "string"
+              },
+              "salesforce_id": {
+                "description": "Salesforce account ID (CRM integration / dedupe).",
+                "type": "string"
+              },
+              "twitter_url": {
+                "description": "Twitter profile URL.",
+                "type": "string"
+              },
+              "typed_custom_fields": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "description": "Custom field values as key-value pairs where key is field_id and value is field_value. additionalProperties are strings.",
+                "title": "Typed Custom Fields",
+                "type": "object"
+              }
+            },
+            "title": "Account Attributes",
+            "type": "object"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "type": "array"
+        },
+        "append_label_names": {
+          "description": "Array of label names to add to ALL accounts in this request.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "run_dedupe": {
+          "description": "Enable aggressive deduplication. Default: false. When true, matches by CRM IDs and domain, organization_id, and name. Existing matches are still returned without modification.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "accounts"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_create_accounts",
+      "pica_action_id": "conn_mod_def::GJz163LdMJU::hWDUX0fCQWCc5qQln6aQ0w",
+      "action_title": "Bulk Create Accounts",
+      "action_path": "/api/v1/accounts/bulk_create",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_update_accounts",
+    "description": "[APOLLO] Bulk Update Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_attributes": {
+          "description": "Array of account objects with individual updates.",
+          "items": {
+            "additionalProperties": false,
+            "description": "Per-account update object",
+            "properties": {
+              "account_stage_id": {
+                "description": "The Apollo account stage ID.",
+                "type": "string"
+              },
+              "id": {
+                "description": "Required. The account ID to update.",
+                "type": "string"
+              },
+              "name": {
+                "description": "The account name.",
+                "type": "string"
+              },
+              "owner_id": {
+                "description": "The Apollo user ID to assign as owner.",
+                "type": "string"
+              },
+              "typed_custom_fields": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "description": "Custom field values as key-value pairs. Keys are custom field IDs; values are strings.",
+                "title": "Typed Custom Fields",
+                "type": "object"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Account Attributes",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "account_ids": {
+          "description": "Array of account IDs to update with the same values. Limit: < 1000 items.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "account_stage_id": {
+          "description": "When using account_ids, applies this stage ID to all accounts in account_ids.",
+          "type": "string"
+        },
+        "async": {
+          "description": "If true, processes updates asynchronously. Only available when using account_ids; not supported with account_attributes.",
+          "type": "boolean"
+        },
+        "name": {
+          "description": "When using account_ids, applies this name to all accounts in account_ids.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "When using account_ids, applies this Apollo user ID as owner to all accounts in account_ids.",
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_update_accounts",
+      "pica_action_id": "conn_mod_def::GJz16-Qfx1w::Et7L5sHASWaCMHF7t-u22w",
+      "action_title": "Bulk Update Accounts",
+      "action_path": "/api/v1/accounts/bulk_update",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_create_an_account",
+    "description": "[APOLLO] Create an Account on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_stage_id": {
+          "description": "Apollo ID of the account stage. Retrieve via List Account Stages. If omitted, Apollo assigns a stage based on your team settings. Example: 6095a710bd01d100a506d4b9.",
+          "type": "string"
+        },
+        "domain": {
+          "description": "Account domain without www. Example: apollo.io or microsoft.com.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Human-readable account name. Example: The Irish Copywriters.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "Apollo user ID for the account owner. Retrieve via Get a List of Users. Example: 66302798d03b9601c7934ebf.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Primary phone number (any format; Apollo sanitizes). Examples: 555-303-1234, +44 7911 123456.",
+          "type": "string"
+        },
+        "raw_address": {
+          "description": "Corporate location text; Apollo maps to a predefined location. Examples: Belfield, Dublin 4, Ireland; Dallas, United States.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Key/value map of custom field IDs to values. (OpenAPI indicates values as strings via additionalProperties.)",
+          "title": "Typed Custom Fields",
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_an_account",
+      "pica_action_id": "conn_mod_def::GJz17HSIaaw::BxpcIhBPQCqc82bYFpJLPg",
+      "action_title": "Create an Account",
+      "action_path": "/api/v1/accounts",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_account_stages",
+    "description": "[APOLLO] List Account Stages on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers for the API call.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Must be application/json.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_account_stages",
+      "pica_action_id": "conn_mod_def::GJz17OH1Ejw::5FIx4c77Rla0ZizWC6Cbng",
+      "action_title": "List Account Stages",
+      "action_path": "/api/v1/account_stages",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_search_for_accounts",
+    "description": "[APOLLO] Search for Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_label_ids": {
+          "description": "Apollo IDs for labels to include. If multiple are provided, accounts connected to any label are included (in combination with other filters).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "account_stage_ids": {
+          "description": "Apollo IDs for account stages to include. If multiple are provided, accounts matching any stage are included (in combination with other filters).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "page": {
+          "description": "Page number to retrieve (int32). Use with per_page to navigate results and improve performance.",
+          "type": "integer"
+        },
+        "per_page": {
+          "description": "Results per page (int32). Docs note a limit of 100 records per page.",
+          "type": "integer"
+        },
+        "q_organization_name": {
+          "description": "Keywords to narrow the search of accounts in your team\u2019s Apollo account. Matches account names only (not other fields).",
+          "type": "string"
+        },
+        "sort_ascending": {
+          "description": "Default: false. Set true to sort ascending. Must be used with sort_by_field or sorting is not applied.",
+          "type": "boolean"
+        },
+        "sort_by_field": {
+          "description": "Sort field.",
+          "enum": [
+            "account_last_activity_date",
+            "account_created_at",
+            "account_updated_at"
+          ],
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_for_accounts",
+      "pica_action_id": "conn_mod_def::GJz17VqALZc::15ONRvevRLmLQmJzEwHJCw",
+      "action_title": "Search for Accounts",
+      "action_path": "/api/v1/accounts/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_account_owner_for_multiple_accounts",
+    "description": "[APOLLO] Update Account Owner for Multiple Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Parameters that must be sent in the URL query string (not in the request body).",
+          "properties": {
+            "account_ids[]": {
+              "description": "Required. The Apollo IDs for the accounts you want to reassign.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "owner_id": {
+              "description": "Required. The Apollo user ID that will become the new owner for the specified accounts.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "account_ids[]",
+            "owner_id"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_account_owner_for_multiple_accounts",
+      "pica_action_id": "conn_mod_def::GJz17dbsUCc::NAEtaQ2FS5KOfbXQiAIoFg",
+      "action_title": "Update Account Owner for Multiple Accounts",
+      "action_path": "/api/v1/accounts/update_owners",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_account_stage_for_multiple_accounts",
+    "description": "[APOLLO] Update Account Stage for Multiple Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "description": "Request media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters to construct https://api.apollo.io/api/v1/{path}. The concrete endpoint path is not specified in the provided content.",
+          "properties": {
+            "path": {
+              "description": "Unspecified endpoint path segment from Apollo reference docs (placeholder from scraped content).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Query parameters are not specified in the provided scraped content.",
+          "properties": {},
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_account_stage_for_multiple_accounts",
+      "pica_action_id": "conn_mod_def::GJz17kS7cXI::rQlesMqqRm23fcXDB6t5sg",
+      "action_title": "Update Account Stage for Multiple Accounts",
+      "action_path": "/{{path}}",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_an_account",
+    "description": "[APOLLO] Update an Account on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_stage_id": {
+          "description": "Apollo ID of the account stage to assign. Example: `61b8e913e0f4d2012e3af74e`.",
+          "type": "string"
+        },
+        "domain": {
+          "description": "Update the account domain. Do not include `www.`. Example: `apollo.io` or `microsoft.com`.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Update the account's human-readable name. Example: `The Fast Irish Copywriters`.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "Apollo user ID to set as the account owner. Example: `66302798d03b9601c7934ebf`.",
+          "type": "string"
+        },
+        "phone": {
+          "description": "Update primary phone number. Examples: `555-303-1234`; `+44 7911 123456`.",
+          "type": "string"
+        },
+        "raw_address": {
+          "description": "Update corporate location (city/state/country). Examples: `Belfield, Dublin 4, Ireland`; `Dallas, United States`.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": true,
+          "description": "Key/value map for custom account fields. Keys are custom field IDs and values must match the field\u2019s data type requirements.",
+          "title": "Typed Custom Fields",
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_an_account",
+      "pica_action_id": "conn_mod_def::GJz17uMfKtU::H2egrgHsTZ2EeOtP8sVw1A",
+      "action_title": "Update an Account",
+      "action_path": "/accounts/{{accountId}}",
+      "method": "PATCH"
+    }
+  },
+  {
+    "name": "pica_apollo_view_an_account",
+    "description": "[APOLLO] View an Account on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters to be sent in the URL.",
+          "properties": {
+            "id": {
+              "description": "The Apollo ID for the account you want to retrieve. Example: `6518c6184f20350001a0b9c0`. To find account IDs, call the \u201cSearch for Accounts\u201d endpoint and use the `id` value from results.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "view_an_account",
+      "pica_action_id": "conn_mod_def::GJz18DDnE6w::RJhEmf4AT6mmLBVttv-7FA",
+      "action_title": "View an Account",
+      "action_path": "/accounts/{{id}}",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_create_call_records",
+    "description": "[APOLLO] Create Call Records on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "description": "Request content type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters used to log the phone call record. Per documentation, these must be sent in the URL query string (not in the body).",
+          "properties": {
+            "account_id": {
+              "description": "Associate the call with an account. Use the \u201cSearch for Accounts\u201d endpoint to retrieve account IDs.",
+              "type": "string"
+            },
+            "contact_id": {
+              "description": "Designate the contact that was called. Use the \u201cSearch for Contacts\u201d endpoint to retrieve contact IDs.",
+              "type": "string"
+            },
+            "duration": {
+              "description": "The duration of the call in seconds (not minutes).",
+              "type": "integer"
+            },
+            "end_time": {
+              "description": "The time when the call ended (ISO 8601). Apollo uses GMT by default; include an offset if needed.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "from_number": {
+              "description": "The phone number that dialed you.",
+              "type": "string"
+            },
+            "logged": {
+              "description": "Set to true if you want to create an individual record for the phone call in Apollo.",
+              "type": "boolean"
+            },
+            "note": {
+              "description": "Add a note to the call record.",
+              "type": "string"
+            },
+            "phone_call_outcome_id": {
+              "description": "Assign a call outcome to the record. Outcomes are workspace-specific; you can find the ID in Apollo UI URLs when filtering by Disposition.",
+              "type": "string"
+            },
+            "phone_call_purpose_id": {
+              "description": "Assign a call purpose to the record. Purposes are workspace-specific; you can find the ID in Apollo UI URLs when filtering by Purpose.",
+              "type": "string"
+            },
+            "start_time": {
+              "description": "The time when the call started (ISO 8601). Apollo uses GMT by default; include an offset if needed.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "status": {
+              "description": "The status of the phone call.",
+              "enum": [
+                "queued",
+                "ringing",
+                "in-progress",
+                "completed",
+                "no_answer",
+                "failed",
+                "busy"
+              ],
+              "type": "string"
+            },
+            "to_number": {
+              "description": "The phone number that you dialed.",
+              "type": "string"
+            },
+            "user_id[]": {
+              "description": "Designate the caller in your team's Apollo account. Use the \u201cGet a List of Users\u201d endpoint to retrieve user IDs.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_call_records",
+      "pica_action_id": "conn_mod_def::GJz18NN_VLE::0lyEfAnHRNKcVO0rXwboFw",
+      "action_title": "Create Call Records",
+      "action_path": "/api/v1/phone_calls",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_phone_calls",
+    "description": "[APOLLO] Search Phone Calls on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers for this endpoint. Do not include authentication headers in this specification.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response content type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Search Phone Calls Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional filters and pagination parameters sent in the URL query string.",
+          "properties": {
+            "contact_label_ids[]": {
+              "description": "Filter calls that included contacts with specific contact label IDs. Can provide multiple IDs.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "date_range[max]": {
+              "description": "Upper bound of the date range to search. Use with `date_range[min]`. Must be after `date_range[min]`. Format: `YYYY-MM-DD`. Example: `2025-06-12`.",
+              "type": "string"
+            },
+            "date_range[min]": {
+              "description": "Lower bound of the date range to search. Use with `date_range[max]`. Must be before `date_range[max]`. Format: `YYYY-MM-DD`. Example: `2025-04-01`.",
+              "type": "string"
+            },
+            "duration[max]": {
+              "description": "Upper bound for call duration in seconds. Use with `duration[min]`. Must be larger than `duration[min]`. Example: `180`.",
+              "type": "integer"
+            },
+            "duration[min]": {
+              "description": "Lower bound for call duration in seconds. Use with `duration[max]`. Example: `30`.",
+              "type": "integer"
+            },
+            "inbound": {
+              "description": "Filter by call direction: `incoming` (prospect called your team) or `outgoing` (your team called the prospect).",
+              "enum": [
+                "incoming",
+                "outgoing"
+              ],
+              "type": "string"
+            },
+            "page": {
+              "description": "Page number to retrieve. Use with `per_page`. Example: `4`.",
+              "type": "string"
+            },
+            "per_page": {
+              "description": "Number of results per page. Use with `page`. Example: `10`.",
+              "type": "string"
+            },
+            "phone_call_outcome_ids[]": {
+              "description": "Filter by call outcome IDs (account-specific). Example: `6095a710bd01d100a506d4c5`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "phone_call_purpose_ids[]": {
+              "description": "Filter by call purpose IDs (account-specific). Example: `6095a710bd01d100a506d4cf`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_keywords": {
+              "description": "Keywords to narrow search. Example: `marketing conference attendees`.",
+              "type": "string"
+            },
+            "user_ids[]": {
+              "description": "Filter calls that included specific users in your Apollo account. Can provide multiple IDs. Example: `67e33d527de088000daa60c4`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "title": "Search Phone Calls Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_phone_calls",
+      "pica_action_id": "conn_mod_def::GJz18YkkJNE::M9zWHDmNQnG286mP6sR-Nw",
+      "action_title": "Search Phone Calls",
+      "action_path": "/phone_calls/search",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_update_a_call_record",
+    "description": "[APOLLO] Update a Call Record on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers for Apollo API.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for PUT /api/v1/phone_calls/{id}",
+          "properties": {
+            "id": {
+              "description": "Required. The Apollo ID for the call record you want to update. Example: `6859b0dd828b270021e69648`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters used to update the phone call record.",
+          "properties": {
+            "account_id": {
+              "description": "Apollo account ID to associate with the call. Example: `66e9abf95ac32901b20d1a0d`.",
+              "type": "string"
+            },
+            "contact_id": {
+              "description": "Apollo contact ID that was called. Example: `66e34b81740c50074e3d1bd4`.",
+              "type": "string"
+            },
+            "duration": {
+              "description": "Duration in seconds (not minutes). Examples: `120`, `205`.",
+              "type": "integer"
+            },
+            "end_time": {
+              "description": "Call end time in ISO 8601. Apollo uses GMT by default; you may specify an offset.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "from_number": {
+              "description": "The phone number that dialed you. Example: `5551234567`.",
+              "type": "string"
+            },
+            "logged": {
+              "description": "Set to `true` if you want to create an individual record for the phone call in Apollo.",
+              "type": "boolean"
+            },
+            "note": {
+              "description": "Note to attach to the call record.",
+              "type": "string"
+            },
+            "phone_call_outcome_id": {
+              "description": "Call outcome ID (workspace-specific). Example: `6095a710bd01d100a506d4c5`.",
+              "type": "string"
+            },
+            "phone_call_purpose_id": {
+              "description": "Call purpose ID (workspace-specific). Example: `6095a710bd01d100a506d4cd`.",
+              "type": "string"
+            },
+            "start_time": {
+              "description": "Call start time in ISO 8601. Apollo uses GMT by default; you may specify an offset.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "status": {
+              "description": "Call status.",
+              "enum": [
+                "queued",
+                "ringing",
+                "in-progress",
+                "completed",
+                "no_answer",
+                "failed",
+                "busy"
+              ],
+              "type": "string"
+            },
+            "to_number": {
+              "description": "The phone number that you dialed. Example: `5551234567`.",
+              "type": "string"
+            },
+            "user_id[]": {
+              "description": "Designate the caller (Apollo user IDs within your team). Example item: `67e33d527de088000daa60c4`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_a_call_record",
+      "pica_action_id": "conn_mod_def::GJz18kiyMJU::fhFTwLMuQ5uzuMS1dp3dbg",
+      "action_title": "Update a Call Record",
+      "action_path": "/phone_calls/{{id}}",
+      "method": "PUT"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_create_contacts",
+    "description": "[APOLLO] Bulk Create Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "append_label_names": {
+          "description": "Label names to add to all contacts in this request.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "contacts": {
+          "description": "Array of contact objects to create. Max items: 100.",
+          "items": {
+            "additionalProperties": false,
+            "description": "A contact object to create.",
+            "properties": {
+              "account_id": {
+                "description": "Associated account ID.",
+                "type": "string"
+              },
+              "contact_emails": {
+                "description": "Array of email objects with position.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "Email object with position index.",
+                  "properties": {
+                    "email": {
+                      "description": "Email address.",
+                      "type": "string"
+                    },
+                    "position": {
+                      "description": "Position index (e.g., `0` for primary).",
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "email",
+                    "position"
+                  ],
+                  "title": "Contact Email",
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "contact_role_type_ids": {
+                "description": "Array of contact role type IDs.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "contact_stage_id": {
+                "description": "Contact stage ID.",
+                "type": "string"
+              },
+              "email": {
+                "description": "Contact\u2019s email address.",
+                "type": "string"
+              },
+              "facebook_url": {
+                "description": "Facebook profile URL.",
+                "type": "string"
+              },
+              "first_name": {
+                "description": "Contact\u2019s first name.",
+                "type": "string"
+              },
+              "hubspot_id": {
+                "description": "HubSpot ID for matching and deduplication.",
+                "type": "string"
+              },
+              "last_name": {
+                "description": "Contact\u2019s last name.",
+                "type": "string"
+              },
+              "linkedin_url": {
+                "description": "LinkedIn profile URL.",
+                "type": "string"
+              },
+              "organization_id": {
+                "description": "Associated organization ID.",
+                "type": "string"
+              },
+              "organization_name": {
+                "description": "Company/organization name.",
+                "type": "string"
+              },
+              "outreach_id": {
+                "description": "Outreach.io ID.",
+                "type": "string"
+              },
+              "owner_id": {
+                "description": "Contact owner user ID. Defaults to current user if not provided.",
+                "type": "string"
+              },
+              "phone": {
+                "description": "Phone number.",
+                "type": "string"
+              },
+              "phone_numbers": {
+                "description": "Array of phone number objects with position.",
+                "items": {
+                  "additionalProperties": false,
+                  "description": "Phone number object with position index.",
+                  "properties": {
+                    "position": {
+                      "description": "Position index (e.g., `0` for primary).",
+                      "type": "integer"
+                    },
+                    "raw_number": {
+                      "description": "Phone number.",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "raw_number",
+                    "position"
+                  ],
+                  "title": "Phone Number",
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "phone_status_cd": {
+                "description": "Phone validation status.",
+                "type": "string"
+              },
+              "photo_url": {
+                "description": "Profile photo URL.",
+                "type": "string"
+              },
+              "present_raw_address": {
+                "description": "Physical address.",
+                "type": "string"
+              },
+              "primary_title": {
+                "description": "Primary job title (takes precedence over `title`).",
+                "type": "string"
+              },
+              "salesforce_account_id": {
+                "description": "Salesforce Account ID.",
+                "type": "string"
+              },
+              "salesforce_contact_id": {
+                "description": "Salesforce Contact ID for matching.",
+                "type": "string"
+              },
+              "salesforce_id": {
+                "description": "Salesforce ID for matching and deduplication.",
+                "type": "string"
+              },
+              "salesforce_lead_id": {
+                "description": "Salesforce Lead ID.",
+                "type": "string"
+              },
+              "salesloft_id": {
+                "description": "SalesLoft ID.",
+                "type": "string"
+              },
+              "title": {
+                "description": "Contact\u2019s job title.",
+                "type": "string"
+              },
+              "twitter_url": {
+                "description": "Twitter profile URL.",
+                "type": "string"
+              },
+              "typed_custom_fields": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "description": "Custom field values as key-value pairs where key is `field_id` and value is `field_value`. Additional properties are strings.",
+                "title": "Typed Custom Fields",
+                "type": "object"
+              }
+            },
+            "title": "Contact",
+            "type": "object"
+          },
+          "maxItems": 100,
+          "type": "array"
+        },
+        "run_dedupe": {
+          "description": "Enables full deduplication across all sources. Default: `false`.",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "contacts"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_create_contacts",
+      "pica_action_id": "conn_mod_def::GJz18r1FsZE::nL_te5RwQDSYnheuzV7W-A",
+      "action_title": "Bulk Create Contacts",
+      "action_path": "/api/v1/contacts/bulk_create",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_update_contacts",
+    "description": "[APOLLO] Bulk Update Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "description": "When using `contact_ids`, apply this Apollo account ID to all contacts.",
+          "type": "string"
+        },
+        "async": {
+          "description": "Force asynchronous processing. Automatically enabled for `>100` contacts.",
+          "type": "boolean"
+        },
+        "contact_attributes": {
+          "description": "Array of contact objects with individual updates. Use this when applying different updates to each contact. Each object must include `id`.",
+          "items": {
+            "additionalProperties": false,
+            "description": "Per-contact updates; `id` is required.",
+            "properties": {
+              "account_id": {
+                "description": "The Apollo account ID to associate with the contact.",
+                "type": "string"
+              },
+              "email": {
+                "description": "The contact's email address.",
+                "type": "string"
+              },
+              "first_name": {
+                "description": "The contact's first name.",
+                "type": "string"
+              },
+              "id": {
+                "description": "Required. The contact ID to update.",
+                "type": "string"
+              },
+              "last_name": {
+                "description": "The contact's last name.",
+                "type": "string"
+              },
+              "linkedin_url": {
+                "description": "The contact's LinkedIn profile URL.",
+                "type": "string"
+              },
+              "organization_name": {
+                "description": "The contact's organization name.",
+                "type": "string"
+              },
+              "owner_id": {
+                "description": "The Apollo user ID to assign as owner.",
+                "type": "string"
+              },
+              "present_raw_address": {
+                "description": "The contact's location.",
+                "type": "string"
+              },
+              "title": {
+                "description": "The contact's job title.",
+                "type": "string"
+              },
+              "typed_custom_fields": {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "description": "Custom field values as key-value pairs. Values are strings.",
+                "title": "Typed Custom Fields",
+                "type": "object"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "title": "Contact Attributes",
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "contact_ids": {
+          "description": "Array of contact IDs to update with the same values. Use this when applying one set of updates to multiple contacts.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "email": {
+          "description": "When using `contact_ids`, apply this email to all contacts.",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "When using `contact_ids`, apply this first name to all contacts.",
+          "type": "string"
+        },
+        "last_name": {
+          "description": "When using `contact_ids`, apply this last name to all contacts.",
+          "type": "string"
+        },
+        "linkedin_url": {
+          "description": "When using `contact_ids`, apply this LinkedIn URL to all contacts.",
+          "type": "string"
+        },
+        "organization_name": {
+          "description": "When using `contact_ids`, apply this organization name to all contacts.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "When using `contact_ids`, apply this Apollo user ID as owner to all contacts.",
+          "type": "string"
+        },
+        "present_raw_address": {
+          "description": "When using `contact_ids`, apply this address/location to all contacts.",
+          "type": "string"
+        },
+        "title": {
+          "description": "When using `contact_ids`, apply this title to all contacts.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "When using `contact_ids`, apply these custom fields to all contacts as key-value pairs. Values are strings.",
+          "title": "Typed Custom Fields (Top-level)",
+          "type": "object"
+        },
+        "visible_entity_ids": {
+          "description": "Specific contact IDs to return in the response (for performance).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_update_contacts",
+      "pica_action_id": "conn_mod_def::GJz184olw_M::Eiiv4GzITq2Y8UX3cefhuw",
+      "action_title": "Bulk Update Contacts",
+      "action_path": "/api/v1/contacts/bulk_update",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_create_a_contact",
+    "description": "[APOLLO] Create a Contact on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "description": "The Apollo ID for the account. Example: 63f53afe4ceeca00016bdd2f",
+          "type": "string"
+        },
+        "contact_stage_id": {
+          "description": "The Apollo ID for the contact stage. Example: 6095a710bd01d100a506d4ae",
+          "type": "string"
+        },
+        "corporate_phone": {
+          "description": "The work/office phone number. Example: +44 7911 123456",
+          "type": "string"
+        },
+        "direct_phone": {
+          "description": "The primary phone number. Example: 555-303-1234",
+          "type": "string"
+        },
+        "email": {
+          "description": "The email address of the contact. Example: example@email.com",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "The first name of the contact you want to create. Example: Tim",
+          "type": "string"
+        },
+        "home_phone": {
+          "description": "The home phone number. Example: 555-303-1234",
+          "type": "string"
+        },
+        "label_names": {
+          "description": "Lists to which the contact belongs.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "last_name": {
+          "description": "The last name of the contact you want to create. Example: Zheng",
+          "type": "string"
+        },
+        "mobile_phone": {
+          "description": "The mobile phone number. Example: 555-303-1234",
+          "type": "string"
+        },
+        "organization_name": {
+          "description": "The name of the contact's employer (company). Example: apollo",
+          "type": "string"
+        },
+        "other_phone": {
+          "description": "Alternative phone number. Example: 555-303-1234",
+          "type": "string"
+        },
+        "present_raw_address": {
+          "description": "The personal location for the contact. Example: Atlanta, United States",
+          "type": "string"
+        },
+        "run_dedupe": {
+          "description": "Set to true to enable deduplication. If a match is found, Apollo returns the existing contact rather than creating a duplicate. Default: false.",
+          "type": "boolean"
+        },
+        "title": {
+          "description": "The current job title that the contact holds. Example: senior research analyst",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": true,
+          "description": "Custom field values keyed by custom field id. IDs/types are workspace-specific; retrieve them via Get a List of All Custom Fields.",
+          "type": "object"
+        },
+        "website_url": {
+          "description": "The corporate website URL. Example: https://www.apollo.io/",
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_a_contact",
+      "pica_action_id": "conn_mod_def::GJz18_qaRlg::Vlkwc7g2RQynN5-X7YAr7w",
+      "action_title": "Create a Contact",
+      "action_path": "/api/v1/contacts",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_contact_stages",
+    "description": "[APOLLO] List Contact Stages on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers for the Apollo API",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_contact_stages",
+      "pica_action_id": "conn_mod_def::GJz19GW61TE::bwcPpUM7Tt2aAVTnbSzu6g",
+      "action_title": "List Contact Stages",
+      "action_path": "/api/v1/contact_stages",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_search_for_contacts",
+    "description": "[APOLLO] Search for Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "contact_label_ids": {
+          "description": "Apollo IDs for labels to include. If multiple are provided, contacts connected to any label are included (in combination with other filters).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "contact_stage_ids": {
+          "description": "Apollo IDs for contact stages to include. If multiple are provided, contacts matching any stage are included (in combination with other filters).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "page": {
+          "description": "Page number to retrieve.",
+          "type": "integer"
+        },
+        "per_page": {
+          "description": "Number of results per page. (Docs note a max display limit of 100 per page.)",
+          "type": "integer"
+        },
+        "q_keywords": {
+          "description": "Keywords to narrow the search among contacts in your Apollo account.",
+          "type": "string"
+        },
+        "sort_ascending": {
+          "description": "Default: false. Set true to sort ascending. Must be used with sort_by_field or sorting is not applied.",
+          "type": "boolean"
+        },
+        "sort_by_field": {
+          "description": "Sort matching contacts by a supported field.",
+          "enum": [
+            "contact_last_activity_date",
+            "contact_email_last_opened_at",
+            "contact_email_last_clicked_at",
+            "contact_created_at",
+            "contact_updated_at"
+          ],
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_for_contacts",
+      "pica_action_id": "conn_mod_def::GJz19OR6O7g::qWyp8pZmSAGHkOzMWXO21Q",
+      "action_title": "Search for Contacts",
+      "action_path": "/api/v1/contacts/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_a_contact",
+    "description": "[APOLLO] Update a Contact on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "description": "Update the account ID. Example: `63f53afe4ceeca00016bdd2f`.",
+          "type": "string"
+        },
+        "contact_stage_id": {
+          "description": "Update the contact stage ID. Example: `6095a710bd01d100a506d4af`.",
+          "type": "string"
+        },
+        "corporate_phone": {
+          "description": "Work/office phone.",
+          "type": "string"
+        },
+        "direct_phone": {
+          "description": "Primary phone.",
+          "type": "string"
+        },
+        "email": {
+          "description": "Update the contact email. Example: `example@email.com`.",
+          "type": "string"
+        },
+        "first_name": {
+          "description": "Update the contact\u2019s first name. Example: `Tim`.",
+          "type": "string"
+        },
+        "home_phone": {
+          "description": "Home phone.",
+          "type": "string"
+        },
+        "label_names": {
+          "description": "Replace lists this contact belongs to. Passing new values overwrites existing lists. Items are strings.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "last_name": {
+          "description": "Update the contact\u2019s last name. Example: `Zheng`.",
+          "type": "string"
+        },
+        "mobile_phone": {
+          "description": "Mobile phone.",
+          "type": "string"
+        },
+        "organization_name": {
+          "description": "Update the employer (company) name. Example: `apollo`.",
+          "type": "string"
+        },
+        "other_phone": {
+          "description": "Alternate phone.",
+          "type": "string"
+        },
+        "present_raw_address": {
+          "description": "Update location (city/state/country). Example: `Atlanta, United States`.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Update the job title. Example: `senior research analyst`.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": true,
+          "description": "Add information to custom fields in Apollo. Keys are custom field IDs and values must match the field\u2019s data type.",
+          "title": "Typed Custom Fields",
+          "type": "object"
+        },
+        "website_url": {
+          "description": "Update the employer website URL. Example: `https://www.apollo.io/`.",
+          "type": "string"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_a_contact",
+      "pica_action_id": "conn_mod_def::GJz19VR-BBs::-TZ9MOtMT-ClOwl_cnbjFw",
+      "action_title": "Update a Contact",
+      "action_path": "/contacts/{{contactId}}",
+      "method": "PATCH"
+    }
+  },
+  {
+    "name": "pica_apollo_update_contact_owner_for_multiple_contacts",
+    "description": "[APOLLO] Update Contact Owner for Multiple Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "description": "Request content type (no request body is used for this endpoint).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Inputs must be provided as query parameters (not in the request body).",
+          "properties": {
+            "contact_ids[]": {
+              "description": "The Apollo IDs for the contacts you want to assign to an owner.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "owner_id": {
+              "description": "The ID of the Apollo user who will become the owner of the contacts.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "contact_ids[]",
+            "owner_id"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_contact_owner_for_multiple_contacts",
+      "pica_action_id": "conn_mod_def::GJz19dqvLjI::RWqP-UvATpykvKsM74wgRA",
+      "action_title": "Update Contact Owner for Multiple Contacts",
+      "action_path": "/api/v1/contacts/update_owners",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_contact_stage_for_multiple_contacts",
+    "description": "[APOLLO] Update Contact Stage for Multiple Contacts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Required query parameters for POST /api/v1/contacts/update_stages",
+          "properties": {
+            "contact_ids[]": {
+              "description": "The Apollo IDs for the contacts you want to update.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "contact_stage_id": {
+              "description": "The Apollo ID of the contact stage to assign to the contacts.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "contact_ids[]",
+            "contact_stage_id"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_contact_stage_for_multiple_contacts",
+      "pica_action_id": "conn_mod_def::GJz19m1SZm4::9f9265U9SK-wXd2ZaBkOZw",
+      "action_title": "Update Contact Stage for Multiple Contacts",
+      "action_path": "/contacts/update_stages",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_view_a_contact",
+    "description": "[APOLLO] View a Contact on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Parameters to be substituted into the URL path.",
+          "properties": {
+            "contact_id": {
+              "description": "The Apollo ID for the contact you want to view. Example: `66e34b81740c50074e3d1bd4`. To find IDs, use the \u201cSearch for Contacts\u201d endpoint and read the contact `id`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "contact_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "view_a_contact",
+      "pica_action_id": "conn_mod_def::GJz19tvPv5w::qzMNEEDNSVS13OIq1ED71g",
+      "action_title": "View a Contact",
+      "action_path": "/contacts/{{contactId}}",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_create_deal",
+    "description": "[APOLLO] Create Deal on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "account_id": {
+          "description": "ID of the target account (company) in Apollo. Find via Organization Search (`organization_id`). Example: `5e66b6381e05b4008c8331b8`.",
+          "type": "string"
+        },
+        "amount": {
+          "description": "Monetary value as a string. Do not include commas or currency symbols; commas cause the amount to be left blank. Example: `55123478`.",
+          "type": "string"
+        },
+        "closed_date": {
+          "description": "Estimated close date in `YYYY-MM-DD` format. Example: `2025-10-30`.",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the deal (human-readable). Example: `Massive Q3 Deal`.",
+          "type": "string"
+        },
+        "opportunity_stage_id": {
+          "description": "ID of the deal stage in your Apollo team. Retrieve via List Deal Stages. Example: `6095a710bd01d100a506d4bd`.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "ID of the deal owner in your Apollo team. Retrieve via Get a List of Users. Example: `66302798d03b9601c7934ebf`.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": true,
+          "description": "Key/value map of custom field IDs to values. Custom fields are unique per team; retrieve IDs/types via Get a List of All Custom Fields. Example: `{\"60c39ed82bd02f01154c470a\":\"2025-08-07\"}`.",
+          "title": "Typed Custom Fields",
+          "type": "object"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_deal",
+      "pica_action_id": "conn_mod_def::GJz190eHuuE::GL5DqXmtRaOYWM-gjcvDMw",
+      "action_title": "Create Deal",
+      "action_path": "/api/v1/opportunities",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_all_deals",
+    "description": "[APOLLO] List All Deals on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional pagination and sorting parameters.",
+          "properties": {
+            "page": {
+              "description": "Page number to retrieve. Use with per_page to navigate results and improve performance. Example: 4.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Number of results per page. Limiting results improves performance. Example: 10.",
+              "type": "integer"
+            },
+            "sort_by_field": {
+              "description": "Sort deals by one of the following fields: amount (largest deal values first), is_closed (closed deals first), is_won (won deals first).",
+              "enum": [
+                "amount",
+                "is_closed",
+                "is_won"
+              ],
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_all_deals",
+      "pica_action_id": "conn_mod_def::GJz199glI3I::R98nmt_VTwOcMDFFWZM9Pg",
+      "action_title": "List All Deals",
+      "action_path": "/api/v1/opportunities/search",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_list_deal_stages",
+    "description": "[APOLLO] List Deal Stages on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_deal_stages",
+      "pica_action_id": "conn_mod_def::GJz1-Ej_fcg::7yJLozw3SZS5C-d-YUwJLg",
+      "action_title": "List Deal Stages",
+      "action_path": "/api/v1/opportunity_stages",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_update_a_deal",
+    "description": "[APOLLO] Update a Deal on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "description": "Deal monetary value as a string. Do not include commas or currency symbols (commas are not accepted and may leave amount blank). Currency is derived from Apollo account settings. Example: 55123478.",
+          "type": "string"
+        },
+        "closed_date": {
+          "description": "Estimated close date formatted as YYYY-MM-DD. Example: 2025-10-30.",
+          "format": "date",
+          "type": "string"
+        },
+        "name": {
+          "description": "Human-readable deal name. Example: Massive Q3 Deal.",
+          "type": "string"
+        },
+        "opportunity_stage_id": {
+          "description": "Deal stage ID. Use \u201cList Deal Stages\u201d to find stage id values. Example: 6095a710bd01d100a506d4bd.",
+          "type": "string"
+        },
+        "owner_id": {
+          "description": "Deal owner\u2019s Apollo user ID. Use \u201cGet a List of Users\u201d to find IDs. Example: 66302798d03b9601c7934ebf.",
+          "type": "string"
+        },
+        "typed_custom_fields": {
+          "additionalProperties": true,
+          "description": "Key/value map for custom fields. Custom field IDs and types are unique to your team. Use \u201cGet a List of All Custom Fields\u201d to find field IDs and valid value types (e.g., picklist entry IDs). Example: { \"60c39ed82bd02f01154c470a\": \"2025-08-07\" }.",
+          "title": "Typed Custom Fields",
+          "type": "object"
+        }
+      },
+      "required": []
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_a_deal",
+      "pica_action_id": "conn_mod_def::GJz1-MANZ58::RFZ_l5ZYS329V6tc9SlYBA",
+      "action_title": "Update a Deal",
+      "action_path": "/opportunities/{{opportunityId}}",
+      "method": "PATCH"
+    }
+  },
+  {
+    "name": "pica_apollo_view_a_deal",
+    "description": "[APOLLO] View a Deal on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response content type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for GET /api/v1/opportunities/{opportunity_id}",
+          "properties": {
+            "opportunity_id": {
+              "description": "The ID of the deal (opportunity) to view. Example: `66e09ea8e3cfcf01b2208ec7`. To find IDs, use the \u201cList All Deals\u201d endpoint and use the `id` value of the desired deal.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "opportunity_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "view_a_deal",
+      "pica_action_id": "conn_mod_def::GJz1-UopLJg::_t41ZTs1SR69nVVgySt8DQ",
+      "action_title": "View a Deal",
+      "action_path": "/opportunities/{{opportunityId}}",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_organization_enrichment_1",
+    "description": "[APOLLO] Bulk Organization Enrichment on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Query parameters to send in the URL (not in the body).",
+          "properties": {
+            "domains[]": {
+              "description": "The domain of each company to enrich. Required. Do not include www., the @ symbol, or similar. Limit: cannot be more than 10 domains.",
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 10,
+              "type": "array"
+            }
+          },
+          "required": [
+            "domains[]"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_organization_enrichment",
+      "pica_action_id": "conn_mod_def::GJz1-cqFPTg::zjyuqfYsRWWN86YT9E1lQQ",
+      "action_title": "Bulk Organization Enrichment",
+      "action_path": "/api/v1/organizations/bulk_enrich",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_people_enrichment_1",
+    "description": "[APOLLO] Bulk People Enrichment on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "details": {
+          "description": "Array of up to 10 person detail objects to enrich.",
+          "items": {
+            "additionalProperties": false,
+            "description": "Optional identifying fields for a single person to enrich (none are explicitly required per person).",
+            "properties": {
+              "domain": {
+                "description": "Employer domain (current or previous). Example: apollo.io.",
+                "type": "string"
+              },
+              "email": {
+                "description": "Email address. Example: example@email.com.",
+                "type": "string"
+              },
+              "first_name": {
+                "description": "Person\u2019s first name. Example: tim.",
+                "type": "string"
+              },
+              "hashed_email": {
+                "description": "Hashed email in MD5 or SHA-256 format.",
+                "type": "string"
+              },
+              "id": {
+                "description": "Apollo person ID. Example: 587cf802f65125cad923a266.",
+                "type": "string"
+              },
+              "last_name": {
+                "description": "Person\u2019s last name. Example: zheng.",
+                "type": "string"
+              },
+              "linkedin_url": {
+                "description": "LinkedIn profile URL.",
+                "type": "string"
+              },
+              "name": {
+                "description": "Full name (typically first + last). Example: tim zheng.",
+                "type": "string"
+              },
+              "organization_name": {
+                "description": "Employer name (current or previous). Example: apollo.",
+                "type": "string"
+              }
+            },
+            "title": "Person Detail",
+            "type": "object"
+          },
+          "maxItems": 10,
+          "type": "array"
+        }
+      },
+      "required": [
+        "details"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_people_enrichment",
+      "pica_action_id": "conn_mod_def::GJz1-mOA1C0::XgK27YgKSKaEnZj_1TIPMg",
+      "action_title": "Bulk People Enrichment",
+      "action_path": "/api/v1/people/bulk_match",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_enrich_an_organization_by_domain",
+    "description": "[APOLLO] Enrich an Organization by Domain on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response content type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Query parameters to include in the URL (not in the request body).",
+          "properties": {
+            "domain": {
+              "description": "The domain of the company to enrich. Do not include \"www.\", the \"@\" symbol, or similar. Example: \"apollo.io\" or \"microsoft.com\".",
+              "type": "string"
+            }
+          },
+          "required": [
+            "domain"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "enrich_an_organization_by_domain",
+      "pica_action_id": "conn_mod_def::GJz1-vQqfEI::rFgxNc8wQFWyV5kX88UBpg",
+      "action_title": "Enrich an Organization by Domain",
+      "action_path": "/organizations/enrich",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_enrich_a_person_people_enrichment",
+    "description": "[APOLLO] Enrich a Person (People Enrichment) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "reveal_phone_number": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "reveal_phone_number"
+                ]
+              },
+              "then": {
+                "required": [
+                  "webhook_url"
+                ]
+              }
+            }
+          ],
+          "description": "All inputs for this endpoint are provided as query parameters (not in the request body).",
+          "properties": {
+            "domain": {
+              "description": "Employer domain (current or previous). Do not include www., @, etc. Example: apollo.io.",
+              "type": "string"
+            },
+            "email": {
+              "description": "Person\u2019s email address. Example: example@email.com.",
+              "type": "string"
+            },
+            "first_name": {
+              "description": "Person\u2019s first name. Typically used with last_name. Example: tim.",
+              "type": "string"
+            },
+            "hashed_email": {
+              "description": "MD5 or SHA-256 hash of the person\u2019s email.",
+              "type": "string"
+            },
+            "id": {
+              "description": "Apollo person ID. Example: 587cf802f65125cad923a266.",
+              "type": "string"
+            },
+            "last_name": {
+              "description": "Person\u2019s last name. Typically used with first_name. Example: zheng.",
+              "type": "string"
+            },
+            "linkedin_url": {
+              "description": "LinkedIn profile URL. Example: http://www.linkedin.com/in/tim-zheng-677ba010.",
+              "type": "string"
+            },
+            "name": {
+              "description": "Full name (usually first + last). If used, you do not need first_name/last_name. Example: tim zheng.",
+              "type": "string"
+            },
+            "organization_name": {
+              "description": "Name of employer (current or previous). Example: apollo.",
+              "type": "string"
+            },
+            "reveal_personal_emails": {
+              "description": "Set to true to reveal personal emails (may consume credits). Default: false.",
+              "type": "boolean"
+            },
+            "reveal_phone_number": {
+              "description": "Set to true to reveal all available phone numbers (may consume credits). Default: false. If true, webhook_url is required.",
+              "type": "boolean"
+            },
+            "run_waterfall_email": {
+              "description": "Set to true to enable email waterfall enrichment. Default: false.",
+              "type": "boolean"
+            },
+            "run_waterfall_phone": {
+              "description": "Set to true to enable phone waterfall enrichment. Default: false.",
+              "type": "boolean"
+            },
+            "webhook_url": {
+              "description": "Required if reveal_phone_number=true; otherwise do not use. HTTPS endpoint where Apollo sends a JSON webhook response with the requested phone number details.",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "enrich_a_person_people_enrichment",
+      "pica_action_id": "conn_mod_def::GJz1-5Pqiyg::USYoxmHNRM2-z8l50tKI_w",
+      "action_title": "Enrich a Person (People Enrichment)",
+      "action_path": "/api/v1/people/match",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_create_a_custom_field",
+    "description": "[APOLLO] Create a Custom Field on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Name of the custom field you want to create. Example: `Test Name`",
+          "type": "string"
+        },
+        "meta": {
+          "additionalProperties": false,
+          "description": "Additional configuration for the field.",
+          "properties": {
+            "max_length": {
+              "description": "Max length for text-based fields (as provided in schema).",
+              "type": "number"
+            }
+          },
+          "title": "Meta",
+          "type": "object"
+        },
+        "modality": {
+          "description": "The modality (object type) the field belongs to. Allowed values: `contact`, `account`, `opportunity`.",
+          "enum": [
+            "contact",
+            "account",
+            "opportunity"
+          ],
+          "type": "string"
+        },
+        "type": {
+          "description": "The data type of the custom field. Allowed values: `string`, `textarea`, `number`, `date`, `datetime`, `boolean`.",
+          "enum": [
+            "string",
+            "textarea",
+            "number",
+            "date",
+            "datetime",
+            "boolean"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "modality",
+        "type"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_a_custom_field",
+      "pica_action_id": "conn_mod_def::GJz1_AZMmkg::OEbbCmKHR5WWmtJsPI7uCg",
+      "action_title": "Create a Custom Field",
+      "action_path": "/api/v1/fields",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_all_custom_fields_deprecated",
+    "description": "[APOLLO] List All Custom Fields (Deprecated) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers for this endpoint.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_all_custom_fields_deprecated",
+      "pica_action_id": "conn_mod_def::GJz1_HOOnYE::pedD6uHST0KelyQArgDpEw",
+      "action_title": "List All Custom Fields (Deprecated)",
+      "action_path": "/api/v1/typed_custom_fields",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_list_all_lists",
+    "description": "[APOLLO] List All Lists on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_all_lists",
+      "pica_action_id": "conn_mod_def::GJz1_NieUjo::Tm7g46eBQxWNMASJ19Ljwg",
+      "action_title": "List All Lists",
+      "action_path": "/api/v1/labels",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_list_email_accounts",
+    "description": "[APOLLO] List Email Accounts on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers for this endpoint.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_email_accounts",
+      "pica_action_id": "conn_mod_def::GJz1_UrYUhs::XdIVhsobTj-KkwvfkNcH5Q",
+      "action_title": "List Email Accounts",
+      "action_path": "/api/v1/email_accounts",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_list_users_teammates",
+    "description": "[APOLLO] List Users (Teammates) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Indicates the client expects a JSON response.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional pagination parameters.",
+          "properties": {
+            "page": {
+              "description": "The page number of results to retrieve. Example: 4.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Number of results per page. Using smaller values can improve performance. Example: 10.",
+              "type": "integer"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_users_teammates",
+      "pica_action_id": "conn_mod_def::GJz1_pZ0XLg::NPEBl6fhT3Sm7HFPEgavsw",
+      "action_title": "List Users (Teammates)",
+      "action_path": "/api/v1/users/search",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_view_api_usage_stats_and_rate_limits",
+    "description": "[APOLLO] View API Usage Stats and Rate Limits on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Cache-Control": {
+              "const": "no-cache",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type",
+            "Cache-Control"
+          ],
+          "title": "Headers",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "view_api_usage_stats_and_rate_limits",
+      "pica_action_id": "conn_mod_def::GJz1_w5eKwQ::xGHYTAZGQhukuTqPhYsqdw",
+      "action_title": "View API Usage Stats and Rate Limits",
+      "action_path": "/api/v1/usage_stats/api_usage_stats",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_get_complete_organization_info",
+    "description": "[APOLLO] Get Complete Organization Info on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "description": "Request headers",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for GET /api/v1/organizations/{id}",
+          "properties": {
+            "id": {
+              "description": "The Apollo ID for the organization you want to research. Example: `5e66b6381e05b4008c8331b8`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "get_complete_organization_info",
+      "pica_action_id": "conn_mod_def::GJz1_4R-H1E::mkjZTuSpQj2UeTG4XHzGhw",
+      "action_title": "Get Complete Organization Info",
+      "action_path": "/organizations/{{id}}",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_search_news_articles_for_companies",
+    "description": "[APOLLO] Search News Articles for Companies on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type.",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "description": "Request content type.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Query parameters to be sent in the URL (not in the request body). Bracket notation keys are used as documented.",
+          "properties": {
+            "categories[]": {
+              "description": "Filter to specific categories/sub-categories of news. Examples: `hires`, `investment`, `contract`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_ids[]": {
+              "description": "The Apollo IDs for the companies you want included in results. Example: `5e66b6381e05b4008c8331b8`. To find IDs, use the Organization Search endpoint and read `organization_id`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "description": "Page number to retrieve. Use with `per_page`. Example: `4`.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Number of results per page (smaller improves performance). Use with `page`. Example: `10`.",
+              "type": "integer"
+            },
+            "published_at[max]": {
+              "description": "Upper bound (inclusive) for published date range. Format: `YYYY-MM-DD`. Use with `published_at[min]`. Must be after `published_at[min]`. Example: `2025-05-15`.",
+              "format": "date",
+              "type": "string"
+            },
+            "published_at[min]": {
+              "description": "Lower bound (inclusive) for published date range. Format: `YYYY-MM-DD`. Use with `published_at[max]`. Must be before `published_at[max]`. Example: `2025-02-15`.",
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "required": [
+            "organization_ids[]"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_news_articles_for_companies",
+      "pica_action_id": "conn_mod_def::GJz2ABKNKRA::KYut8dhiQym3KK_YqchgsA",
+      "action_title": "Search News Articles for Companies",
+      "action_path": "/news_articles/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_an_organization_s_job_postings",
+    "description": "[APOLLO] List an Organization\u2019s Job Postings on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "HTTP headers to send with the request.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Cache-Control": {
+              "const": "no-cache",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Cache-Control"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Parameters that must be embedded in the URL path.",
+          "properties": {
+            "organization_id": {
+              "description": "The organization ID of the company for which you want job postings. Example: `5e66b6381e05b4008c8331b8`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "organization_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional URL query parameters for pagination.",
+          "properties": {
+            "page": {
+              "description": "Page number to retrieve. Use with `per_page` for navigable results and improved performance. Example: `4`.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Number of results per page (helps performance). Use with `page`. Example: `10`.",
+              "type": "integer"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers",
+        "query"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_an_organization_s_job_postings",
+      "pica_action_id": "conn_mod_def::GJz2AJUZ-YI::SBuO9bAfSQqjm4l12tdvAQ",
+      "action_title": "List an Organization\u2019s Job Postings",
+      "action_path": "/organizations/{{organizationId}}/job_postings",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_search_organizations_company_search",
+    "description": "[APOLLO] Search Organizations (Company Search) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "All filters for this POST endpoint must be provided as query parameters (not in the body).",
+          "properties": {
+            "currently_using_any_of_technology_uids[]": {
+              "description": "Filter by technologies currently used. Apollo supports 1,500+ technologies. Use underscores (`_`) to replace spaces/periods as listed in Apollo\u2019s supported technologies CSV. Examples: `salesforce`, `google_analytics`, `wordpress_org`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "latest_funding_amount_range[max]": {
+              "description": "Max amount for the most recent funding round. Use with `latest_funding_amount_range[min]`. No currency symbols/commas/decimals. Examples: `5000000`, `15000000`.",
+              "type": "integer"
+            },
+            "latest_funding_amount_range[min]": {
+              "description": "Min amount for the most recent funding round. Use with `latest_funding_amount_range[max]`. No currency symbols/commas/decimals. Examples: `5000000`, `15000000`.",
+              "type": "integer"
+            },
+            "latest_funding_date_range[max]": {
+              "description": "Latest date of most recent funding round (YYYY-MM-DD). Use with `latest_funding_date_range[min]`. Example: `2025-09-25`.",
+              "type": "string"
+            },
+            "latest_funding_date_range[min]": {
+              "description": "Earliest date of most recent funding round (YYYY-MM-DD). Use with `latest_funding_date_range[max]`. Example: `2025-07-25`.",
+              "type": "string"
+            },
+            "organization_ids[]": {
+              "description": "Include only these Apollo organization IDs. Example: `5e66b6381e05b4008c8331b8`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_job_locations[]": {
+              "description": "Locations of active job postings. Examples: `atlanta`, `japan`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_job_posted_at_range[max]": {
+              "description": "Latest job posted date (YYYY-MM-DD). Use with `organization_job_posted_at_range[min]`. Example: `2025-09-25`.",
+              "type": "string"
+            },
+            "organization_job_posted_at_range[min]": {
+              "description": "Earliest job posted date (YYYY-MM-DD). Use with `organization_job_posted_at_range[max]`. Example: `2025-07-25`.",
+              "type": "string"
+            },
+            "organization_locations[]": {
+              "description": "HQ location filter (cities, US states, countries). Results are based on HQ location (not office locations). Examples: `texas`, `tokyo`, `spain`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_not_locations[]": {
+              "description": "Exclude organizations by HQ location. Examples: `minnesota`, `ireland`, `seoul`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_num_employees_ranges[]": {
+              "description": "Employee count ranges. Each range is \"min,max\" (comma-separated, no spaces). You can pass multiple ranges. Examples: `1,10`, `250,500`, `10000,20000`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_num_jobs_range[max]": {
+              "description": "Maximum number of active job postings. Use with `organization_num_jobs_range[min]`. Examples: `50`, `500`.",
+              "type": "integer"
+            },
+            "organization_num_jobs_range[min]": {
+              "description": "Minimum number of active job postings. Use with `organization_num_jobs_range[max]`. Examples: `50`, `500`.",
+              "type": "integer"
+            },
+            "page": {
+              "description": "Page number to retrieve. Example: `4`.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Results per page. Example: `10`.",
+              "type": "integer"
+            },
+            "q_organization_domains_list[]": {
+              "description": "Domain(s) for the organization. Do not include `www.`, `@`, etc. Accepts up to 1,000 domains per request. Examples: `apollo.io`, `microsoft.com`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_organization_job_titles[]": {
+              "description": "Job titles found in active job postings at the company. Examples: `sales manager`, `research analyst`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_organization_keyword_tags[]": {
+              "description": "Filter by keyword tags associated with companies. Examples: `mining`, `sales strategy`, `consulting`.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_organization_name": {
+              "description": "Filter by organization name (partial matches supported). Example: `apollo` or `mining`.",
+              "type": "string"
+            },
+            "revenue_range[max]": {
+              "description": "Maximum revenue. No currency symbols/commas/decimals. Example: `50000000`.",
+              "type": "integer"
+            },
+            "revenue_range[min]": {
+              "description": "Minimum revenue. No currency symbols/commas/decimals. Example: `300000`.",
+              "type": "integer"
+            },
+            "total_funding_range[max]": {
+              "description": "Max total funding across all rounds. Use with `total_funding_range[min]`. No currency symbols/commas/decimals. Examples: `50000000`, `350000000`.",
+              "type": "integer"
+            },
+            "total_funding_range[min]": {
+              "description": "Min total funding across all rounds. Use with `total_funding_range[max]`. No currency symbols/commas/decimals. Examples: `50000000`, `350000000`.",
+              "type": "integer"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_organizations_company_search",
+      "pica_action_id": "conn_mod_def::GJz2AXYS8Hw::nYfwc352SyqMeSNf-v4kmQ",
+      "action_title": "Search Organizations (Company Search)",
+      "action_path": "/mixed_companies/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_people_api_search_net_new_people_prospecting",
+    "description": "[APOLLO] People API Search (Net-New People Prospecting) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Cache-Control": {
+              "const": "no-cache",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type",
+            "Cache-Control"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Filters must be sent as query parameters in the URL (not in the body).",
+          "properties": {
+            "contact_email_status[]": {
+              "description": "Email statuses to search.",
+              "items": {
+                "enum": [
+                  "verified",
+                  "unverified",
+                  "likely to engage",
+                  "unavailable"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "currently_not_using_any_of_technology_uids[]": {
+              "description": "Exclude employers using any specified technologies. Use underscores instead of spaces/periods.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "currently_using_all_of_technology_uids[]": {
+              "description": "Filter for employers using all specified technologies. Use underscores instead of spaces/periods.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "currently_using_any_of_technology_uids[]": {
+              "description": "Filter for employers using any specified technologies. Use underscores instead of spaces/periods.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "include_similar_titles": {
+              "description": "Whether to include people with titles similar to person_titles[]. Set to false to return only strict matches when using person_titles[].",
+              "type": "boolean"
+            },
+            "organization_ids[]": {
+              "description": "Apollo organization IDs (employers) to include.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_job_locations[]": {
+              "description": "Locations of jobs being actively recruited by the employer.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_job_posted_at_range[max]": {
+              "description": "Latest date when jobs were posted. Use with organization_job_posted_at_range[min].",
+              "format": "date",
+              "type": "string"
+            },
+            "organization_job_posted_at_range[min]": {
+              "description": "Earliest date when jobs were posted. Use with organization_job_posted_at_range[max].",
+              "format": "date",
+              "type": "string"
+            },
+            "organization_locations[]": {
+              "description": "HQ location of the person\u2019s current employer (cities, states, countries). If a company has multiple offices, filtering is still based on HQ.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_num_employees_ranges[]": {
+              "description": "Employer headcount ranges as strings \"min,max\" (comma-separated).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "organization_num_jobs_range[max]": {
+              "description": "Maximum number of active job postings at the employer. Use with organization_num_jobs_range[min].",
+              "type": "integer"
+            },
+            "organization_num_jobs_range[min]": {
+              "description": "Minimum number of active job postings at the employer. Use with organization_num_jobs_range[max].",
+              "type": "integer"
+            },
+            "page": {
+              "description": "Page number to retrieve.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Results per page.",
+              "type": "integer"
+            },
+            "person_locations[]": {
+              "description": "Where people live (cities, US states, countries). To filter by employer HQ location instead, use organization_locations[].",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "person_seniorities[]": {
+              "description": "Seniority levels for a person\u2019s current job title. Matches if any one seniority matches.",
+              "items": {
+                "enum": [
+                  "owner",
+                  "founder",
+                  "c_suite",
+                  "partner",
+                  "vp",
+                  "head",
+                  "director",
+                  "manager",
+                  "senior",
+                  "entry",
+                  "intern"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "person_titles[]": {
+              "description": "Job titles held by the people you want to find. People only need to match 1 title. Adding more expands results. Also matches similar terms (e.g., marketing manager may match content marketing manager).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_keywords": {
+              "description": "A string of words over which to filter results.",
+              "type": "string"
+            },
+            "q_organization_domains_list[]": {
+              "description": "Employer domain(s) (current or previous). Do not include www. or @. Up to 1,000 domains per request.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "q_organization_job_titles[]": {
+              "description": "Job titles listed in active job postings at the person\u2019s current employer.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "revenue_range[max]": {
+              "description": "Maximum employer revenue. Use with revenue_range[min]. No currency symbols/commas/decimals.",
+              "type": "integer"
+            },
+            "revenue_range[min]": {
+              "description": "Minimum employer revenue. Use with revenue_range[max]. No currency symbols/commas/decimals.",
+              "type": "integer"
+            }
+          },
+          "title": "Query parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "people_api_search_net_new_people_prospecting",
+      "pica_action_id": "conn_mod_def::GJz2AmtsIH8::-KnLbk4nSHurCgEJXsodwA",
+      "action_title": "People API Search (Net-New People Prospecting)",
+      "action_path": "/api/v1/mixed_people/api_search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_activate_a_sequence_approve_a_sequence",
+    "description": "[APOLLO] Activate a Sequence (Approve a Sequence) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for POST /api/v1/emailer_campaigns/{sequence_id}/approve",
+          "properties": {
+            "sequence_id": {
+              "description": "The Apollo ID for the sequence you want to activate. Example: `66e9e215ece19801b219997f`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "sequence_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "activate_a_sequence_approve_a_sequence",
+      "pica_action_id": "conn_mod_def::GJz2AtgLPus::Jvp7DjM3TvKQcSXkGoY70g",
+      "action_title": "Activate a Sequence (Approve a Sequence)",
+      "action_path": "/emailer_campaigns/{{sequenceId}}/approve",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_add_contacts_to_a_sequence",
+    "description": "[APOLLO] Add Contacts to a Sequence on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers for this endpoint.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for POST /api/v1/emailer_campaigns/{sequence_id}/add_contact_ids",
+          "properties": {
+            "sequence_id": {
+              "description": "The Apollo ID for the sequence to which you want to add contacts. Example: `66e9e215ece19801b219997f`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "sequence_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Query parameters for this action. `emailer_campaign_id` and `send_email_from_email_account_id` are required. Either `contact_ids[]` or `label_names[]` must be provided.",
+          "properties": {
+            "add_if_in_queue": {
+              "description": "Set to `true` to add contacts even if they are currently in the queue for processing. Default: `false`.",
+              "type": "boolean"
+            },
+            "auto_unpause_at": {
+              "description": "ISO 8601 datetime when paused contacts should be automatically unpaused. Must be used with `status=paused`.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "contact_ids[]": {
+              "description": "Apollo IDs for contacts to add. Example item: `66e34b81740c50074e3d1bd4`. Note: Either `contact_ids[]` or `label_names[]` must be provided.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "contact_verification_skipped": {
+              "description": "Set to `true` to skip contact verification during the addition process. Default: `false`.",
+              "type": "boolean"
+            },
+            "contacts_without_ownership_permission": {
+              "description": "Set to `true` to add contacts even if you don't have ownership permission for them. Default: `false`.",
+              "type": "boolean"
+            },
+            "emailer_campaign_id": {
+              "description": "The same ID as the `sequence_id`. Example: `66e9e215ece19801b219997f`.",
+              "type": "string"
+            },
+            "label_names[]": {
+              "description": "Alternative to `contact_ids[]`. Contacts with these label names will be added. Note: Either `contact_ids[]` or `label_names[]` must be provided.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "send_email_from_email_account_id": {
+              "description": "Apollo ID for the email account used to send emails to the added contacts. Example: `6633baaece5fbd01c791d7ca`.",
+              "type": "string"
+            },
+            "send_email_from_email_address": {
+              "description": "Optional specific email address to send from within the email account.",
+              "type": "string"
+            },
+            "sequence_active_in_other_campaigns": {
+              "description": "Set to `true` to add contacts even if they have been added to other sequences (does not differentiate active vs paused). Default: `false`.",
+              "type": "boolean"
+            },
+            "sequence_finished_in_other_campaigns": {
+              "description": "Set to `true` to add contacts if they are marked as `finished` in another sequence. Default: `false`.",
+              "type": "boolean"
+            },
+            "sequence_job_change": {
+              "description": "Set to `true` to add contacts even if they recently changed jobs. Default: `false`.",
+              "type": "boolean"
+            },
+            "sequence_no_email": {
+              "description": "Set to `true` to add contacts even if they do not have an email address. Default: `false`.",
+              "type": "boolean"
+            },
+            "sequence_same_company_in_same_campaign": {
+              "description": "Set to `true` to add contacts even if other contacts from the same company are already in the sequence. Default: `false`.",
+              "type": "boolean"
+            },
+            "sequence_unverified_email": {
+              "description": "Set to `true` to add contacts if they have an unverified email address. Default: `false`.",
+              "type": "boolean"
+            },
+            "status": {
+              "description": "Initial status for added contacts. Enum: `active`, `paused`. If `paused` with `auto_unpause_at`, enables scheduled addition.",
+              "enum": [
+                "active",
+                "paused"
+              ],
+              "type": "string"
+            },
+            "user_id": {
+              "description": "Apollo user ID of the user taking the action (for activity log). Example: `66302798d03b9601c7934ebf`.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "emailer_campaign_id",
+            "send_email_from_email_account_id"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "add_contacts_to_a_sequence",
+      "pica_action_id": "conn_mod_def::GJz2A8rUZLQ::BRe1mfcBRQ2suX0rLoMxnA",
+      "action_title": "Add Contacts to a Sequence",
+      "action_path": "/emailer_campaigns/{{sequenceId}}/add_contact_ids",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_archive_a_sequence",
+    "description": "[APOLLO] Archive a Sequence on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters to call POST /api/v1/emailer_campaigns/{sequence_id}/archive",
+          "properties": {
+            "sequence_id": {
+              "description": "The Apollo ID for the sequence you want to archive. Example: `66e9e215ece19801b219997f`.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "sequence_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "archive_a_sequence",
+      "pica_action_id": "conn_mod_def::GJz2BEEMZi4::OUkI3T59SaWn2TvPxYr2ZA",
+      "action_title": "Archive a Sequence",
+      "action_path": "/emailer_campaigns/{{sequenceId}}/archive",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_check_email_stats_for_an_outreach_email",
+    "description": "[APOLLO] Check Email Stats for an Outreach Email on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Expected response media type",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters to construct /emailer_messages/{id}/activities",
+          "properties": {
+            "id": {
+              "description": "The ID of the outreach email message you want to view (example: `684b2203a2ce950021cbf730`).",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "check_email_stats_for_an_outreach_email",
+      "pica_action_id": "conn_mod_def::GJz2BLnrCB8::vF1TyxaBQ5myM57SgGuEQw",
+      "action_title": "Check Email Stats for an Outreach Email",
+      "action_path": "/emailer_messages/{{id}}/activities",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_deactivate_a_sequence_abort_an_emailer_campaign",
+    "description": "[APOLLO] Deactivate a Sequence (Abort an Emailer Campaign) on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "path": {
+          "additionalProperties": false,
+          "description": "Path parameters for POST /api/v1/emailer_campaigns/{sequence_id}/abort",
+          "properties": {
+            "sequence_id": {
+              "description": "The Apollo ID for the sequence you want to deactivate. Example: `66e9e215ece19801b219997f`. To find IDs, use the \u201cSearch for Sequences\u201d endpoint and read the `id` field.",
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "sequence_id"
+          ],
+          "title": "Path Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "path",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "deactivate_a_sequence_abort_an_emailer_campaign",
+      "pica_action_id": "conn_mod_def::GJz2BTGhsgo::eUsvQy2zTMCGy3G_Sa6UkQ",
+      "action_title": "Deactivate a Sequence (Abort an Emailer Campaign)",
+      "action_path": "/emailer_campaigns/{{sequenceId}}/abort",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_outreach_emails",
+    "description": "[APOLLO] Search Outreach Emails on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Search Outreach Emails Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional filters and pagination controls. Query parameters must be sent in the URL (not in the body).",
+          "properties": {
+            "email_account_id_and_aliases": {
+              "description": "Filter by email account id and aliases.",
+              "type": "string"
+            },
+            "emailer_campaign_ids[]": {
+              "description": "Include only emails in specific sequences (campaigns). You can pass multiple IDs.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "emailer_message_date_range[max]": {
+              "description": "Upper bound date (format YYYY-MM-DD). Must be after min. Use with [min] and emailer_message_date_range_mode.",
+              "type": "string"
+            },
+            "emailer_message_date_range[min]": {
+              "description": "Lower bound date (format YYYY-MM-DD). Must be before max. Use with [max] and emailer_message_date_range_mode.",
+              "type": "string"
+            },
+            "emailer_message_date_range_mode": {
+              "description": "Used with emailer_message_date_range[max] and [min]. Choose what the range applies to.",
+              "enum": [
+                "due_at",
+                "completed_at"
+              ],
+              "type": "string"
+            },
+            "emailer_message_reply_classes[]": {
+              "description": "Filter by reply sentiment/classification. You can pass multiple values.",
+              "items": {
+                "enum": [
+                  "willing_to_meet",
+                  "follow_up_question",
+                  "person_referral",
+                  "out_of_office",
+                  "already_left_company_or_not_right_person",
+                  "not_interested",
+                  "unsubscribe",
+                  "none_of_the_above"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "emailer_message_stats[]": {
+              "description": "Filter by current email status/engagement. You can pass multiple values.",
+              "items": {
+                "enum": [
+                  "delivered",
+                  "scheduled",
+                  "drafted",
+                  "not_opened",
+                  "opened",
+                  "clicked",
+                  "unsubscribed",
+                  "demoed",
+                  "bounced",
+                  "spam_blocked",
+                  "failed_other"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "not_emailer_campaign_ids[]": {
+              "description": "Exclude emails from specific sequences (campaigns). You can pass multiple IDs.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "not_sent_reason_cds[]": {
+              "description": "Filter by reason message was not sent. You can pass multiple values.",
+              "items": {
+                "enum": [
+                  "contact_stage_safeguard",
+                  "same_account_reply",
+                  "account_stage_safeguard",
+                  "email_unverified",
+                  "snippets_missing",
+                  "personalized_opener_missing",
+                  "thread_reply_original_email_missing",
+                  "no_active_email_account",
+                  "email_format_invalid",
+                  "ownership_permission",
+                  "email_service_provider_delivery_failure",
+                  "sendgrid_dropped_email",
+                  "mailgun_dropped_email",
+                  "gdpr_compliance",
+                  "not_valid_hard_bounce_detected",
+                  "other_safeguard",
+                  "new_job_change_detected",
+                  "email_on_global_bounce_list"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "description": "Page number to retrieve. Use with per_page.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Results per page. Endpoint limit is 100 per page.",
+              "type": "integer"
+            },
+            "q_keywords": {
+              "description": "Keyword search across email content (partial match).",
+              "type": "string"
+            },
+            "user_ids[]": {
+              "description": "Filter emails sent by specific Apollo users (IDs in your team account).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "title": "Search Outreach Emails Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_outreach_emails",
+      "pica_action_id": "conn_mod_def::GJz2BiEEzJM::Y5joB8UsQTOeDh1CR3rlPQ",
+      "action_title": "Search Outreach Emails",
+      "action_path": "/api/v1/emailer_messages/search",
+      "method": "GET"
+    }
+  },
+  {
+    "name": "pica_apollo_search_for_sequences",
+    "description": "[APOLLO] Search for Sequences on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "additionalProperties": false,
+          "description": "This endpoint\u2019s documentation does not specify any request body fields. Send an empty JSON object {} if your HTTP client requires a body for POST.",
+          "properties": {},
+          "title": "Request Body",
+          "type": "object"
+        },
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters for searching and pagination. Must be sent in the URL query string, not in the request body.",
+          "properties": {
+            "page": {
+              "description": "Page number of results to retrieve. Use with per_page for pagination/performance. Example: \"4\".",
+              "type": "string"
+            },
+            "per_page": {
+              "description": "Number of results per page (limiting improves performance). Use with page. Example: \"10\".",
+              "type": "string"
+            },
+            "q_name": {
+              "description": "Keywords to narrow the search by sequence name only. Keywords should match at least part of a sequence\u2019s name. Example: \"marketing conference attendees\".",
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers",
+        "body"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_for_sequences",
+      "pica_action_id": "conn_mod_def::GJz2BqHQQLU::bmUbbCglQh2KqfGP0IXpOA",
+      "action_title": "Search for Sequences",
+      "action_path": "/api/v1/emailer_campaigns/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_update_contact_status_in_a_sequence",
+    "description": "[APOLLO] Update Contact Status in a Sequence on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": true,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Although the method is POST, inputs are provided as query parameters (not a JSON request body).",
+          "properties": {
+            "contact_ids[]": {
+              "description": "The Apollo IDs for the contacts whose sequence status you want to update.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "emailer_campaign_ids[]": {
+              "description": "The Apollo IDs for the sequences to update. If multiple are provided, the contacts\u2019 statuses are updated across all specified sequences.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "mode": {
+              "description": "How to update status.",
+              "enum": [
+                "mark_as_finished",
+                "remove",
+                "stop"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "emailer_campaign_ids[]",
+            "contact_ids[]",
+            "mode"
+          ],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "update_contact_status_in_a_sequence",
+      "pica_action_id": "conn_mod_def::GJz2By0T4OM::n_mYkNbbRjKYBKSXO67Zig",
+      "action_title": "Update Contact Status in a Sequence",
+      "action_path": "/api/v1/emailer_campaigns/remove_or_stop_contact_ids",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_bulk_create_tasks",
+    "description": "[APOLLO] Bulk Create Tasks on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "contact_ids": {
+          "description": "Apollo contact IDs to receive the action. A separate task is created for each contact ID.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "due_at": {
+          "description": "Due date/time in ISO 8601 (RFC3339) format.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "note": {
+          "description": "Human-readable description providing context for the task owner.",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Task priority. Default: medium.",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        "status": {
+          "description": "Status of the task being created. Examples/notes: use scheduled for future tasks; for already completed tasks use completed or skipped.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Task type.",
+          "enum": [
+            "call",
+            "outreach_manual_email",
+            "linkedin_step_connect",
+            "linkedin_step_message",
+            "linkedin_step_view_profile",
+            "linkedin_step_interact_post",
+            "action_item"
+          ],
+          "type": "string"
+        },
+        "user_id": {
+          "description": "ID of the task owner within your Apollo team account (the user who will take action). Example: 66302798d03b9601c7934ebf.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "contact_ids",
+        "type",
+        "status",
+        "due_at"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "bulk_create_tasks",
+      "pica_action_id": "conn_mod_def::GJz2B7v9zxE::pXhwSRhBTQGyzVIcPEkVDQ",
+      "action_title": "Bulk Create Tasks",
+      "action_path": "/api/v1/tasks/bulk_create",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_create_a_task",
+    "description": "[APOLLO] Create a Task on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "contact_id": {
+          "description": "The Apollo ID for the contact the task is associated with. Example: `66e34b81740c50074e3d1bd4`.",
+          "type": "string"
+        },
+        "due_at": {
+          "description": "Due date/time in ISO 8601 / RFC3339 format.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "note": {
+          "description": "Human-readable description/context for the task. Recommended but not required.",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Priority of the task. Allowed values: `high`, `medium`, `low`. Default: `medium`.",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        "status": {
+          "description": "Status of the task. Guidance: use `scheduled` for future-facing tasks; for already completed tasks use `completed` or `skipped`.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Title for the task. If omitted, Apollo auto-generates a title based on task type and contact name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Task type.",
+          "enum": [
+            "call",
+            "outreach_manual_email",
+            "linkedin_step_connect",
+            "linkedin_step_message",
+            "linkedin_step_view_profile",
+            "linkedin_step_interact_post",
+            "action_item"
+          ],
+          "type": "string"
+        },
+        "user_id": {
+          "description": "The ID for the task owner within your Apollo account (the user who will take action). Example: `66302798d03b9601c7934ebf`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "user_id",
+        "contact_id",
+        "type",
+        "status",
+        "due_at",
+        "priority",
+        "title",
+        "note"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "create_a_task",
+      "pica_action_id": "conn_mod_def::GJz2CCrow9U::TGx2GiD5Sky06_7b6RdTRw",
+      "action_title": "Create a Task",
+      "action_path": "/api/v1/tasks",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_search_for_tasks",
+    "description": "[APOLLO] Search for Tasks on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "type": "string"
+            },
+            "Cache-Control": {
+              "const": "no-cache",
+              "type": "string"
+            },
+            "Content-Type": {
+              "const": "application/json",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept",
+            "Content-Type",
+            "Cache-Control"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query string parameters. Per spec, query parameters must be sent in the URL and not in the body.",
+          "properties": {
+            "open_factor_names[]": {
+              "description": "Use `task_types` to return a count of tasks by task type. When used, the response includes a `faceting.task_types` array with `count` per task type.",
+              "items": {
+                "enum": [
+                  "task_types"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "page": {
+              "description": "Page number to retrieve. Use with `per_page` for navigation/performance. Example: `4`.",
+              "type": "integer"
+            },
+            "per_page": {
+              "description": "Number of results per page. Example: `10`. (Docs note a hard limit of 100/page; requesting too many may trigger a 422 error like `Per page not supported`.)",
+              "type": "integer"
+            },
+            "sort_by_field": {
+              "description": "Sort the tasks by one of: `task_due_at` (most future-dated first), `task_priority` (highest priority first).",
+              "enum": [
+                "task_due_at",
+                "task_priority"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [],
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "query",
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "search_for_tasks",
+      "pica_action_id": "conn_mod_def::GJz2CLiwP_c::GRQySUEsRaKzCNgUXEYfYg",
+      "action_title": "Search for Tasks",
+      "action_path": "/api/v1/tasks/search",
+      "method": "POST"
+    }
+  },
+  {
+    "name": "pica_apollo_list_fields_in_an_apollo_account",
+    "description": "[APOLLO] List Fields in an Apollo Account on apollo",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "headers": {
+          "additionalProperties": false,
+          "description": "Request headers.",
+          "properties": {
+            "Accept": {
+              "const": "application/json",
+              "description": "Media type accepted for the response.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Accept"
+          ],
+          "title": "Headers",
+          "type": "object"
+        },
+        "query": {
+          "additionalProperties": false,
+          "description": "Optional query parameters for filtering results.",
+          "properties": {
+            "source": {
+              "description": "Filter fields by source.",
+              "enum": [
+                "system",
+                "custom",
+                "crm_synced"
+              ],
+              "type": "string"
+            }
+          },
+          "title": "Query Parameters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "headers"
+      ]
+    },
+    "_pica_metadata": {
+      "platform": "apollo",
+      "action_id": "list_fields_in_an_apollo_account",
+      "pica_action_id": "conn_mod_def::GJz2PQ_d0UY::7vxfP5zqSGuz4V5NrgNW5w",
+      "action_title": "List Fields in an Apollo Account",
+      "action_path": "/api/v1/fields",
+      "method": "GET"
+    }
+  }
+]
